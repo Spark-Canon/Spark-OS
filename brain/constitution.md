@@ -1,103 +1,88 @@
-# Spark-OS Constitution
+# Spark Brain Constitution
 
-**Project:** Spark-OS  
+**Version:** 2.0  
+**Status:** Active  
 **Repository:** `Spark-Canon/Spark-OS`  
-**Role:** Project bootloader and canonical entry point  
-**Status:** Foundational  
-**Last updated:** 2026-07-20
+**Authority:** Repository operating layer
 
 ## Purpose
 
-This file is the first document that any human or AI collaborator must read before changing Spark-OS.
+Spark Brain is the control plane for Spark OS. It gives humans and AI a deterministic way to start, resume, navigate, and validate repository work.
 
-Spark-OS is intended to become the operating system for a modern mortgage brokerage. It is not merely CRM software. It is an operational platform organized around responsibilities, workflows, institutional knowledge, compliance, and AI-supported execution.
+Spark Brain does not own Philosophy, Governance, Canon, Academy content, or architectural decisions. Those remain authoritative in their existing repository locations.
 
-The repository is the project's long-term memory. Conversation history is not the source of truth.
+## Foundational Rule
+
+> Spark Brain owns navigation. The repository owns knowledge.
+
+Brain files may summarize a path or loading rule, but they must link to the authoritative source instead of redefining its substance.
+
+## Authority Boundaries
+
+- Philosophy: [`../01-philosophy/`](../01-philosophy/)
+- Governance: [`../02-governance/`](../02-governance/)
+- Architecture decisions: [`../02-governance/architecture-decisions/`](../02-governance/architecture-decisions/)
+- Business knowledge: [`../03-canon/`](../03-canon/)
+- Learning design and instruction: [`../04-academy/`](../04-academy/)
+- Exploratory work: [`../00-workbench/`](../00-workbench/)
+- Retired material: [`../99-archive/`](../99-archive/)
+- Repository startup, navigation, session continuity, and health: [`./`](./)
+
+The machine-readable authority map is [`manifest.yaml`](manifest.yaml).
+
+## Operating Rules
+
+1. Read before writing.
+2. Load only the context required by the selected boot mode.
+3. Follow links to authoritative sources; do not copy their content into Brain.
+4. Use the canonical ADR process for architectural changes.
+5. Keep `current-state.md` factual and current.
+6. Record session continuity in `session.md`.
+7. Run repository integrity validation after structural changes.
+8. Never claim success from path existence alone.
+9. Record failed or unverified actions explicitly.
+10. Escalate conflicts between authoritative sources instead of silently resolving them.
+
+## Boot Modes
+
+- Use [`boot-sequence.md#quick-resume`](boot-sequence.md#quick-resume) for normal continuation.
+- Use [`boot-sequence.md#full-architectural-boot`](boot-sequence.md#full-architectural-boot) before architectural or governance decisions.
 
 ## Resume Commands
 
-The following phrases all mean the same thing:
+The following phrases invoke Spark Brain:
 
-- `Resume Spark-OS`
-- `Open Spark Constitution`
+- `Resume Spark OS`
+- `Open Spark Brain`
 - `Continue Spark Architecture`
 - `Work on Spark`
 
-When one of these commands is given, begin the boot sequence below.
+Start with [`resume.md`](resume.md).
 
-## Boot Sequence
+## Change Discipline
 
-1. Read this file.
-2. Read `brain/current-state.md`.
-3. Read `brain/vision.md`.
-4. Read `brain/principles.md`.
-5. Read `brain/domain-language.md`.
-6. Read `brain/responsibility-map.md`.
-7. Read `brain/architecture.md`.
-8. Read `brain/roadmap.md`.
-9. Read `brain/open-questions.md`.
-10. Read all ADRs created or changed since the last recorded session.
-11. Continue from the `Next Task` in `brain/current-state.md`.
+A Brain change requires an ADR when it changes:
 
-Do not redesign the project before completing this sequence.
+- authority boundaries
+- boot order
+- repository lifecycle
+- canonical locations
+- integrity guarantees
+- governance relationships
 
-## Source-of-Truth Hierarchy
+Routine state and session updates do not require an ADR.
 
-When documents disagree, use this order:
+## Session Closeout
 
-1. This Constitution
-2. Accepted ADRs
-3. Domain language
-4. Architecture and responsibility map
-5. Current state
-6. Roadmap
-7. Other documentation
-8. Conversation history
+Before ending meaningful repository work:
 
-Conversation history may explain context, but it does not override repository documentation.
+1. Update [`current-state.md`](current-state.md).
+2. Update [`session.md`](session.md).
+3. Update affected navigation.
+4. Create or update an ADR when required.
+5. Run the integrity validator described in [`health.md`](health.md).
+6. Report changed paths, verification results, and unresolved concerns.
 
-## Core Rules
+## Portability
 
-- Architecture precedes implementation.
-- Important decisions must be documented.
-- Architectural changes require an ADR.
-- Domain terms must retain their canonical meanings.
-- Every major component must own a clear responsibility.
-- Prefer consistency over cleverness.
-- Prefer simple, inspectable systems over hidden complexity.
-- Do not create duplicate concepts under different names.
-- Update `current-state.md` before ending meaningful work.
-- Update the architectural journal after significant decisions.
-- Never claim a repository change was made unless it was verified.
-
-## Required Session Closeout
-
-Before ending a meaningful Spark-OS work session:
-
-1. Update `brain/current-state.md`.
-2. Record decisions in `meta/architectural-journal.md`.
-3. Create or update ADRs when architecture changed.
-4. Update `brain/open-questions.md`.
-5. Report exactly what changed.
-6. Record any failed or unverified actions.
-
-## Human and AI Collaboration
-
-AI acts as a senior architectural partner. It should:
-
-- preserve architectural consistency
-- identify duplicated concepts
-- surface hidden assumptions
-- recommend ADRs
-- update documentation with architectural changes
-- separate facts, decisions, assumptions, and proposals
-- avoid undocumented design drift
-- avoid treating generated code as authoritative without review
-
-Humans retain final authority over product direction, business rules, compliance interpretation, and accepted architecture.
-
-## Repository Memory Principle
-
-The project must remember itself.
-
-A future collaborator should be able to understand why Spark exists, what it means, how it is structured, what is currently happening, what remains unresolved, and what to do next without relying on a previous chat.
+Spark Brain must remain usable without dependence on a particular AI model, chat history, or proprietary interface. Markdown, Git history, and the machine-readable manifest are the durable memory substrate.
