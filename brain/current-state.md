@@ -1,36 +1,46 @@
 # Current State
 
 **Last updated:** 2026-07-20  
-**Current phase:** Domain foundation  
-**Current milestone:** Define the canonical transaction aggregate  
-**Status:** Spark Brain and repository memory system installed and verified
+**Current phase:** Repository foundation  
+**Current milestone:** Review and merge Spark Brain v2  
+**Status:** Migration verified on pull request #2; pending human review and merge
+
+## Repository Reality
+
+- The numbered repository architecture remains authoritative.
+- Spark Brain v2 is the repository control plane, not a second knowledge hierarchy.
+- Philosophy remains under `01-philosophy/`.
+- Governance and ADRs remain under `02-governance/`.
+- Business knowledge remains under `03-canon/`.
+- Academy content remains under `04-academy/`.
+- Brain v1 business and duplicate authority files are retired by ADR-0002.
+- `/meta` and the root `/adr` system are no longer active authorities on the migration branch.
 
 ## Last Completed
 
-- Installed the canonical Spark Brain under `/brain`.
-- Installed repository working agreements and compatibility documents under `/meta`.
-- Installed ADR-000 through ADR-003 under `/adr`.
-- Inspected the two pre-existing commits before installation:
-  - `043a789ca6a397467bfae88a67af5010d45883c4` created `meta/ai-working-agreement.md`.
-  - `e4f50eb20acccc63120b8f91c79beeb0449fbea9` created `meta/design-principles.md`.
-- Updated the two pre-existing files in place using their current blob SHAs.
-- Established `brain/principles.md` as the canonical principles document.
-- Verified every installation target by fetching it from `main`.
+- Audited the original repository architecture and Spark Brain v1 installation.
+- Confirmed that the earlier truncation finding was caused by incomplete connector reads; the committed Brain v1 files contained their full prepared contents.
+- Confirmed the architectural findings about duplicate authorities, competing ADR systems, competing principle systems, stale root navigation, and incomplete boot integration.
+- Chose in-place migration rather than rollback to preserve history and explicitly retire superseded architecture.
+- Installed the Spark Brain v2 operating layer, machine-readable manifest, executable validator, and GitHub Actions integrity workflow.
+- Re-read the pull-request diff and verified the authority reconciliation.
+- Repository Integrity workflow run `29791884214` completed successfully on migration head `a40fc7e8740e56db2021c8266a8b60d5a1e8e825` before this closeout update.
 
 ## Current Priority
 
-Begin Phase 1 domain foundation without bypassing the open architectural questions.
+Review and merge pull request #2 after the final integrity workflow succeeds on the latest head.
 
 ## Next Task
 
-Resolve **Q-001 — Canonical Transaction Aggregate** from `brain/open-questions.md`.
+After this migration is merged, complete the unfinished Philosophy foundation in the sequence defined by `01-philosophy/README.md`, beginning with the Manifesto.
 
-Produce an ADR that decides whether `Mortgage File`, `Application`, or another coordinating aggregate is primary, and update the domain language, responsibility map, architecture, open questions, current state, and architectural journal as required.
+Do not begin domain-software architecture until Spark OS scope and Philosophy are sufficiently established to constrain it.
 
 ## Known Blockers
 
-None for repository access or Spark Brain installation.
+- Spark Brain v2 is not active on `main` until pull request #2 is merged.
+- Human review is still required for semantic quality even when automated integrity checks pass.
 
 ## Resume Instruction
 
-Run the boot sequence in `brain/constitution.md`, then continue from the Next Task above.
+Use [`resume.md`](resume.md) and select Quick Resume or Full Architectural Boot based on the work being performed.

@@ -1,0 +1,89 @@
+{
+  "version": 2,
+  "schema": "spark-brain-manifest-v2",
+  "authority": {
+    "exploration": "00-workbench",
+    "philosophy": "01-philosophy",
+    "governance": "02-governance",
+    "adr": "02-governance/architecture-decisions",
+    "canon": "03-canon",
+    "academy": "04-academy",
+    "archive": "99-archive",
+    "brain": "brain"
+  },
+  "boot": {
+    "quick_resume": [
+      "brain/constitution.md",
+      "brain/current-state.md",
+      "brain/session.md"
+    ],
+    "full_architectural": [
+      "README.md",
+      "brain/constitution.md",
+      "CONTRIBUTING.md",
+      "brain/repository-map.md",
+      "02-governance/ai-governance/AI_GOVERNANCE.md",
+      "01-philosophy/README.md",
+      "02-governance/architecture-decisions/ADR-0001-markdown-source-of-truth.md",
+      "02-governance/architecture-decisions/ADR-0002-spark-brain-control-plane.md",
+      "brain/current-state.md",
+      "brain/session.md",
+      "brain/health.md"
+    ]
+  },
+  "resume": {
+    "instructions": "brain/resume.md",
+    "current_state": "brain/current-state.md",
+    "session": "brain/session.md"
+  },
+  "integrity": {
+    "required_files": [
+      "README.md",
+      "CONTRIBUTING.md",
+      "brain/constitution.md",
+      "brain/boot-sequence.md",
+      "brain/repository-map.md",
+      "brain/navigation.md",
+      "brain/resume.md",
+      "brain/current-state.md",
+      "brain/session.md",
+      "brain/health.md",
+      "brain/manifest.yaml",
+      "02-governance/ai-governance/AI_GOVERNANCE.md",
+      "02-governance/architecture-decisions/ADR-TEMPLATE.md",
+      "02-governance/architecture-decisions/ADR-0001-markdown-source-of-truth.md",
+      "02-governance/architecture-decisions/ADR-0002-spark-brain-control-plane.md",
+      "01-philosophy/README.md",
+      "03-canon/README.md",
+      "04-academy/README.md",
+      "99-archive/spark-brain-v1/README.md",
+      "tools/validate_repository.py",
+      ".github/workflows/repository-integrity.yml"
+    ],
+    "required_headings": {
+      "brain/constitution.md": ["# Spark Brain Constitution", "## Purpose", "## Authority Boundaries", "## Session Closeout"],
+      "brain/boot-sequence.md": ["# Boot Sequence", "## Quick Resume", "## Full Architectural Boot", "## Failure Behavior"],
+      "brain/repository-map.md": ["# Repository Map", "## Authority Rules", "## Machine-Readable Source"],
+      "brain/resume.md": ["# Resume Spark OS", "## 1. Select a Boot Mode", "## 5. Verify Before Closeout"],
+      "brain/current-state.md": ["# Current State", "## Repository Reality", "## Next Task", "## Known Blockers"],
+      "brain/session.md": ["# Session Continuity", "## Decisions Made", "## Verification Performed", "## Next Resume Point"],
+      "brain/health.md": ["# Repository Health", "## Required Checks", "## Failure Policy"]
+    },
+    "retired_paths": [
+      "adr",
+      "meta",
+      "brain/architecture.md",
+      "brain/domain-language.md",
+      "brain/open-questions.md",
+      "brain/principles.md",
+      "brain/responsibility-map.md",
+      "brain/roadmap.md",
+      "brain/vision.md"
+    ],
+    "adr_pattern": "^ADR-(\\d{4})-[a-z0-9-]+\\.md$",
+    "placeholder_exclusions": [
+      "02-governance/architecture-decisions/ADR-TEMPLATE.md",
+      "00-workbench"
+    ]
+  }
+}

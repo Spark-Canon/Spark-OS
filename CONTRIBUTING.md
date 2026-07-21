@@ -4,21 +4,40 @@ This document defines how Spark OS should change without becoming disorganized, 
 
 ## Core Rule
 
-A conversation is where ideas may begin.
-
-The repository is where ideas become accepted.
+A conversation is where ideas may begin. The repository is where ideas become accepted.
 
 Nothing becomes authoritative merely because it was written by Sheldon, ChatGPT, Claude, another AI, or a subject-matter expert. Authority comes from deliberate acceptance into the correct repository location.
 
-## Before Adding a File
+Spark Brain is the repository control plane. It records state, navigation, and integrity requirements but does not create another knowledge state.
+
+## Before Adding or Changing a File
 
 Ask:
 
 1. What single purpose does this file serve?
-2. Is this exploratory, governing, canonical, educational, or archived?
-3. Does this knowledge already exist elsewhere?
-4. Is a new file necessary, or should an existing source be improved?
-5. What other files will depend on this decision?
+2. Is this operational metadata, exploratory, philosophical, governing, canonical, educational, or archived?
+3. Where does the repository map assign authority for this information?
+4. Does this knowledge already exist elsewhere?
+5. Is a new file necessary, or should an existing source be improved?
+6. What other files depend on this decision?
+7. Does the change require an ADR?
+
+Use [`brain/repository-map.md`](brain/repository-map.md) and [`brain/manifest.yaml`](brain/manifest.yaml) to locate authority.
+
+## Repository Operating Layer
+
+Location: `brain/`
+
+Use only for:
+
+- startup and resume instructions
+- repository navigation
+- machine-readable authority mapping
+- current work state
+- session continuity
+- repository health and integrity validation
+
+Do not place business knowledge, Philosophy, Governance, Canon, learning content, domain models, or ADRs in Brain.
 
 ## Knowledge States
 
@@ -26,100 +45,63 @@ Ask:
 
 Location: `00-workbench/`
 
-Use for:
+Use for unfinished ideas, questions, alternative models, drafts, architectural debates, future possibilities, and work awaiting validation. Workbench content is not authoritative.
 
-- unfinished ideas
-- questions
-- alternative models
-- drafts
-- architectural debates
-- future possibilities
+### Philosophy
 
-Workbench content is not authoritative.
+Location: `01-philosophy/`
+
+Use for foundational beliefs, values, principles, mental models, and philosophical language.
 
 ### Governance
 
 Location: `02-governance/`
 
-Use for:
-
-- repository rules
-- AI roles
-- document and writing standards
-- review processes
-- architectural decision records
-
-Governance explains how Spark OS operates and changes.
+Use for repository rules, AI roles, standards, review processes, and architectural decision records.
 
 ### Canon
 
 Location: `03-canon/`
 
-Use for accepted, authoritative knowledge.
+Use for accepted, authoritative business, mortgage, operational, and institutional knowledge.
 
-Canon should be:
-
-- trustworthy
-- clearly scoped
-- sufficiently sourced when external facts are involved
-- structured for reuse
-- separated from temporary teaching activities
-- changed deliberately
+Canon should be trustworthy, clearly scoped, sufficiently sourced when external facts are involved, structured for reuse, separated from temporary teaching activities, and changed deliberately.
 
 ### Academy
 
 Location: `04-academy/`
 
-Use for teaching experiences derived from philosophy, standards, and Canon.
-
-Academy material may add examples, sequencing, exercises, assessments, and explanation, but should not invent a separate version of the underlying truth.
+Use for teaching experiences derived from Philosophy, Governance, and Canon. Academy may add examples, sequencing, exercises, assessments, and explanation, but must not invent a separate version of the underlying truth.
 
 ### Archive
 
 Location: `99-archive/`
 
-Use for material that is no longer active but should remain traceable.
-
-Do not archive something merely because it is unfinished; unfinished work normally belongs in the Workbench.
+Use for material that is no longer active but should remain traceable. Do not archive unfinished work merely because it is incomplete; unfinished work normally belongs in the Workbench.
 
 ## Change Workflow
 
-For small foundation-stage changes:
+For a small non-architectural change:
 
-1. Identify the correct file.
-2. Make one coherent change.
-3. Review the diff.
-4. Commit with an intent-based message.
+1. Perform Quick Resume.
+2. Identify the authoritative file.
+3. Make one coherent change.
+4. Review the diff and downstream effects.
+5. Run repository integrity validation when navigation or structure changed.
+6. Commit with an intent-based message.
+7. Update Brain state when the work changes the active continuation point.
 
-For material changes after the foundation is stable:
+For a material, architectural, or governance change:
 
-1. Create a branch.
-2. Make the proposed changes.
-3. Open a pull request.
-4. Review the diff, reasoning, and downstream effects.
-5. Merge only after acceptance.
-
-## Commit Messages
-
-A commit should describe a meaningful checkpoint or decision.
-
-Good:
-
-```text
-Establish Spark OS foundational architecture
-Define Claude as repository steward
-Clarify Canon-to-Academy knowledge flow
-```
-
-Weak:
-
-```text
-Update files
-Changes
-More work
-```
-
-Prefer an imperative phrase that explains the intent of the change.
+1. Perform Full Architectural Boot.
+2. Create a branch.
+3. Identify affected authorities and whether an ADR is required.
+4. Make the proposed changes.
+5. Update navigation, current state, and session continuity.
+6. Run `python tools/validate_repository.py`.
+7. Open a pull request.
+8. Review the complete diff, reasoning, integrity result, and downstream effects.
+9. Merge only after acceptance.
 
 ## Architectural Decision Records
 
@@ -129,74 +111,83 @@ Create an ADR when a decision:
 - establishes a durable constraint
 - creates a meaningful trade-off
 - would be difficult to reconstruct later
-- changes the architecture or governance model
+- changes architecture, governance, authority, boot behavior, or integrity guarantees
 
-Do not create ADRs for routine wording edits.
+The only canonical ADR location is:
 
-Use the template in:
+`02-governance/architecture-decisions/`
+
+Use the template:
 
 `02-governance/architecture-decisions/ADR-TEMPLATE.md`
 
-## File Naming
+Do not create another ADR directory or numbering system.
 
-Use:
+## Commit Messages
 
-- descriptive file names
-- lowercase kebab-case for general repository files
-- uppercase conventional names only when GitHub convention improves discoverability, such as `README.md` and `CONTRIBUTING.md`
-- stable names that describe the concept rather than a temporary project phase
+A commit should describe a meaningful checkpoint or decision. Prefer an imperative phrase that explains intent.
 
-Examples:
+Good examples:
 
 ```text
-assessment-philosophy.md
-mortgage-qualification-principles.md
-ADR-0001-markdown-source-of-truth.md
+Establish Spark OS foundational architecture
+Define Claude as repository steward
+Adopt Spark Brain as repository control plane
+```
+
+Avoid generic messages such as `Update files` or `Changes`.
+
+## File Naming
+
+Use descriptive names, lowercase kebab-case for general repository files, conventional uppercase names only where GitHub convention improves discovery, and stable names that describe the concept rather than a temporary project phase.
+
+ADRs use four-digit numbering:
+
+```text
+ADR-0002-spark-brain-control-plane.md
 ```
 
 ## Linking
 
-Prefer relative Markdown links.
+Prefer relative Markdown links. Link to the authoritative source instead of repeating large blocks of knowledge.
 
-Link to the authoritative source instead of repeating large blocks of knowledge.
-
-When a concept has one canonical definition, other documents should summarize it only as needed and link back to the source.
+When a concept has one canonical definition, other documents should summarize it only when navigation requires context and must link back to the source.
 
 ## Review Questions
 
 Before accepting a meaningful change, ask:
 
-- Does this preserve Spark philosophy?
-- Does it contradict accepted Canon?
+- Does this preserve Spark Philosophy?
+- Does it contradict accepted Governance or Canon?
 - Does it create a second source of truth?
-- Does it improve competence, judgment, trust, or retrieval?
+- Is the file in the authority location named by the repository map?
+- Does it improve competence, judgment, trust, retrieval, or continuity?
 - Does it make Spark OS simpler or merely larger?
 - What downstream outputs need revision?
+- Do the integrity checks pass?
 
 ## AI Contributions
 
 AI-generated content must be reviewed according to the same standards as human-generated content.
 
-AI may:
+AI may draft, restructure, compare, identify conflicts, propose links, identify missing assumptions, and execute approved repository routines.
 
-- draft
-- restructure
-- compare
-- identify conflicts
-- propose links
-- identify missing assumptions
-- execute approved repository routines
+AI may not independently decide what Spark believes, what becomes Canon, or whether a major architectural decision is accepted.
 
-AI may not independently decide what Spark believes or what becomes Canon.
+See [`02-governance/ai-governance/AI_GOVERNANCE.md`](02-governance/ai-governance/AI_GOVERNANCE.md).
 
 ## Definition of Done
 
 A change is complete when:
 
-- it is in the correct location
+- it is in the correct authority location
 - its purpose is clear
 - links work
 - duplication has been considered
 - major trade-offs are documented
-- the commit message explains the intent
 - affected navigation is updated
+- current state and session continuity are accurate when applicable
+- every modified file has been re-read
+- repository integrity validation passes
+- the commit message explains the intent
+- failed or unverified actions are recorded
