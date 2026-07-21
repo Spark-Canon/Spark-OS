@@ -1,9 +1,9 @@
 # Current State
 
 **Last updated:** 2026-07-20  
-**Current phase:** Repository foundation  
-**Current milestone:** Establish repository foundation before Philosophy development
-**Status:** Spark Brain v2 merged; Conversation Archive System installed and audited
+**Current phase:** Philosophy development
+**Current milestone:** Develop the Philosophy foundation in sequence
+**Status:** Repository foundation complete; Philosophy drafts will be developed outside Codex before installation
 
 ## Repository Reality
 
@@ -18,6 +18,9 @@
 - Pull request #2 was reviewed and merged into `main` at commit `02c07f27ff107a98278b41dd3e5853fa2a76efec`.
 - Design conversations may be preserved under `99-archive/design-history/` as historical reference only.
 - Repository documents, Governance, Canon, Philosophy, and canonical ADRs remain authoritative over archived conversations.
+- Pull request #3 was reviewed and merged into `main` at commit `0468ded`.
+- The Conversation Archive System is active on `main`.
+- Design History remains separate from Spark Brain and is not Quick Resume or operational context.
 
 ## Last Completed
 
@@ -32,14 +35,17 @@
 - Installed the Conversation Archive System under `99-archive/design-history/` with explicit authority boundaries, naming rules, cross-linking guidance, and a durable workflow.
 - Archived the first design-history summary covering the Spark Brain v1 to v2 migration.
 - Added a required conversation-summary template and governing contribution rule for future archive entries.
+- Reviewed and merged pull request #3, completing the Conversation Archive System installation.
+- Expanded Design History into evolution, optional transcript, conversation-summary, major-milestone, and retired-architecture layers while preserving the first archived summary.
+- Established the canonical Design History Workflow in Governance and converted Architectural Evolution into one living chronological narrative.
 
 ## Current Priority
 
-Accept the audited Conversation Archive System without allowing archived conversations to become a competing source of truth.
+Complete and review the expanded Design History installation without changing the authority or boot behavior of Spark Brain.
 
 ## Next Task
 
-After the Conversation Archive System is accepted, complete the unfinished Philosophy foundation in the sequence defined by `01-philosophy/README.md`, beginning with the Manifesto.
+After the Design History installation is accepted, wait for Sheldon to provide the completed Philosophy drafts and explicitly instruct Codex to install them. Before installation, review each draft against the existing Philosophy boundaries and repository authority model.
 
 Do not begin domain-software architecture until Spark OS scope and Philosophy are sufficiently established to constrain it.
 

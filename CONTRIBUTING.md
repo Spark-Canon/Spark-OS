@@ -79,14 +79,16 @@ Location: `99-archive/`
 
 Use for material that is no longer active but should remain traceable. Do not archive unfinished work merely because it is incomplete; unfinished work normally belongs in the Workbench.
 
-Important design conversations may be preserved under [`99-archive/design-history/`](99-archive/design-history/) as historical reasoning. Conversation archives never become authoritative by being stored there. Accepted outcomes must be recorded in the appropriate Philosophy, Governance, Canon, or ADR document.
+Design History under [`99-archive/design-history/`](99-archive/design-history/) preserves architectural evolution, qualifying conversation summaries, completed milestones, and retired architectures. It is explanatory only. Current repository documents always win, and accepted outcomes must be recorded in the appropriate Philosophy, Governance, Canon, or ADR document.
+
+The canonical creation and closeout rules are defined in [`02-governance/design-history-workflow.md`](02-governance/design-history-workflow.md).
 
 #### Conversation Summary Rule
 
 Every archived conversation summary must:
 
 1. use [`99-archive/design-history/SUMMARY-TEMPLATE.md`](99-archive/design-history/SUMMARY-TEMPLATE.md)
-2. be stored under `99-archive/design-history/chat-summaries/`
+2. be stored under `99-archive/design-history/conversation-summaries/`
 3. follow `YYYY-MM-DD-topic-summary.md` naming
 4. retain the historical-reference and non-authoritative notices
 5. complete every template section, using `None` or `Not available` where necessary
@@ -94,6 +96,12 @@ Every archived conversation summary must:
 7. include applicable ADRs, pull requests, commit SHAs, and related archive records
 
 A summary that does not meet these requirements is not ready to be added to the archive.
+
+#### Design History Closeout Rule
+
+After every major architectural milestone, review whether current repository documents, ADRs, Brain continuity, a milestone record, a qualifying conversation summary, an evolution narrative, or a retired-architecture explanation require updates.
+
+Not every conversation belongs in Design History. Add a summary only when the conversation produced enduring insight that materially shaped, challenged, or clarified long-term architecture. Add a full transcript only when the complete exchange has exceptional historical value and has been reviewed for secrets and sensitive personal information. Design History must never be loaded as default Spark Brain context or used to establish current authority.
 
 ## Change Workflow
 
