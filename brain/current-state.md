@@ -1,9 +1,9 @@
 # Current State
 
-**Last updated:** 2026-07-20  
+**Last updated:** 2026-07-21
 **Current phase:** Philosophy development
-**Current milestone:** Develop the Philosophy foundation in sequence
-**Status:** Repository foundation complete; Philosophy drafts will be developed outside Codex before installation
+**Current milestone:** Develop Principles from the accepted Philosophy foundation
+**Status:** Manifesto and Values installed; independent verification complete
 
 ## Repository Reality
 
@@ -21,6 +21,10 @@
 - Pull request #3 was reviewed and merged into `main` at commit `0468ded`.
 - The Conversation Archive System is active on `main`.
 - Design History remains separate from Spark Brain and is not Quick Resume or operational context.
+- The Manifesto and all five Values are installed as accepted and active in [`../01-philosophy/`](../01-philosophy/).
+- The governing Explore → Challenge → Audit → Close → Distill work method is defined in [`../CONTRIBUTING.md`](../CONTRIBUTING.md) and is available through Full Architectural Boot without being copied into Brain.
+- Proposed Derived Principles in the Values remain unaccepted source signals; Principles are the next Philosophy development phase.
+- Applicable mortgage-sector terminology remains a verification item before operational derivation.
 
 ## Last Completed
 
@@ -38,14 +42,17 @@
 - Reviewed and merged pull request #3, completing the Conversation Archive System installation.
 - Expanded Design History into evolution, optional transcript, conversation-summary, major-milestone, and retired-architecture layers while preserving the first archived summary.
 - Established the canonical Design History Workflow in Governance and converted Architectural Evolution into one living chronological narrative.
+- Installed the approved Manifesto and Values with canonical acceptance metadata.
+- Added the five-stage governing work method to `CONTRIBUTING.md` and updated Philosophy, root, and Brain continuity navigation.
+- Completed independent verification of the corrected foundational installation; Philosophy fidelity, heading structure, navigation, formatting, and repository integrity all pass.
 
 ## Current Priority
 
-Complete and review the expanded Design History installation without changing the authority or boot behavior of Spark Brain.
+Begin deliberate Principles development only when authorized.
 
 ## Next Task
 
-After the Design History installation is accepted, wait for Sheldon to provide the completed Philosophy drafts and explicitly instruct Codex to install them. Before installation, review each draft against the existing Philosophy boundaries and repository authority model.
+Await Sheldon's explicit direction to begin Principles exploration. Proposed Derived Principles remain unaccepted source signals and must not be treated as adopted Principles.
 
 Do not begin domain-software architecture until Spark OS scope and Philosophy are sufficiently established to constrain it.
 
