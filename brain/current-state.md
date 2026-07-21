@@ -2,8 +2,8 @@
 
 **Last updated:** 2026-07-20  
 **Current phase:** Repository foundation  
-**Current milestone:** Review and merge Spark Brain v2  
-**Status:** Migration verified on pull request #2; pending human review and merge
+**Current milestone:** Establish repository foundation before Philosophy development
+**Status:** Spark Brain v2 merged; Conversation Archive System installed and audited
 
 ## Repository Reality
 
@@ -15,6 +15,9 @@
 - Academy content remains under `04-academy/`.
 - Brain v1 business and duplicate authority files are retired by ADR-0002.
 - `/meta` and the root `/adr` system are no longer active authorities on the migration branch.
+- Pull request #2 was reviewed and merged into `main` at commit `02c07f27ff107a98278b41dd3e5853fa2a76efec`.
+- Design conversations may be preserved under `99-archive/design-history/` as historical reference only.
+- Repository documents, Governance, Canon, Philosophy, and canonical ADRs remain authoritative over archived conversations.
 
 ## Last Completed
 
@@ -25,21 +28,24 @@
 - Installed the Spark Brain v2 operating layer, machine-readable manifest, executable validator, and GitHub Actions integrity workflow.
 - Re-read the pull-request diff and verified the authority reconciliation.
 - Repository Integrity workflow run `29791884214` completed successfully on migration head `a40fc7e8740e56db2021c8266a8b60d5a1e8e825` before this closeout update.
+- Sheldon completed the semantic review and manual merge of pull request #2.
+- Installed the Conversation Archive System under `99-archive/design-history/` with explicit authority boundaries, naming rules, cross-linking guidance, and a durable workflow.
+- Archived the first design-history summary covering the Spark Brain v1 to v2 migration.
+- Added a required conversation-summary template and governing contribution rule for future archive entries.
 
 ## Current Priority
 
-Review and merge pull request #2 after the final integrity workflow succeeds on the latest head.
+Accept the audited Conversation Archive System without allowing archived conversations to become a competing source of truth.
 
 ## Next Task
 
-After this migration is merged, complete the unfinished Philosophy foundation in the sequence defined by `01-philosophy/README.md`, beginning with the Manifesto.
+After the Conversation Archive System is accepted, complete the unfinished Philosophy foundation in the sequence defined by `01-philosophy/README.md`, beginning with the Manifesto.
 
 Do not begin domain-software architecture until Spark OS scope and Philosophy are sufficiently established to constrain it.
 
 ## Known Blockers
 
-- Spark Brain v2 is not active on `main` until pull request #2 is merged.
-- Human review is still required for semantic quality even when automated integrity checks pass.
+- No known blockers.
 
 ## Resume Instruction
 

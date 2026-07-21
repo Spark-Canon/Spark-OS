@@ -1,45 +1,42 @@
 # Session Continuity
 
 **Session date:** 2026-07-20  
-**Branch:** `spark-brain-v2-migration`  
-**Pull request:** #2 — Migrate Spark Brain to repository control plane  
-**Session status:** Migration complete and verified; pending human review and merge  
-**Verified migration head before closeout:** `a40fc7e8740e56db2021c8266a8b60d5a1e8e825`
+**Branch:** `install-conversation-archive-system`
+**Session status:** Conversation Archive System installed and audited; acceptance pending
+**Starting commit:** `02c07f27ff107a98278b41dd3e5853fa2a76efec`
 
 ## Session Objective
 
-Migrate Spark Brain from a competing knowledge hierarchy into a repository control plane that provides deterministic startup, navigation, state continuity, and integrity validation.
+Install a permanent archive for foundational Spark OS design conversations while preserving the repository as the only authoritative source of accepted project knowledge.
 
 ## Decisions Made
 
-- Use in-place migration rather than rollback.
-- Keep the numbered Spark OS repository architecture authoritative.
-- Keep the existing Governance ADR directory as the only ADR system.
-- Retire Brain v1 business-knowledge files instead of repairing them as canonical sources.
-- Preserve retirement history through Git and an archive record rather than duplicate archived copies.
-- Add a machine-readable manifest and executable validator.
-- Keep pull request #2 open for human review rather than merging architectural changes automatically.
+- Place design-conversation history under `99-archive/design-history/`.
+- Keep archived conversations historical and non-authoritative.
+- Keep `02-governance/architecture-decisions/` as the only canonical ADR system.
+- Store concise summaries separately from optional raw transcripts.
+- Permit separate historical decision-context records without ADR numbering or decision authority.
+- Require archive summaries to cross-link relevant ADRs, pull requests, commits, and repository documents whenever possible.
+- Add the archive README to the Spark Brain integrity manifest so the installation cannot disappear silently.
+- Use the first archived Spark Brain migration summary as the reference implementation for the required summary template.
+- Require future summaries to use the template, preserve non-authoritative notices, follow the archive naming and placement rules, and cross-link authoritative outcomes.
+- Do not create a new ADR because the archive implements existing source-of-truth and archive rules without changing authority, boot order, governance relationships, or canonical locations.
 
 ## Verification Performed
 
-- Re-read the root README, CONTRIBUTING guide, Philosophy framework, and key Governance documents.
-- Compared the pre-Brain commit with `main` to identify every v1 change.
-- Re-fetched Brain v1 files completely and rejected the earlier truncation conclusion.
-- Confirmed the remaining prior-audit findings about duplicate authorities and incomplete integration.
-- Inspected the complete migration comparison and pull-request patch.
-- Verified that Brain v1 business files, `/meta`, and the root `/adr` system are removed in the migration diff.
-- Verified that ADR-0002 uses the canonical Governance ADR location and numbering.
-- Verified that the manifest and human-readable repository map assign the same authority roots.
-- Verified that the Repository Integrity workflow run `29791884214` completed successfully.
-
-## Remaining Review
-
-- Confirm the final integrity workflow succeeds after this closeout update.
-- Review pull request #2 semantically.
-- Merge only after acceptance.
+- Performed Full Architectural Boot before changing archive and contribution structure.
+- Confirmed alignment with ADR-0001 and ADR-0002.
+- Confirmed the design-history archive does not create a second ADR, Governance, Philosophy, or Canon system.
+- Confirmed pull request #2 is merged into `main` at commit `02c07f27ff107a98278b41dd3e5853fa2a76efec`.
+- Created persistent directories for summaries, transcripts, and historical decision context.
+- Updated archive navigation, contribution guidance, integrity requirements, current state, and session continuity.
+- Re-read every changed document and reviewed the complete diff for authority conflicts and duplication.
+- Confirmed all requested directories and naming conventions are present.
+- Confirmed relative Markdown links resolve through repository integrity validation.
+- Repository integrity validation passed after installation.
+- Archived `2026-07-20-spark-brain-v1-to-v2-summary.md` with authoritative document, PR, commit, and archive links.
+- Added `SUMMARY-TEMPLATE.md`, made it an integrity-required file, and established its use as a contribution rule.
 
 ## Next Resume Point
 
-Open [`resume.md`](resume.md), perform Quick Resume to review pull request #2, or Full Architectural Boot before changing the migration architecture.
-
-After merge, begin the unfinished Philosophy foundation with `01-philosophy/manifesto.md`.
+Review the complete Conversation Archive System diff and repository-integrity result. After acceptance, begin Philosophy development with [`../01-philosophy/manifesto.md`](../01-philosophy/manifesto.md).

@@ -15,3 +15,8 @@ Use this area for material that is no longer active because it was replaced, dep
 - avoid moving unfinished drafts here; drafts normally belong in the Workbench
 
 Git history preserves previous versions of active files. The Archive is for retired documents that remain useful as explicit historical records.
+
+## Archive Collections
+
+- [`design-history/`](design-history/) preserves summaries, optional transcripts, and historical decision context from important design conversations. It is historical reference only and does not replace Philosophy, Governance, Canon, or ADRs.
+- [`spark-brain-v1/`](spark-brain-v1/) records the retired Spark Brain v1 authority model and its replacement.

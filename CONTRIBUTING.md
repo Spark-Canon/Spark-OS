@@ -79,6 +79,22 @@ Location: `99-archive/`
 
 Use for material that is no longer active but should remain traceable. Do not archive unfinished work merely because it is incomplete; unfinished work normally belongs in the Workbench.
 
+Important design conversations may be preserved under [`99-archive/design-history/`](99-archive/design-history/) as historical reasoning. Conversation archives never become authoritative by being stored there. Accepted outcomes must be recorded in the appropriate Philosophy, Governance, Canon, or ADR document.
+
+#### Conversation Summary Rule
+
+Every archived conversation summary must:
+
+1. use [`99-archive/design-history/SUMMARY-TEMPLATE.md`](99-archive/design-history/SUMMARY-TEMPLATE.md)
+2. be stored under `99-archive/design-history/chat-summaries/`
+3. follow `YYYY-MM-DD-topic-summary.md` naming
+4. retain the historical-reference and non-authoritative notices
+5. complete every template section, using `None` or `Not available` where necessary
+6. link accepted outcomes to their authoritative repository documents rather than duplicating them
+7. include applicable ADRs, pull requests, commit SHAs, and related archive records
+
+A summary that does not meet these requirements is not ready to be added to the archive.
+
 ## Change Workflow
 
 For a small non-architectural change:

@@ -56,6 +56,8 @@
       "01-philosophy/README.md",
       "03-canon/README.md",
       "04-academy/README.md",
+      "99-archive/design-history/README.md",
+      "99-archive/design-history/SUMMARY-TEMPLATE.md",
       "99-archive/spark-brain-v1/README.md",
       "tools/validate_repository.py",
       ".github/workflows/repository-integrity.yml"
@@ -67,7 +69,9 @@
       "brain/resume.md": ["# Resume Spark OS", "## 1. Select a Boot Mode", "## 5. Verify Before Closeout"],
       "brain/current-state.md": ["# Current State", "## Repository Reality", "## Next Task", "## Known Blockers"],
       "brain/session.md": ["# Session Continuity", "## Decisions Made", "## Verification Performed", "## Next Resume Point"],
-      "brain/health.md": ["# Repository Health", "## Required Checks", "## Failure Policy"]
+      "brain/health.md": ["# Repository Health", "## Required Checks", "## Failure Policy"],
+      "99-archive/design-history/README.md": ["# Design History", "## Authority Boundaries", "## Workflow", "## Reading Order for Future AI"],
+      "99-archive/design-history/SUMMARY-TEMPLATE.md": ["## Purpose", "## Context", "## Outcome", "## Repository References", "## Unresolved Questions"]
     },
     "retired_paths": [
       "adr",
@@ -83,6 +87,7 @@
     "adr_pattern": "^ADR-(\\d{4})-[a-z0-9-]+\\.md$",
     "placeholder_exclusions": [
       "02-governance/architecture-decisions/ADR-TEMPLATE.md",
+      "99-archive/design-history/SUMMARY-TEMPLATE.md",
       "00-workbench"
     ]
   }
