@@ -37,6 +37,6 @@ The migration was reviewed through [PR #2](https://github.com/Spark-Canon/Spark-
 
 ## Related History
 
-- [Spark Brain evolution](../evolution/2026-07-20-spark-brain-evolution.md)
+- [Spark OS Architectural Evolution](../evolution/README.md)
 - [Spark Brain v1 to v2 conversation summary](../conversation-summaries/2026-07-20-spark-brain-v1-to-v2-summary.md)
 - [Retired Spark Brain v1 architecture](../retired-architectures/2026-07-20-spark-brain-v1-retired.md)

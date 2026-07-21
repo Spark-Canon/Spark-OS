@@ -36,7 +36,8 @@
 - Archived the first design-history summary covering the Spark Brain v1 to v2 migration.
 - Added a required conversation-summary template and governing contribution rule for future archive entries.
 - Reviewed and merged pull request #3, completing the Conversation Archive System installation.
-- Expanded Design History into evolution, conversation-summary, major-milestone, and retired-architecture layers while preserving the first archived summary.
+- Expanded Design History into evolution, optional transcript, conversation-summary, major-milestone, and retired-architecture layers while preserving the first archived summary.
+- Established the canonical Design History Workflow in Governance and converted Architectural Evolution into one living chronological narrative.
 
 ## Current Priority
 

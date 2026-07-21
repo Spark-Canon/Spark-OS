@@ -50,6 +50,7 @@
       "brain/health.md",
       "brain/manifest.yaml",
       "02-governance/ai-governance/AI_GOVERNANCE.md",
+      "02-governance/design-history-workflow.md",
       "02-governance/architecture-decisions/ADR-TEMPLATE.md",
       "02-governance/architecture-decisions/ADR-0001-markdown-source-of-truth.md",
       "02-governance/architecture-decisions/ADR-0002-spark-brain-control-plane.md",
@@ -70,6 +71,7 @@
       "brain/current-state.md": ["# Current State", "## Repository Reality", "## Next Task", "## Known Blockers"],
       "brain/session.md": ["# Session Continuity", "## Decisions Made", "## Verification Performed", "## Next Resume Point"],
       "brain/health.md": ["# Repository Health", "## Required Checks", "## Failure Policy"],
+      "02-governance/design-history-workflow.md": ["# Design History Workflow", "## Authority Order", "## Document Types", "## End-of-Session Review", "## Required Sequence", "## Spark Brain Boundary"],
       "99-archive/design-history/README.md": ["# Design History", "## Directory Structure", "## Authority Boundaries", "## Relationship to Spark Brain", "## Milestone Closeout Workflow", "## Reading Order"],
       "99-archive/design-history/SUMMARY-TEMPLATE.md": ["## Purpose", "## Context", "## Outcome", "## Repository References", "## Unresolved Questions"]
     },

@@ -32,7 +32,7 @@ The replacement is defined by [ADR-0002](../../../02-governance/architecture-dec
 ## Related History
 
 - [Original Spark Brain v1 archive record](../../spark-brain-v1/README.md)
-- [Spark Brain evolution](../evolution/2026-07-20-spark-brain-evolution.md)
+- [Spark OS Architectural Evolution](../evolution/README.md)
 - [Spark Brain v2 milestone](../major-milestones/2026-07-20-spark-brain-v2-milestone.md)
 - [Spark Brain v1 to v2 conversation summary](../conversation-summaries/2026-07-20-spark-brain-v1-to-v2-summary.md)
 - [PR #2](https://github.com/Spark-Canon/Spark-OS/pull/2)

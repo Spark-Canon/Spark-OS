@@ -10,6 +10,7 @@ This area defines authority, decision processes, repository standards, AI respon
 
 - [`ai-governance`](ai-governance/) — AI roles, authority, boundaries, and evolution
 - [`architecture-decisions`](architecture-decisions/) — the only canonical Architectural Decision Record system
+- [`design-history-workflow.md`](design-history-workflow.md) — rules for creating non-authoritative architectural history
 - Future standards may include:
   - document standards
   - writing standards
@@ -23,6 +24,7 @@ Spark Brain is the repository control plane. It loads, navigates, and validates 
 - Brain authority map: [`../brain/repository-map.md`](../brain/repository-map.md)
 - Machine-readable manifest: [`../brain/manifest.yaml`](../brain/manifest.yaml)
 - Control-plane decision: [`architecture-decisions/ADR-0002-spark-brain-control-plane.md`](architecture-decisions/ADR-0002-spark-brain-control-plane.md)
+- Design History workflow: [`design-history-workflow.md`](design-history-workflow.md)
 
 Governance remains authoritative for repository rules, AI roles, standards, review processes, and ADRs.
 

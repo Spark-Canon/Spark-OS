@@ -81,6 +81,8 @@ Use for material that is no longer active but should remain traceable. Do not ar
 
 Design History under [`99-archive/design-history/`](99-archive/design-history/) preserves architectural evolution, qualifying conversation summaries, completed milestones, and retired architectures. It is explanatory only. Current repository documents always win, and accepted outcomes must be recorded in the appropriate Philosophy, Governance, Canon, or ADR document.
 
+The canonical creation and closeout rules are defined in [`02-governance/design-history-workflow.md`](02-governance/design-history-workflow.md).
+
 #### Conversation Summary Rule
 
 Every archived conversation summary must:
@@ -99,7 +101,7 @@ A summary that does not meet these requirements is not ready to be added to the 
 
 After every major architectural milestone, review whether current repository documents, ADRs, Brain continuity, a milestone record, a qualifying conversation summary, an evolution narrative, or a retired-architecture explanation require updates.
 
-Not every conversation belongs in Design History. Add a conversation summary only when the conversation permanently changed Spark OS architecture. Design History must never be loaded as default Spark Brain context or used to establish current authority.
+Not every conversation belongs in Design History. Add a summary only when the conversation produced enduring insight that materially shaped, challenged, or clarified long-term architecture. Add a full transcript only when the complete exchange has exceptional historical value and has been reviewed for secrets and sensitive personal information. Design History must never be loaded as default Spark Brain context or used to establish current authority.
 
 ## Change Workflow
 

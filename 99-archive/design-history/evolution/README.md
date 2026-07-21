@@ -1,12 +1,12 @@
-# Spark Brain Evolution
+# Spark OS Architectural Evolution
 
-**Date:** 2026-07-20
+**Last updated:** 2026-07-20
 **Archive status:** Historical reference only
 **Authority:** Non-authoritative evolution narrative
 
 > Current repository documents always win.
 
-## Narrative
+## Spark Brain v1 to Spark Brain v2
 
 Spark Brain began as a repository-backed memory hierarchy intended to preserve continuity across AI conversations. Spark Brain v1 combined operating memory with vision, principles, terminology, architecture, open questions, responsibility mapping, roadmap content, and a separate ADR system.
 

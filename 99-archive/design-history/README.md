@@ -10,13 +10,17 @@ Design History preserves the architectural evolution of Spark OS: how the reposi
 
 Repository memory describes what is currently accepted through Philosophy, Governance, Canon, ADRs, and Spark Brain. Design History explains how and why that accepted state emerged.
 
-Design History is historical, explanatory, and non-authoritative. It cannot approve a proposal, amend an ADR, redefine Governance, change Canon, or direct current operations. If a historical record exposes a real conflict, begin new work in the Workbench and resolve it through the normal repository process.
+Design History is historical, explanatory, and non-authoritative. It cannot approve a proposal, amend an ADR, redefine Governance, change Canon, or direct current operations. The canonical creation rules are defined in the [Design History Workflow](../../02-governance/design-history-workflow.md).
 
 ## Directory Structure
 
 ### Evolution
 
-[`evolution/`](evolution/) contains connected narrative histories spanning multiple architectural stages. An evolution record may trace a path such as Spark Brain v1, repository audit, Spark Brain v2, and later evolution.
+[`evolution/README.md`](evolution/README.md) is the single living chronological narrative of Spark OS architecture. Update it incrementally when a completed milestone changes the project's long-term direction.
+
+### Transcripts
+
+[`transcripts/`](transcripts/) contains optional complete conversations with exceptional historical value. Transcripts have no authority, must be clearly labeled, and must be reviewed for secrets or sensitive personal information before being committed.
 
 ### Conversation Summaries
 
@@ -63,16 +67,18 @@ Use ISO dates and lowercase kebab-case topics:
 conversation-summaries/YYYY-MM-DD-topic-summary.md
 major-milestones/YYYY-MM-DD-topic-milestone.md
 retired-architectures/YYYY-MM-DD-topic-retired.md
-evolution/YYYY-MM-DD-topic-evolution.md
+transcripts/YYYY-MM-DD-topic-transcript.md
 ```
 
-For multi-session work, use the date the work concluded.
+The living evolution narrative remains `evolution/README.md`. For multi-session summaries or transcripts, use the date the work concluded.
 
 ## Cross-Linking
 
 Whenever available, link to applicable ADRs, pull requests, full commit SHAs, authoritative repository documents, and related Design History records. Links should make the history navigable without reproducing accepted knowledge.
 
 ## Milestone Closeout Workflow
+
+Follow the canonical [Design History Workflow](../../02-governance/design-history-workflow.md).
 
 After every major architectural milestone, determine whether:
 
