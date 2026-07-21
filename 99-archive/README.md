@@ -18,5 +18,5 @@ Git history preserves previous versions of active files. The Archive is for reti
 
 ## Archive Collections
 
-- [`design-history/`](design-history/) preserves summaries, optional transcripts, and historical decision context from important design conversations. It is historical reference only and does not replace Philosophy, Governance, Canon, or ADRs.
+- [`design-history/`](design-history/) preserves architectural evolution, qualifying conversation summaries, completed milestones, and retired-architecture explanations. It is explanatory only and never replaces current repository documents.
 - [`spark-brain-v1/`](spark-brain-v1/) records the retired Spark Brain v1 authority model and its replacement.

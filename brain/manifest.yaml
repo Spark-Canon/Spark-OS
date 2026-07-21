@@ -70,7 +70,7 @@
       "brain/current-state.md": ["# Current State", "## Repository Reality", "## Next Task", "## Known Blockers"],
       "brain/session.md": ["# Session Continuity", "## Decisions Made", "## Verification Performed", "## Next Resume Point"],
       "brain/health.md": ["# Repository Health", "## Required Checks", "## Failure Policy"],
-      "99-archive/design-history/README.md": ["# Design History", "## Authority Boundaries", "## Workflow", "## Reading Order for Future AI"],
+      "99-archive/design-history/README.md": ["# Design History", "## Directory Structure", "## Authority Boundaries", "## Relationship to Spark Brain", "## Milestone Closeout Workflow", "## Reading Order"],
       "99-archive/design-history/SUMMARY-TEMPLATE.md": ["## Purpose", "## Context", "## Outcome", "## Repository References", "## Unresolved Questions"]
     },
     "retired_paths": [
