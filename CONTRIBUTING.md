@@ -103,6 +103,18 @@ After every major architectural milestone, review whether current repository doc
 
 Not every conversation belongs in Design History. Add a summary only when the conversation produced enduring insight that materially shaped, challenged, or clarified long-term architecture. Add a full transcript only when the complete exchange has exceptional historical value and has been reviewed for secrets and sensitive personal information. Design History must never be loaded as default Spark Brain context or used to establish current authority.
 
+## Governing Work Method
+
+Spark OS uses **Explore → Challenge → Audit → Close → Distill** inside the existing repository lifecycle:
+
+- **Explore:** investigate an idea freely enough to expose its possibilities, assumptions, and implications.
+- **Challenge:** test it with trade-offs, counterexamples, edge cases, obligations, and credible contrary evidence.
+- **Audit:** check conceptual coherence, repository fit, authority, duplication, scope, downstream ownership, and over-complexity.
+- **Close:** declare the exploration sufficiently tested and mapped to serve as source material. Closure does not make conclusions accepted, complete, or canonical.
+- **Distill:** carry only the durable, appropriately owned content into a concise candidate for deliberate acceptance.
+
+This cycle is a working method inside the existing repository lifecycle, not another knowledge state, acceptance layer, authority, or required set of new files. Apply it proportionately; trivial mechanical changes do not require ceremonial execution of every stage.
+
 ## Change Workflow
 
 For a small non-architectural change:

@@ -115,8 +115,9 @@ The repository currently establishes:
 - the canonical ADR system
 - Spark Brain v2 startup, navigation, continuity, and integrity controls
 - the Philosophy framework and document boundaries
+- the accepted Manifesto and Values as active Philosophy foundations
 
-The next content milestone is to complete the Philosophy foundation in the sequence defined by [`01-philosophy/README.md`](01-philosophy/README.md), beginning with the Manifesto.
+The next content milestone is to develop Principles in the sequence defined by [`01-philosophy/README.md`](01-philosophy/README.md).
 
 ## Design North Star
 

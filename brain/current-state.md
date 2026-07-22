@@ -1,9 +1,9 @@
 # Current State
 
-**Last updated:** 2026-07-21  
+**Last updated:** 2026-07-22
 **Current phase:** Philosophy development
-**Current milestone:** Develop the Philosophy foundation in sequence
-**Status:** Repository architecture and foundation complete; awaiting Philosophy drafts for review and installation
+**Current milestone:** Develop Principles from the accepted Philosophy foundation
+**Status:** Manifesto and Values installed; independent verification complete
 
 ## Repository Reality
 
@@ -22,6 +22,10 @@
 - Design conversations may be preserved under `99-archive/design-history/` as historical reference only.
 - Design History remains separate from Spark Brain and is not Quick Resume or operational context.
 - Repository documents, Governance, Canon, Philosophy, Academy, and canonical ADRs remain authoritative over archived history.
+- The Manifesto and all five Values are installed as accepted and active in [`../01-philosophy/`](../01-philosophy/).
+- The governing Explore → Challenge → Audit → Close → Distill work method is defined in [`../CONTRIBUTING.md`](../CONTRIBUTING.md) and is available through Full Architectural Boot without being copied into Brain.
+- Proposed Derived Principles in the Values remain unaccepted source signals; Principles are the next Philosophy development phase.
+- Applicable mortgage-sector terminology remains a verification item before operational derivation.
 
 ## Last Completed
 
@@ -40,27 +44,23 @@
 - Confirmed Design History remains historical only, is excluded from Quick Resume and Full Architectural Boot, and never overrides current repository authority.
 - Reviewed and merged pull request #4, completing the expanded Design History installation.
 - Completed the repository-foundation closeout and transitioned Spark OS into Philosophy development.
+- Installed the approved Manifesto and Values with canonical acceptance metadata.
+- Added the five-stage governing work method to `CONTRIBUTING.md` and updated Philosophy, root, and Brain continuity navigation.
+- Completed independent verification of the corrected foundational installation; Philosophy fidelity, heading structure, navigation, formatting, and repository integrity all pass.
 
 ## Current Priority
 
-Wait for Sheldon to provide Philosophy drafts developed outside this repository, then review and revise them for coherence, clarity, downstream implications, and alignment with the existing repository authority model before installation.
+Begin deliberate Principles development only when authorized.
 
 ## Next Task
 
-Begin the Philosophy layer in repository order when drafts are supplied:
-
-1. Manifesto
-2. Values
-3. Principles
-4. Mental Models
-5. Glossary
+Await Sheldon's explicit direction to begin Principles exploration. Proposed Derived Principles remain unaccepted source signals and must not be treated as adopted Principles.
 
 Do not begin domain-software architecture until Spark OS scope and Philosophy are sufficiently established to constrain it.
 
 ## Known Blockers
 
-- Philosophy drafts have not yet been supplied.
-- No architectural or repository-integrity blockers are known.
+- No known architectural or repository-integrity blockers.
 
 ## Continuity Responsibility
 

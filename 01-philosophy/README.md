@@ -57,16 +57,8 @@ A material change should identify downstream documents that may require review.
 
 ## Current Status
 
-Sprint 1 has established the complete Philosophy framework and document boundaries.
+The Manifesto and Values are accepted and active foundations of Spark Philosophy.
 
-The documents are intentionally marked **content in development**. They are structurally active but do not yet represent a finished or accepted statement of Spark Philosophy.
+Principles are the next Philosophy development phase. Mental Models and the Glossary remain structurally established but substantively in development.
 
-Development should proceed in this order:
-
-1. Manifesto
-2. Values
-3. Principles
-4. Mental Models
-5. Glossary
-
-Do not draft all five independently. Each layer should constrain and clarify the next.
+Development remains sequential: Manifesto → Values → Principles → Mental Models → shared language. Each layer should constrain and clarify the next, while later documents may reveal ambiguity that warrants deliberate revision of an earlier document.
