@@ -1,46 +1,46 @@
 # Session Continuity
 
 **Session date:** 2026-07-22
-**Branch:** `agent/design-history-system`
-**Session status:** Foundational Philosophy installed, independently verified, and reconciled with current `main`
-**Starting commit:** `4297c9a23fb9f403622f03958958071a33793ff4`
+**Branch:** `agent/foundational-provenance-closeout`
+**Session status:** Post-foundation maintenance prepared; provenance closeout awaiting review
+**Starting commit:** `ceedf64d0ec1bf504ccb408c81cd2986be517e37`
 
 ## Session Objective
 
-Reconcile pull request #6 with the repository-foundation closeout already merged into `main`, preserve both continuity histories, and complete the verified foundational Philosophy handoff without changing repository authority or boot behavior.
+Close the completed foundational installation cleanly: retire merged branches, preserve useful non-authoritative working memory, remove redundant completed drafts, and record concise historical provenance without creating another authority or repository layer.
 
 ## Decisions Made
 
-- Preserve the repository-foundation closeout and Design History completion recorded on `main`.
-- Install the frozen approved Philosophy without substantive rewriting.
-- Keep all five Values in one canonical document and leave proposed Derived Principles unaccepted.
-- Define Explore → Challenge → Audit → Close → Distill only in [`../CONTRIBUTING.md`](../CONTRIBUTING.md).
-- Rely on Full Architectural Boot to load that Governance source; do not duplicate the method in Brain.
-- Treat Principles as the next Philosophy development phase, requiring Sheldon's explicit authorization.
-- Keep applicable mortgage-sector terminology under verification before operational derivation.
-- Do not create an ADR because the installation does not change authority, lifecycle, boot order, canonical roots, or Brain integrity guarantees.
+- Use one Major Milestone record and a small Architectural Evolution update rather than creating a new provenance system.
+- Keep current Philosophy, Governance, and Brain documents authoritative over historical records.
+- Preserve the detailed foundational audit and active task notepad in the Workbench as non-authoritative material.
+- Remove completed installation instructions and superseded candidate copies after recording their durable approval and verification evidence.
+- Close the completed Values task while retaining unresolved Principles and Governance work.
+- Retire only feature branches whose tips are fully reachable from `main`.
+- Keep Principles as the next Philosophy development phase, requiring Sheldon's explicit authorization.
 
 ## Verification Performed
 
-- Confirmed pull request #4 and the repository-foundation closeout are present on `main`.
-- Verified the released installation packet and frozen-source SHA-256 values.
-- Performed Full Architectural Boot in the required order and confirmed alignment with ADR-0001 and ADR-0002.
-- Reviewed current primary RECA mortgage-sector rules for terminology conflict before installing Values; no material conflict was found.
-- Installed the approved Manifesto and Values with only canonical metadata and mechanical Markdown formatting changes.
-- Confirmed the five-stage method is reached through `CONTRIBUTING.md` during Full Architectural Boot and is not copied into Brain.
-- Independent audit confirmed exact Philosophy fidelity, permitted scope, navigation, terminology, and repository integrity.
-- Moved the unchanged Governing Work Method section after both Design History subrules, resolving the heading-hierarchy blocker.
-- Reconciled `brain/current-state.md` and `brain/session.md` with current `main` without restoring stale Philosophy handoff language.
-- Re-ran formatting and repository integrity validation successfully after conflict resolution.
+- Confirmed pull request #6 merged into `main` at `ceedf64d0ec1bf504ccb408c81cd2986be517e37`.
+- Confirmed GitHub and local repository integrity validation passed for the foundational installation.
+- Confirmed all four retired feature-branch tips were reachable from `main` before deletion.
+- Fast-forwarded local `main` and created this maintenance branch without losing Workbench changes.
+- Reviewed the detailed audit for credential patterns and removed two local machine paths before publication.
+- Preserved approved-source hashes, installed hashes, installation commits, pull request, merge commit, and authority boundaries in the milestone record.
+- Confirmed the canonical Manifesto and Values were not modified during maintenance.
 
-## Files Changed During Conflict Resolution
+## Files in Maintenance Scope
 
-- `brain/current-state.md`
+- `00-workbench/README.md`
+- `00-workbench/task-notepad.md`
+- `00-workbench/drafts/foundational-conversation-audit.md`
+- `99-archive/design-history/evolution/README.md`
+- `99-archive/design-history/major-milestones/2026-07-22-foundational-philosophy-milestone.md`
 - `brain/session.md`
 
 ## Next Resume Point
 
-The coordinated foundational installation is verified. Await Sheldon's explicit authorization before beginning Principles exploration; proposed Derived Principles remain unaccepted source signals.
+Review and merge the post-foundation maintenance pull request. Then await Sheldon's explicit authorization before beginning Principles Exploration 001; proposed Derived Principles remain unaccepted source signals.
 
 Do not begin domain-software architecture until Spark OS scope and Philosophy are sufficiently established to constrain it.
 

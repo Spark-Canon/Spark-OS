@@ -26,6 +26,8 @@ This is the exploratory area of Spark OS. Content here may be incomplete, contra
 
 ## Structure
 
+- [`task-notepad.md`](task-notepad.md) — active cross-chat tasks and feedback awaiting review
+
 - [`architect-log`](architect-log/) — observations about how Spark OS is evolving
 - [`decisions`](decisions/) — decision proposals and reasoning before acceptance
 - [`drafts`](drafts/) — incomplete content
