@@ -14,11 +14,15 @@ LINK_PATTERN = re.compile(r"(?<!!)\[[^\]]*\]\(([^)]+)\)")
 PLACEHOLDER_PATTERN = re.compile(r"\b(?:TODO|TBD|FIXME)\b|\[PLACEHOLDER\]", re.IGNORECASE)
 
 # brain/manifest.yaml is parsed exclusively via json.loads() below: it must remain
-# JSON-compatible YAML (no comments, anchors, or non-JSON YAML syntax). This is a
-# deliberate, currently-undocumented contract; see the repository-integrity
-# hardening report for the pending decision on formalizing or migrating it.
+# valid JSON despite its .yaml extension (no comments, anchors, or non-JSON YAML
+# syntax). This is the current parsing contract, not a documented architectural
+# decision; see brain/health.md for the durable explanation.
 MAP_TABLE_ROW_PATTERN = re.compile(r"^\|[^|]*\|\s*\[[^\]]*\]\(([^)]+)\)\s*\|")
 
+# The following slug functions approximate GitHub's heading-anchor algorithm.
+# They are proportionate for this repository's current content but do not
+# guarantee full fidelity for every Unicode edge case (e.g. combining
+# diacritics); see brain/health.md, "Extending Validation".
 HEADING_PATTERN = re.compile(r"^(#{1,6})\s+(.+?)\s*#*$")
 INLINE_CODE_PATTERN = re.compile(r"`([^`]*)`")
 MD_INLINE_LINK_PATTERN = re.compile(r"\[([^\]]*)\]\([^)]*\)")
