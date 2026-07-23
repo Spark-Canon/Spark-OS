@@ -1,6 +1,6 @@
 # ADR-0003: Enforce Repository Map and Manifest Consistency in the Validator
 
-**Status:** Proposed
+**Status:** Accepted
 **Date:** 2026-07-22
 **Decision owners:** Sheldon Phillips
 **Supersedes:** None

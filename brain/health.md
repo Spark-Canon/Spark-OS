@@ -36,7 +36,7 @@ Validation must fail when any of the following is detected:
 
 `brain/manifest.yaml` uses a `.yaml` extension but is parsed exclusively through Python's `json.loads()` (see `tools/validate_repository.py`). Its actual syntax contract is JSON, not general YAML: comments, anchors, and other non-JSON YAML constructs are not supported and will fail parsing.
 
-This is the current parsing contract, not a documented architectural decision. Whether to rename the file, formalize this contract in place, or otherwise resolve the mismatch between its extension and its actual format remains an open decision.
+This parsing contract is now documented here. `brain/manifest.yaml` remains the accepted current path; no rename or format migration has occurred. A possible future filename or format migration remains an open question, and any such migration of this canonical Brain path would require a separate ADR under the Brain Constitution's Change Discipline.
 
 ## Authority Integrity
 
