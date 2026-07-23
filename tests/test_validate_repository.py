@@ -325,7 +325,7 @@ class ValidatorFixtureTest(unittest.TestCase):
 
 
 class ManifestSerializationContractTest(unittest.TestCase):
-    """Locks in the current, undocumented manifest.yaml <-> json.loads() contract."""
+    """Locks in the current manifest.yaml <-> json.loads() contract."""
 
     def test_real_manifest_is_valid_json(self) -> None:
         manifest_path = TOOLS_DIR.parent / "brain" / "manifest.yaml"
