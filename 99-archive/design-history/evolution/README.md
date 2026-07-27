@@ -1,6 +1,6 @@
 # Spark OS Architectural Evolution
 
-**Last updated:** 2026-07-22
+**Last updated:** 2026-07-27
 **Archive status:** Historical reference only
 **Authority:** Non-authoritative evolution narrative
 
@@ -42,15 +42,26 @@ The Manifesto and Values were developed through open exploration, deliberate cha
 
 This milestone established a durable pattern: exploratory detail may remain broad, but accepted repository knowledge should be distilled into the smallest coherent authoritative form. The full Explore → Challenge → Audit → Close → Distill method was placed in `CONTRIBUTING.md` as a proportionate working method rather than another authority or lifecycle.
 
-The authoritative Philosophy now begins with the accepted [Manifesto](../../../01-philosophy/manifesto.md) and [Values](../../../01-philosophy/values.md). Principles remain the next deliberately authorized development phase.
+The authoritative Philosophy began with the accepted [Manifesto](../../../01-philosophy/manifesto.md) and [Values](../../../01-philosophy/values.md).
+
+## Accepted Principles
+
+Spark OS next developed seven Principles as durable decision rules derived from the accepted Values. The work tested candidate families independently, compared the complete set for overlap and conflict, challenged the set-level gaps, and distilled one accepted document without turning operational controls into additional Philosophy.
+
+The same separation of roles governed installation: exploration and design remained non-authoritative, independent audit challenged the candidate and installation, Sheldon Phillips supplied human approval, a bounded implementation task installed the fingerprinted artifact, and a separate audit verified the result before merge.
+
+The accepted [Principles](../../../01-philosophy/principles.md) now constrain recurring consequential judgment across Spark Mortgages. Mental Models are the next Philosophy development phase; earlier proposed models remain source signals rather than accepted Philosophy.
 
 ## Related History
 
 - [Spark Brain v1 to v2 conversation summary](../conversation-summaries/2026-07-20-spark-brain-v1-to-v2-summary.md)
 - [Spark Brain v2 milestone](../major-milestones/2026-07-20-spark-brain-v2-milestone.md)
 - [Foundational Philosophy milestone](../major-milestones/2026-07-22-foundational-philosophy-milestone.md)
+- [Accepted Principles milestone](../major-milestones/2026-07-27-principles-milestone.md)
 - [Retired Spark Brain v1 architecture](../retired-architectures/2026-07-20-spark-brain-v1-retired.md)
 - [PR #2](https://github.com/Spark-Canon/Spark-OS/pull/2)
 - [PR #6](https://github.com/Spark-Canon/Spark-OS/pull/6)
+- [PR #9](https://github.com/Spark-Canon/Spark-OS/pull/9)
 - Merge commit `02c07f27ff107a98278b41dd3e5853fa2a76efec`
 - Merge commit `ceedf64d0ec1bf504ccb408c81cd2986be517e37`
+- Merge commit `0f740d8ee79b7c33a3afbb04810978a20ddbd1c4`

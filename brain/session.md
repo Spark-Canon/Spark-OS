@@ -1,46 +1,39 @@
 # Session Continuity
 
 **Session date:** 2026-07-27
-**Branch:** `agent/install-spark-os-principles`
-**Session status:** Approved Principles installed; independent verification and merge pending
-**Starting commit:** `e22d071211afa9d79bce524540bfb3346e8a0823`
+**Repository baseline:** `main` at `0f740d8ee79b7c33a3afbb04810978a20ddbd1c4`
+**Session status:** Principles milestone closed; Mental Models ready for authorization
 
 ## Session Objective
 
-Install the Spark OS Principles approved by Sheldon Phillips on 2026-07-27 without altering their substantive content, update bounded Philosophy continuity, and prepare the installation for independent verification.
+Close the verified Principles installation by recording its merged state and provenance through the existing Brain and Design History structures without altering accepted Philosophy.
 
 ## Decisions Made
 
-- Install the approved Principles artifact faithfully without rewriting substantive content.
-- Apply only the four authorized acceptance transformations: change the status to accepted and active, preserve the approved scope, remove “candidate” from the durable-decision-rules introduction, and replace the final candidate-status paragraph with the approved acceptance and Governance language.
-- Limit related updates to the five Values links, Philosophy and root navigation, and Brain continuity.
-- Keep this installation separate from pull request #8 and unrelated repository work.
-- Keep independent verification and merge pending.
-- Do not begin Mental Models on this branch.
+- Treat the accepted Principles and the other installed Philosophy documents as out of scope for closeout edits.
+- Record approval, source and installed fingerprints, installation commits, independent audit, pull request, and merge through the established Design History mechanism.
+- Advance Brain continuity to Mental Models only after confirming the audited Principles installation reached `main`.
+- Keep Principles provenance separate from pull request #8 and unrelated technical-integrity work.
+- Do not begin Mental Models or course-prototype content during closeout.
 
 ## Verification Performed
 
-- Confirmed the approved source SHA-256 matched `398DCEA61EFC2C5F9F6B67C3D08186CFFEC76E4B8E01E5391811FA35557C230C`.
-- Confirmed the installed document matched the approved source exactly after reversing the authorized acceptance transformations.
-- Confirmed all seven Principles were present in the approved order.
-- Confirmed all seven Value-to-Principle links and generated Markdown anchors.
-- Checked for stale active Principles-development status language.
-- Confirmed repository validation and `git diff --check` passed.
-- Confirmed only the six authorized files changed.
-- Confirmed no Workbench, pull request #8, Governance, Canon, Academy, or Mental Models content entered the installation commit.
+- Confirmed pull request #9 merged into `main` at `0f740d8ee79b7c33a3afbb04810978a20ddbd1c4`.
+- Confirmed the merged head was the independently audited commit `739392b196218126d3dda82d6373efa83fb47fcd`.
+- Confirmed the accepted Principles are present on GitHub `main`.
+- Confirmed the approved source and installed fingerprints remain recorded without making historical artifacts authoritative.
+- Confirmed the closeout changes only Brain continuity and the existing Design History system.
 
-## Files in Installation Scope
+## Files in Closeout Scope
 
-- `01-philosophy/principles.md`
-- `01-philosophy/values.md`
-- `01-philosophy/README.md`
-- `README.md`
 - `brain/current-state.md`
 - `brain/session.md`
+- `99-archive/design-history/evolution/README.md`
+- `99-archive/design-history/major-milestones/2026-07-27-principles-milestone.md`
 
 ## Next Resume Point
 
-Independently verify and merge the approved Principles installation. After successful verification and merge, Mental Models are the next Philosophy development phase.
+Begin Mental Models Exploration 001 only when Sheldon authorizes it. A clearly non-authoritative learning-content prototype may proceed in parallel when separately authorized.
 
 Do not begin domain-software architecture until Spark OS scope and Philosophy are sufficiently established to constrain it.
 

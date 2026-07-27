@@ -2,8 +2,8 @@
 
 **Last updated:** 2026-07-27
 **Current phase:** Philosophy development
-**Current milestone:** Verify and merge the accepted Principles installation
-**Status:** Principles approved and installed on this branch; independent verification and merge pending
+**Current milestone:** Develop Mental Models from the accepted Philosophy foundation
+**Status:** Manifesto, Values, and Principles accepted and active; Principles installation independently verified and merged
 
 ## Repository Reality
 
@@ -18,15 +18,15 @@
 - Pull request #2 was reviewed and merged into `main` at commit `02c07f27ff107a98278b41dd3e5853fa2a76efec`.
 - Pull request #3 was reviewed and merged into `main` at commit `0468ded`.
 - Pull request #4 was reviewed and merged into `main` at commit `316627d944696c680b2615b02ca7578e618da065`.
+- Pull request #9 was independently audited and merged into `main` at commit `0f740d8ee79b7c33a3afbb04810978a20ddbd1c4`.
 - The Conversation Archive System and expanded Design History system are active on `main`.
 - Design conversations may be preserved under `99-archive/design-history/` as historical reference only.
 - Design History remains separate from Spark Brain and is not Quick Resume or operational context.
 - Repository documents, Governance, Canon, Philosophy, Academy, and canonical ADRs remain authoritative over archived history.
 - The Manifesto, all five Values, and all seven Principles are installed as accepted and active in [`../01-philosophy/`](../01-philosophy/).
 - The governing Explore → Challenge → Audit → Close → Distill work method is defined in [`../CONTRIBUTING.md`](../CONTRIBUTING.md) and is available through Full Architectural Boot without being copied into Brain.
-- Sheldon Phillips approved the Principles on 2026-07-27, and the approved artifact is installed on this branch.
-- Independent verification and merge of the Principles installation remain pending.
-- Mental Models are the next Philosophy development phase after successful verification and merge.
+- Sheldon Phillips approved the Principles on 2026-07-27; their installation was independently verified and merged through pull request #9.
+- Mental Models are the next Philosophy development phase.
 - Applicable mortgage-sector terminology remains a verification item before operational derivation.
 
 ## Last Completed
@@ -49,15 +49,16 @@
 - Installed the approved Manifesto and Values with canonical acceptance metadata.
 - Added the five-stage governing work method to `CONTRIBUTING.md` and updated Philosophy, root, and Brain continuity navigation.
 - Completed independent verification of the corrected foundational installation; Philosophy fidelity, heading structure, navigation, formatting, and repository integrity all pass.
-- Installed the Principles artifact approved by Sheldon Phillips on 2026-07-27 and linked the accepted Values to their derived Principles on this branch.
+- Installed the Principles artifact approved by Sheldon Phillips on 2026-07-27 and linked the accepted Values to their derived Principles.
+- Independently verified and merged the Principles installation through pull request #9.
 
 ## Current Priority
 
-Complete independent verification and merge of the approved Principles installation.
+Begin deliberate Mental Models development when authorized.
 
 ## Next Task
 
-Verify and merge the approved Principles installation. After successful verification and merge, Mental Models become the next Philosophy development phase.
+Prepare Mental Models Exploration 001 using the accepted Manifesto, Values, and Principles as constraints. Treat earlier models and exploratory distinctions as non-authoritative source signals until they survive the governing work method.
 
 Do not begin domain-software architecture until Spark OS scope and Philosophy are sufficiently established to constrain it.
 
