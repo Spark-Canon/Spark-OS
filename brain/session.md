@@ -11,26 +11,23 @@ Install the Spark OS Principles approved by Sheldon Phillips on 2026-07-27 witho
 
 ## Decisions Made
 
-- Use one Major Milestone record and a small Architectural Evolution update rather than creating a new provenance system.
-- Keep current Philosophy, Governance, and Brain documents authoritative over historical records.
-- Preserve the detailed foundational audit and active task notepad in the Workbench as non-authoritative material.
-- Remove completed installation instructions and superseded candidate copies after recording their durable approval and verification evidence.
-- Close the completed Values task while retaining unresolved Principles and Governance work.
-- Retire only feature branches whose tips are fully reachable from `main`.
-- Install the approved Principles artifact faithfully, with only the authorized candidate-to-accepted transformations.
-- Keep independent verification and merge pending; do not begin Mental Models work on this branch.
+- Install the approved Principles artifact faithfully without rewriting substantive content.
+- Apply only the four authorized acceptance transformations: change the status to accepted and active, preserve the approved scope, remove “candidate” from the durable-decision-rules introduction, and replace the final candidate-status paragraph with the approved acceptance and Governance language.
+- Limit related updates to the five Values links, Philosophy and root navigation, and Brain continuity.
+- Keep this installation separate from pull request #8 and unrelated repository work.
+- Keep independent verification and merge pending.
+- Do not begin Mental Models on this branch.
 
 ## Verification Performed
 
-- Confirmed pull request #6 merged into `main` at `ceedf64d0ec1bf504ccb408c81cd2986be517e37`.
-- Confirmed GitHub and local repository integrity validation passed for the foundational installation.
-- Confirmed all four retired feature-branch tips were reachable from `main` before deletion.
-- Fast-forwarded local `main` and created this maintenance branch without losing Workbench changes.
-- Reviewed the detailed audit for credential patterns and removed two local machine paths before publication.
-- Preserved approved-source hashes, installed hashes, installation commits, pull request, merge commit, and authority boundaries in the milestone record.
-- Confirmed the canonical Manifesto and Values were not modified during maintenance.
-- Confirmed the approved Principles source SHA-256 before installation.
-- Installed the approved artifact and updated the five Values' Derived Principles sections, Philosophy navigation, root status, and Brain continuity.
+- Confirmed the approved source SHA-256 matched `398DCEA61EFC2C5F9F6B67C3D08186CFFEC76E4B8E01E5391811FA35557C230C`.
+- Confirmed the installed document matched the approved source exactly after reversing the authorized acceptance transformations.
+- Confirmed all seven Principles were present in the approved order.
+- Confirmed all seven Value-to-Principle links and generated Markdown anchors.
+- Checked for stale active Principles-development status language.
+- Confirmed repository validation and `git diff --check` passed.
+- Confirmed only the six authorized files changed.
+- Confirmed no Workbench, pull request #8, Governance, Canon, Academy, or Mental Models content entered the installation commit.
 
 ## Files in Installation Scope
 
