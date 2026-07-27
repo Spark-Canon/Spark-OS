@@ -57,8 +57,8 @@ A material change should identify downstream documents that may require review.
 
 ## Current Status
 
-The Manifesto and Values are accepted and active foundations of Spark Philosophy.
+The Manifesto, Values, and Principles are accepted and active foundations of Spark Philosophy.
 
-Principles are the next Philosophy development phase. Mental Models and the Glossary remain structurally established but substantively in development.
+Mental Models are the next Philosophy development phase. Mental Models and the Glossary remain structurally established but substantively in development.
 
 Development remains sequential: Manifesto → Values → Principles → Mental Models → shared language. Each layer should constrain and clarify the next, while later documents may reveal ambiguity that warrants deliberate revision of an earlier document.

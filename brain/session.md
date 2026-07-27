@@ -1,46 +1,46 @@
 # Session Continuity
 
-**Session date:** 2026-07-22
-**Branch:** `agent/foundational-provenance-closeout`
-**Session status:** Post-foundation maintenance prepared; provenance closeout awaiting review
-**Starting commit:** `ceedf64d0ec1bf504ccb408c81cd2986be517e37`
+**Session date:** 2026-07-27
+**Branch:** `agent/install-spark-os-principles`
+**Session status:** Approved Principles installed; independent verification and merge pending
+**Starting commit:** `e22d071211afa9d79bce524540bfb3346e8a0823`
 
 ## Session Objective
 
-Close the completed foundational installation cleanly: retire merged branches, preserve useful non-authoritative working memory, remove redundant completed drafts, and record concise historical provenance without creating another authority or repository layer.
+Install the Spark OS Principles approved by Sheldon Phillips on 2026-07-27 without altering their substantive content, update bounded Philosophy continuity, and prepare the installation for independent verification.
 
 ## Decisions Made
 
-- Use one Major Milestone record and a small Architectural Evolution update rather than creating a new provenance system.
-- Keep current Philosophy, Governance, and Brain documents authoritative over historical records.
-- Preserve the detailed foundational audit and active task notepad in the Workbench as non-authoritative material.
-- Remove completed installation instructions and superseded candidate copies after recording their durable approval and verification evidence.
-- Close the completed Values task while retaining unresolved Principles and Governance work.
-- Retire only feature branches whose tips are fully reachable from `main`.
-- Keep Principles as the next Philosophy development phase, requiring Sheldon's explicit authorization.
+- Install the approved Principles artifact faithfully without rewriting substantive content.
+- Apply only the four authorized acceptance transformations: change the status to accepted and active, preserve the approved scope, remove “candidate” from the durable-decision-rules introduction, and replace the final candidate-status paragraph with the approved acceptance and Governance language.
+- Limit related updates to the five Values links, Philosophy and root navigation, and Brain continuity.
+- Keep this installation separate from pull request #8 and unrelated repository work.
+- Keep independent verification and merge pending.
+- Do not begin Mental Models on this branch.
 
 ## Verification Performed
 
-- Confirmed pull request #6 merged into `main` at `ceedf64d0ec1bf504ccb408c81cd2986be517e37`.
-- Confirmed GitHub and local repository integrity validation passed for the foundational installation.
-- Confirmed all four retired feature-branch tips were reachable from `main` before deletion.
-- Fast-forwarded local `main` and created this maintenance branch without losing Workbench changes.
-- Reviewed the detailed audit for credential patterns and removed two local machine paths before publication.
-- Preserved approved-source hashes, installed hashes, installation commits, pull request, merge commit, and authority boundaries in the milestone record.
-- Confirmed the canonical Manifesto and Values were not modified during maintenance.
+- Confirmed the approved source SHA-256 matched `398DCEA61EFC2C5F9F6B67C3D08186CFFEC76E4B8E01E5391811FA35557C230C`.
+- Confirmed the installed document matched the approved source exactly after reversing the authorized acceptance transformations.
+- Confirmed all seven Principles were present in the approved order.
+- Confirmed all seven Value-to-Principle links and generated Markdown anchors.
+- Checked for stale active Principles-development status language.
+- Confirmed repository validation and `git diff --check` passed.
+- Confirmed only the six authorized files changed.
+- Confirmed no Workbench, pull request #8, Governance, Canon, Academy, or Mental Models content entered the installation commit.
 
-## Files in Maintenance Scope
+## Files in Installation Scope
 
-- `00-workbench/README.md`
-- `00-workbench/task-notepad.md`
-- `00-workbench/drafts/foundational-conversation-audit.md`
-- `99-archive/design-history/evolution/README.md`
-- `99-archive/design-history/major-milestones/2026-07-22-foundational-philosophy-milestone.md`
+- `01-philosophy/principles.md`
+- `01-philosophy/values.md`
+- `01-philosophy/README.md`
+- `README.md`
+- `brain/current-state.md`
 - `brain/session.md`
 
 ## Next Resume Point
 
-Review and merge the post-foundation maintenance pull request. Then await Sheldon's explicit authorization before beginning Principles Exploration 001; proposed Derived Principles remain unaccepted source signals.
+Independently verify and merge the approved Principles installation. After successful verification and merge, Mental Models are the next Philosophy development phase.
 
 Do not begin domain-software architecture until Spark OS scope and Philosophy are sufficiently established to constrain it.
 
