@@ -48,11 +48,10 @@ This Value can be gamed through technically accurate statements arranged to misl
 
 ### 7. Derived Principles
 
-The following are proposed downstream rules, not accepted Spark OS Principles:
+The following accepted Spark OS Principles are primarily derived from this Value:
 
-- Represent material uncertainty honestly.
-- Distinguish evidence from interpretation.
-- Give credible contrary evidence proportionate attention.
+- [Make the Basis of Judgment Clear](principles.md#1-make-the-basis-of-judgment-clear)
+- [Reconsider When Evidence Warrants It](principles.md#2-reconsider-when-evidence-warrants-it)
 
 ## The Client Before the Deal
 
@@ -93,11 +92,10 @@ This Value can be gamed by presenting the most profitable option as client-direc
 
 ### 7. Derived Principles
 
-The following are proposed downstream rules, not accepted Spark OS Principles:
+The following accepted Spark OS Principles are primarily derived from this Value:
 
-- Keep professional advice independent of transactional incentives.
-- Support informed client choice without substituting organizational preference.
-- Recommend only within lawful, competent, available, and properly scoped boundaries.
+- [Support Informed Choice](principles.md#3-support-informed-choice)
+- [Keep Conflicting Benefit From Distorting Judgment](principles.md#4-keep-conflicting-benefit-from-distorting-judgment)
 
 ## Accountability Must Remain Clear
 
@@ -140,11 +138,9 @@ This Value can be gamed by naming an owner who lacks authority or support, treat
 
 ### 7. Derived Principles
 
-The following are proposed downstream rules, not accepted Spark OS Principles:
+The following accepted Spark OS Principles are primarily derived from this Value:
 
-- Align accountability with authority and reasonable ability to act.
-- Delegation must not create material ownership gaps.
-- Spark remains accountable for operating conditions it creates or approves.
+- [Match Accountability to Authority and Ability](principles.md#5-match-accountability-to-authority-and-ability)
 
 ## Grow Without Becoming Fragile
 
@@ -189,11 +185,9 @@ This Value can be gamed by treating volume or favorable metrics as proof of capa
 
 ### 7. Derived Principles
 
-The following are proposed downstream rules, not accepted Spark OS Principles:
+The following accepted Spark OS Principles are primarily derived from this Value:
 
-- Grow through sufficient, not perfect, readiness when risk is bounded and learning is possible.
-- Distinguish temporary strain from structural fragility.
-- Do not use capability language to protect stagnation.
+- [Match Readiness to Consequence](principles.md#6-match-readiness-to-consequence)
 
 ## Build for Those Who Follow
 
@@ -236,8 +230,6 @@ This Value can be gamed through excessive preservation: retaining everything “
 
 ### 7. Derived Principles
 
-The following are proposed downstream rules, not accepted Spark OS Principles:
+The following accepted Spark OS Principles are primarily derived from this Value:
 
-- Accept proportionate present cost for foreseeable future continuity.
-- Preserve reconstructability where loss would be materially consequential.
-- Preserve and retire deliberately so future people can understand, challenge, and improve what they inherit.
+- [Preserve What Future Judgment Requires](principles.md#7-preserve-what-future-judgment-requires)
