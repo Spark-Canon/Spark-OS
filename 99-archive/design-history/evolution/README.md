@@ -55,6 +55,7 @@ The accepted [Principles](../../../01-philosophy/principles.md) now constrain re
 ## Related History
 
 - [Spark Brain v1 to v2 conversation summary](../conversation-summaries/2026-07-20-spark-brain-v1-to-v2-summary.md)
+- [Principles Exploration 001 conversation summary](../conversation-summaries/2026-07-27-principles-exploration-001-summary.md)
 - [Spark Brain v2 milestone](../major-milestones/2026-07-20-spark-brain-v2-milestone.md)
 - [Foundational Philosophy milestone](../major-milestones/2026-07-22-foundational-philosophy-milestone.md)
 - [Accepted Principles milestone](../major-milestones/2026-07-27-principles-milestone.md)
