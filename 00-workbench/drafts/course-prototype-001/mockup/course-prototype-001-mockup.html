@@ -1,0 +1,838 @@
+<title>Insured / Insurable / Uninsurable — Course Prototype 001</title>
+<style>
+  :root {
+    --paper: #edf1e8;
+    --paper-deep: #e3e9dc;
+    --rule: #c3d0be;
+    --ink: #202b26;
+    --ink-soft: #4b5b52;
+    --ink-faint: #7c897f;
+    --card: #f7f8f2;
+    --card-border: #d7ddce;
+    --accent-insured: #1f6f8b;
+    --accent-insurable: #a8722e;
+    --accent-uninsurable: #a6412b;
+    --flag-bg: #e8b93a;
+    --flag-ink: #3b2a05;
+    --stamp: #a6412b;
+    --focus: #1f6f8b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #182420;
+      --paper-deep: #14201c;
+      --rule: #2c3a32;
+      --ink: #e9eee6;
+      --ink-soft: #a7b6ac;
+      --ink-faint: #7c8a80;
+      --card: #1f2e28;
+      --card-border: #314239;
+      --accent-insured: #6fb8d6;
+      --accent-insurable: #d9a24b;
+      --accent-uninsurable: #e08669;
+      --flag-bg: #c99a2e;
+      --flag-ink: #241a02;
+      --stamp: #e08669;
+      --focus: #6fb8d6;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #182420;
+    --paper-deep: #14201c;
+    --rule: #2c3a32;
+    --ink: #e9eee6;
+    --ink-soft: #a7b6ac;
+    --ink-faint: #7c8a80;
+    --card: #1f2e28;
+    --card-border: #314239;
+    --accent-insured: #6fb8d6;
+    --accent-insurable: #d9a24b;
+    --accent-uninsurable: #e08669;
+    --flag-bg: #c99a2e;
+    --flag-ink: #241a02;
+    --stamp: #e08669;
+    --focus: #6fb8d6;
+  }
+  :root[data-theme="light"] {
+    --paper: #edf1e8;
+    --paper-deep: #e3e9dc;
+    --rule: #c3d0be;
+    --ink: #202b26;
+    --ink-soft: #4b5b52;
+    --ink-faint: #7c897f;
+    --card: #f7f8f2;
+    --card-border: #d7ddce;
+    --accent-insured: #1f6f8b;
+    --accent-insurable: #a8722e;
+    --accent-uninsurable: #a6412b;
+    --flag-bg: #e8b93a;
+    --flag-ink: #3b2a05;
+    --stamp: #a6412b;
+    --focus: #1f6f8b;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+  }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  .frame {
+    display: grid;
+    grid-template-columns: 200px minmax(0, 1fr);
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+  @media (max-width: 860px) {
+    .frame { grid-template-columns: 1fr; }
+  }
+
+  /* Rail */
+  .rail {
+    position: sticky;
+    top: 0;
+    align-self: start;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 2rem 0.75rem 2rem 1.25rem;
+    border-right: 1px solid var(--rule);
+  }
+  @media (max-width: 860px) {
+    .rail {
+      position: static;
+      height: auto;
+      display: flex;
+      gap: 0.4rem;
+      overflow-x: auto;
+      padding: 0.9rem 1rem;
+      border-right: none;
+      border-bottom: 1px solid var(--rule);
+      background: var(--paper-deep);
+    }
+  }
+  .rail-mark {
+    font-family: ui-serif, Georgia, "Times New Roman", serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+    margin: 0 0 1.1rem;
+    letter-spacing: 0.02em;
+  }
+  @media (max-width: 860px) { .rail-mark { display: none; } }
+  .rail a {
+    display: block;
+    padding: 0.42rem 0.6rem;
+    margin-bottom: 0.15rem;
+    color: var(--ink-soft);
+    text-decoration: none;
+    font-size: 0.86rem;
+    border-left: 2px solid transparent;
+    white-space: nowrap;
+  }
+  .rail a:hover { color: var(--ink); border-left-color: var(--rule); }
+  .rail a:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+
+  main { padding: 0 1.75rem 6rem; min-width: 0; }
+  @media (max-width: 860px) { main { padding: 0 1.1rem 5rem; } }
+
+  .col { max-width: 720px; margin: 0 auto; }
+
+  /* Cover / header */
+  .cover {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 3rem 0 1.75rem;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+  .eyebrow {
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+  h1 {
+    font-family: ui-serif, Georgia, "Times New Roman", serif;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1.15;
+    margin: 0.4rem 0 0.6rem;
+    text-wrap: balance;
+    max-width: 20ch;
+  }
+  .dek { color: var(--ink-soft); font-size: 1rem; max-width: 58ch; margin: 0; }
+
+  .stamp {
+    position: absolute;
+    top: 2.6rem;
+    right: -0.5rem;
+    border: 2px solid var(--stamp);
+    color: var(--stamp);
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.35rem 0.55rem;
+    transform: rotate(4deg);
+    border-radius: 3px;
+    line-height: 1.3;
+    text-align: center;
+  }
+  @media (max-width: 560px) { .stamp { position: static; display: inline-block; transform: rotate(-1.5deg); margin-top: 0.9rem; } }
+
+  .filelabel {
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.9rem;
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    padding: 0.85rem 1rem;
+  }
+  @media (max-width: 560px) { .filelabel { grid-template-columns: 1fr 1fr; } }
+  .filelabel dt {
+    font-family: ui-monospace, monospace;
+    font-size: 0.66rem;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin: 0 0 0.15rem;
+  }
+  .filelabel dd { margin: 0; font-size: 0.86rem; color: var(--ink); }
+
+  /* Sections */
+  section { max-width: 720px; margin: 0 auto; padding: 2.75rem 0; border-bottom: 1px solid var(--rule); }
+  section:last-of-type { border-bottom: none; }
+  .section-eyebrow {
+    font-family: ui-monospace, monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--accent-insured);
+    margin: 0 0 0.4rem;
+  }
+  h2 {
+    font-family: ui-serif, Georgia, serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin: 0 0 0.9rem;
+    text-wrap: balance;
+  }
+  h3 { font-family: ui-serif, Georgia, serif; font-size: 1.12rem; margin: 1.4rem 0 0.5rem; }
+  p { margin: 0 0 0.9rem; }
+  .lede { color: var(--ink-soft); font-size: 0.95rem; }
+
+  .flag {
+    background: var(--flag-bg);
+    color: var(--flag-ink);
+    font-family: ui-monospace, monospace;
+    font-size: 0.78rem;
+    padding: 0.05rem 0.4rem;
+    border-radius: 2px;
+    white-space: normal;
+  }
+
+  /* Outcomes */
+  .outcomes { display: grid; gap: 0.6rem; }
+  .outcome-row {
+    display: grid;
+    grid-template-columns: 7.5rem 1fr;
+    gap: 1rem;
+    padding: 0.7rem 0;
+    border-top: 1px solid var(--rule);
+  }
+  .outcome-row:first-child { border-top: none; }
+  .outcome-tag {
+    font-family: ui-monospace, monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    padding-top: 0.1rem;
+  }
+  .outcome-row p { margin: 0; font-size: 0.92rem; }
+  .not-tested { color: var(--ink-faint); font-style: italic; }
+
+  /* Category cards */
+  .cat-grid { display: grid; gap: 0.85rem; margin: 1.2rem 0 1.6rem; }
+  .cat-card {
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-left: 4px solid var(--cat-color, var(--ink-faint));
+    border-radius: 3px;
+    padding: 1rem 1.15rem;
+  }
+  .cat-card[data-cat="insured"] { --cat-color: var(--accent-insured); }
+  .cat-card[data-cat="insurable"] { --cat-color: var(--accent-insurable); }
+  .cat-card[data-cat="uninsurable"] { --cat-color: var(--accent-uninsurable); }
+  .cat-name {
+    font-family: ui-serif, Georgia, serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--cat-color, var(--ink));
+    margin: 0 0 0.35rem;
+  }
+  .cat-card p { margin: 0; font-size: 0.92rem; }
+
+  .callout {
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    padding: 0.9rem 1.05rem;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+  }
+  .callout .section-eyebrow { color: var(--ink-faint); }
+
+  /* Case cards (details/summary, no JS) */
+  .case-card {
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-left: 4px solid var(--ink-faint);
+    border-radius: 3px;
+    margin-bottom: 0.9rem;
+    transition: border-color 0.15s ease;
+  }
+  .case-card[open][data-cat="insured"] { border-left-color: var(--accent-insured); }
+  .case-card[open][data-cat="insurable"] { border-left-color: var(--accent-insurable); }
+  .case-card[open][data-cat="uninsurable"] { border-left-color: var(--accent-uninsurable); }
+
+  .case-card summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 1rem 1.15rem;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .case-card summary::-webkit-details-marker { display: none; }
+  .case-card summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  .case-id {
+    font-family: ui-monospace, monospace;
+    font-size: 0.78rem;
+    color: var(--ink-faint);
+    letter-spacing: 0.04em;
+  }
+  .case-facts { font-size: 0.92rem; margin: 0.25rem 0 0; color: var(--ink); }
+  .reveal-btn {
+    font-family: ui-monospace, monospace;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent-insured);
+    white-space: nowrap;
+    align-self: center;
+  }
+  .case-card[open] .reveal-btn::after { content: "hide"; }
+  .case-card:not([open]) .reveal-btn::after { content: "reveal"; }
+
+  .case-body { padding: 0 1.15rem 1.15rem; }
+  .case-qs {
+    margin: 0 0 1rem;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 0.3rem;
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+  }
+  .case-qs li::before { content: "— "; color: var(--ink-faint); }
+
+  .case-tag {
+    display: inline-block;
+    font-family: ui-monospace, monospace;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.15rem 0.5rem;
+    border-radius: 2px;
+    margin-bottom: 0.55rem;
+    color: var(--paper);
+    background: var(--cat-color, var(--ink-faint));
+  }
+  .case-card[data-cat="insured"] .case-tag { --cat-color: var(--accent-insured); }
+  .case-card[data-cat="insurable"] .case-tag { --cat-color: var(--accent-insurable); }
+  .case-card[data-cat="uninsurable"] .case-tag { --cat-color: var(--accent-uninsurable); }
+
+  .case-body p { font-size: 0.92rem; margin: 0; }
+
+  /* Knowledge check (MCQ) */
+  .mcq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 0.8rem;
+    margin-top: 1.2rem;
+  }
+  .mcq-card {
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-left: 4px solid var(--ink-faint);
+    border-radius: 3px;
+    transition: border-color 0.15s ease;
+  }
+  .mcq-card[open] { border-left-color: var(--accent-insured); }
+  .mcq-card summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 0.8rem 0.9rem 0.55rem;
+    display: flex;
+    gap: 0.55rem;
+    align-items: baseline;
+  }
+  .mcq-card summary::-webkit-details-marker { display: none; }
+  .mcq-card summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  .mcq-card[open] .reveal-btn::after { content: "hide"; }
+  .mcq-card:not([open]) .reveal-btn::after { content: "reveal"; }
+  .mcq-num {
+    font-family: ui-monospace, monospace;
+    font-size: 0.74rem;
+    color: var(--ink-faint);
+    padding-top: 0.1rem;
+  }
+  .mcq-stem { font-size: 0.89rem; margin: 0; flex: 1; }
+  .mcq-options {
+    margin: 0 0.9rem 0.7rem 2.35rem;
+    padding: 0;
+    font-size: 0.83rem;
+    color: var(--ink-soft);
+    display: grid;
+    gap: 0.2rem;
+  }
+  .mcq-options li::marker { font-family: ui-monospace, monospace; color: var(--ink-faint); }
+  .mcq-answer {
+    margin: 0 0.9rem 0.85rem 2.35rem;
+    font-family: ui-monospace, monospace;
+    font-size: 0.78rem;
+    color: var(--accent-insured);
+    font-weight: 600;
+  }
+
+  /* Assessment */
+  .q-card {
+    border-top: 1px solid var(--rule);
+    padding: 1.1rem 0;
+  }
+  .q-card:first-child { border-top: none; }
+  .q-num {
+    font-family: ui-monospace, monospace;
+    font-size: 0.78rem;
+    color: var(--ink-faint);
+  }
+  .q-prompt { font-size: 0.98rem; margin: 0.25rem 0 0.6rem; }
+  .q-card details summary {
+    cursor: pointer;
+    font-family: ui-monospace, monospace;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent-insured);
+    list-style: none;
+  }
+  .q-card details summary::-webkit-details-marker { display: none; }
+  .q-card details summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  .q-card details[open] summary::after { content: " · hide"; color: var(--ink-faint); }
+  .q-answer {
+    margin-top: 0.7rem;
+    display: grid;
+    gap: 0.5rem;
+    font-size: 0.88rem;
+  }
+  .q-answer .row dt {
+    font-family: ui-monospace, monospace;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-faint);
+    margin: 0 0 0.1rem;
+  }
+  .q-answer .row dd { margin: 0; color: var(--ink); }
+
+  /* Facilitator notes */
+  .fac-list { margin: 0; padding: 0; list-style: none; display: grid; gap: 0.9rem; }
+  .fac-list li { font-size: 0.92rem; }
+  .fac-list strong { display: block; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-faint); margin-bottom: 0.15rem; font-weight: 600; }
+
+  /* Source map table */
+  .tablewrap { overflow-x: auto; border: 1px solid var(--rule); border-radius: 3px; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.86rem; }
+  th, td { text-align: left; padding: 0.6rem 0.8rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  thead th {
+    font-family: ui-monospace, monospace;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--ink-faint);
+    background: var(--paper-deep);
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  td.cat { font-family: ui-monospace, monospace; font-size: 0.78rem; white-space: nowrap; color: var(--ink-soft); }
+
+  footer.colophon {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2rem 0 4rem;
+    font-size: 0.82rem;
+    color: var(--ink-faint);
+  }
+  footer.colophon a { color: var(--ink-soft); }
+</style>
+
+<div class="frame">
+  <nav class="rail" aria-label="Section navigation">
+    <p class="rail-mark">Prototype 001</p>
+    <a href="#brief">Brief</a>
+    <a href="#outcomes">Outcomes</a>
+    <a href="#learn">Learn</a>
+    <a href="#apply">Apply</a>
+    <a href="#assessment">Assessment</a>
+    <a href="#knowledge-check">Knowledge check</a>
+    <a href="#facilitator">Facilitator notes</a>
+    <a href="#sourcemap">Source map</a>
+  </nav>
+
+  <main>
+    <header class="cover">
+      <p class="eyebrow">Spark Academy · Workbench · Course prototype 001</p>
+      <h1>Insured, Insurable, and Uninsurable Mortgages</h1>
+      <p class="dek">An interactive mock-up of the reviewed course draft — same content as <code>prototype-course.md</code>, laid out the way a learner would actually work through it.</p>
+      <div class="stamp">Workbench draft<br>Non-authoritative</div>
+      <dl class="filelabel">
+        <div><dt>Learner</dt><dd>New / developing agent</dd></div>
+        <div><dt>Est. time</dt><dd>30–45 min (unverified)</dd></div>
+        <div><dt>Status</dt><dd>Not approved for client, compliance, or training reliance</dd></div>
+      </dl>
+    </header>
+
+    <section id="brief">
+      <p class="section-eyebrow">Prototype brief</p>
+      <h2>Scope, and what this deliberately leaves out</h2>
+      <p><strong>Purpose.</strong> Test what a narrow, real-feeling Academy lesson actually requires — source material, traceability, simplification limits, and the boundary between what AI can safely draft and what needs a human subject-matter expert.</p>
+      <p><strong>Scope.</strong> The conceptual distinction between Insured, Insurable, and Uninsurable mortgage categories; why the distinction changes how a file should be worked; and when a new agent should stop and verify rather than commit to a classification.</p>
+      <p><strong>Explicit exclusions.</strong> Exact current thresholds, premium rates, lender-specific programs, qualifying-rate mechanics, compliance citations, and any client-facing script — excluded because no Spark Canon source exists yet to state them accurately.</p>
+      <p><strong>Source limitations.</strong> <span class="flag">Spark Canon currently has no mortgage domain content</span>. Every specific regulatory figure below is a placeholder. The general category structure itself is a prototype assumption, not a verified source — see the source map at the bottom of this page.</p>
+    </section>
+
+    <section id="outcomes">
+      <p class="section-eyebrow">Learning outcomes</p>
+      <h2>Working design tool, not an accepted taxonomy</h2>
+      <div class="outcomes">
+        <div class="outcome-row"><div class="outcome-tag">Know</div><p>The names of the three categories and the general factors that distinguish them.</p></div>
+        <div class="outcome-row"><div class="outcome-tag">Understand</div><p>Why two files with the same down payment percentage can land in different categories.</p></div>
+        <div class="outcome-row"><div class="outcome-tag">Judge</div><p>Whether a file's known facts support a confident classification, or a specific gap requires verification first.</p></div>
+        <div class="outcome-row"><div class="outcome-tag">Perform</div><p class="not-tested">Not exercised here — correctly classifying a live file is a practice-and-supervision outcome. Completing this does not establish competence.</p></div>
+      </div>
+    </section>
+
+    <section id="learn">
+      <p class="section-eyebrow">Learn</p>
+      <h2>Why the categories exist</h2>
+      <p class="lede">Default insurance changes who bears the risk if a borrower defaults, which changes the rate and terms a lender is willing to offer. <span class="flag">[PLACEHOLDER — requires Canon-confirmed regulatory framing]</span></p>
+
+      <div class="cat-grid">
+        <article class="cat-card" data-cat="insured">
+          <p class="cat-name">Insured</p>
+          <p>Default insurance is required and obtained — generally a lower down payment ("high-ratio") on an owner-occupied purchase. The borrower typically pays the premium. <span class="flag">[PLACEHOLDER — current threshold, price cap, amortization limit]</span></p>
+        </article>
+        <article class="cat-card" data-cat="insurable">
+          <p class="cat-name">Insurable</p>
+          <p>Down payment is high enough that insurance isn't required for the borrower's sake, but the file still meets insurer eligibility — so a lender can insure it for their own funding purposes. No premium cost to the borrower. <span class="flag">[PLACEHOLDER — current eligibility criteria]</span></p>
+        </article>
+        <article class="cat-card" data-cat="uninsurable">
+          <p class="cat-name">Uninsurable</p>
+          <p>Doesn't meet insurer eligibility regardless of down payment — usually driven by <strong>transaction type or property use</strong> (e.g. refinances, non-owner-occupied properties), not the down payment amount. <span class="flag">[PLACEHOLDER — complete current exclusion list]</span></p>
+        </article>
+      </div>
+
+      <h3>Why it matters to an agent</h3>
+      <p>The category affects the rate a lender is likely to offer, whether the client pays a premium, which lenders and programs are realistically available, and what the file needs to demonstrate for the classification to hold up. Getting it wrong isn't a labelling error — it can mean presenting a client with a rate or program that was never actually available to them.</p>
+
+      <div class="callout">
+        <p class="section-eyebrow">Common new-agent misreading</p>
+        <p style="margin:0">Down payment is the most visible number on a file, so it's tempting to treat it as the whole answer: "20% down, so it's Insurable." The Apply cases below are built specifically to break that assumption.</p>
+      </div>
+    </section>
+
+    <section id="apply">
+      <p class="section-eyebrow">Apply</p>
+      <h2>Five fictional cases</h2>
+      <p class="lede">No real client information. Numbers are illustrative, not current figures. Work each case before revealing the reasoning.</p>
+
+      <details class="case-card" data-cat="insured">
+        <summary>
+          <div><span class="case-id">Case 1</span><p class="case-facts">Purchase, owner-occupied single-family, $450,000, 10% down, 25-yr amortization, stable salaried income.</p></div>
+          <span class="reveal-btn"></span>
+        </summary>
+        <div class="case-body">
+          <ul class="case-qs">
+            <li>Which category does this point toward?</li>
+            <li>What fact drove that answer?</li>
+            <li>What would you still verify before treating it as settled?</li>
+            <li>Would you escalate this file?</li>
+          </ul>
+          <span class="case-tag">Points toward Insured</span>
+          <p>Down payment is below the low-ratio range on a standard owner-occupied purchase — the pattern that generally drives Insured. This still depends on price and amortization sitting inside current insurer limits, which aren't confirmed here. Strongest answer: "likely Insured, pending price/amortization confirmation," not a flat, fully-settled "Insured."</p>
+        </div>
+      </details>
+
+      <details class="case-card" data-cat="insurable">
+        <summary>
+          <div><span class="case-id">Case 2</span><p class="case-facts">Purchase, owner-occupied condo, $600,000, 25% down, 25-yr amortization, primary residence.</p></div>
+          <span class="reveal-btn"></span>
+        </summary>
+        <div class="case-body">
+          <ul class="case-qs">
+            <li>Which category does this point toward?</li>
+            <li>What fact drove that answer?</li>
+            <li>What would you still verify before treating it as settled?</li>
+            <li>Would you escalate this file?</li>
+          </ul>
+          <span class="case-tag">Points toward Insurable, not Insured</span>
+          <p>Down payment is high enough that insurance isn't required for the borrower's sake — but that doesn't mean the file is exempt from every eligibility question, just that the <em>cost</em> falls differently. The common error is concluding "high down payment = no insurance considerations at all," which conflates Insured and Insurable as if only one involves insurance eligibility.</p>
+        </div>
+      </details>
+
+      <details class="case-card" data-cat="uninsurable">
+        <summary>
+          <div><span class="case-id">Case 3</span><p class="case-facts">Refinance of an owner-occupied home to consolidate debt, ~35% equity, 25-yr amortization requested.</p></div>
+          <span class="reveal-btn"></span>
+        </summary>
+        <div class="case-body">
+          <ul class="case-qs">
+            <li>Which category does this point toward?</li>
+            <li>What fact drove that answer?</li>
+            <li>What would you still verify before treating it as settled?</li>
+            <li>Would you escalate this file?</li>
+          </ul>
+          <span class="case-tag">Uninsurable — equity is irrelevant here</span>
+          <p>This is the case most likely to be misjudged by someone anchored on down payment size: 35% equity looks strong, but refinances are generally excluded by <strong>transaction type</strong>, independent of how much equity exists. Not every factor is a spectrum — some are a hard structural gate.</p>
+        </div>
+      </details>
+
+      <details class="case-card" data-cat="uninsurable">
+        <summary>
+          <div><span class="case-id">Case 4</span><p class="case-facts">Purchase, non-owner-occupied rental property, $450,000, 25% down, 25-yr amortization.</p></div>
+          <span class="reveal-btn"></span>
+        </summary>
+        <div class="case-body">
+          <ul class="case-qs">
+            <li>Which category does this point toward?</li>
+            <li>What fact drove that answer?</li>
+            <li>What would you still verify before treating it as settled?</li>
+            <li>Would you escalate this file?</li>
+          </ul>
+          <span class="case-tag">Uninsurable — occupancy, not down payment</span>
+          <p>25% down looks identical to Case 2's profile, but occupancy (non-owner-occupied) independently disqualifies it. Two cases with the same down payment landing in different categories is the clearest demonstration here that down payment alone is not the whole answer.</p>
+        </div>
+      </details>
+
+      <details class="case-card" data-cat="">
+        <summary>
+          <div><span class="case-id">Case 5 — escalation case</span><p class="case-facts">Purchase, owner-occupied duplex (client occupies one unit, rents the other), price near an uncertain threshold, 15% down, 25-yr amortization, self-employed client with 1.5 years documented income.</p></div>
+          <span class="reveal-btn"></span>
+        </summary>
+        <div class="case-body">
+          <ul class="case-qs">
+            <li>Which category does this point toward?</li>
+            <li>What fact drove that answer?</li>
+            <li>What would you still verify before treating it as settled?</li>
+            <li>Would you escalate this file?</li>
+          </ul>
+          <span class="case-tag" style="background:var(--flag-bg); color:var(--flag-ink)">Cannot classify with confidence</span>
+          <p>At least three things are unresolved: whether a mixed owner-occupied/rental duplex meets current insurer occupancy rules, whether the price sits under or over a threshold the agent isn't certain of, and how self-employment documentation interacts with qualification (a related but separate question). The defensible answer isn't a guess in either direction — it's naming exactly what's unverified and escalating or checking before telling the client anything definite.</p>
+        </div>
+      </details>
+    </section>
+
+    <section id="assessment">
+      <p class="section-eyebrow">Assessment</p>
+      <h2>Recall, explanation, application, judgment</h2>
+
+      <div class="q-card">
+        <p class="q-num">1 · Recall</p>
+        <p class="q-prompt">Which of the three categories involves the borrower paying a mortgage default insurance premium?</p>
+        <details><summary>Show expected reasoning</summary>
+          <dl class="q-answer">
+            <div class="row"><dt>Expected</dt><dd>Insured, by definition.</dd></div>
+            <div class="row"><dt>Common error</dt><dd>Confusing Insured and Insurable, since both involve insurance eligibility.</dd></div>
+            <div class="row"><dt>Why it matters</dt><dd>This is the single most common confusion flagged in the Learn section.</dd></div>
+          </dl>
+        </details>
+      </div>
+
+      <div class="q-card">
+        <p class="q-num">2 · Explanation</p>
+        <p class="q-prompt">Why can two files with the same down payment percentage land in different categories?</p>
+        <details><summary>Show expected reasoning</summary>
+          <dl class="q-answer">
+            <div class="row"><dt>Expected</dt><dd>Down payment governs the Insured/Insurable split, but occupancy and transaction type can independently push a file to Uninsurable regardless of down payment.</dd></div>
+            <div class="row"><dt>Acceptable alternatives</dt><dd>Any answer naming at least one non-down-payment factor (occupancy, transaction type).</dd></div>
+            <div class="row"><dt>Common error</dt><dd>Restating that down payment matters without naming what else does.</dd></div>
+          </dl>
+        </details>
+      </div>
+
+      <div class="q-card">
+        <p class="q-num">3 · Scenario application</p>
+        <p class="q-prompt">Purchase, owner-occupied, 5% down, standard single-family, 25-yr amortization. Classify it, and state what you'd still confirm.</p>
+        <details><summary>Show expected reasoning</summary>
+          <dl class="q-answer">
+            <div class="row"><dt>Expected</dt><dd>Points toward Insured; price and amortization still need confirming against current limits.</dd></div>
+            <div class="row"><dt>Acceptable alternatives</dt><dd>"Likely Insured, pending confirmation" is strongest; a flat "Insured" with nothing flagged as unconfirmed is weaker but not wrong.</dd></div>
+            <div class="row"><dt>Common error</dt><dd>Treating the classification as fully certain with no remaining unknowns.</dd></div>
+          </dl>
+        </details>
+      </div>
+
+      <div class="q-card">
+        <p class="q-num">4 · Scenario application</p>
+        <p class="q-prompt">Refinance, owner-occupied, strong equity position. Classify it.</p>
+        <details><summary>Show expected reasoning</summary>
+          <dl class="q-answer">
+            <div class="row"><dt>Expected</dt><dd>Uninsurable, on transaction type, independent of equity.</dd></div>
+            <div class="row"><dt>Common error</dt><dd>Reasoning from equity/down payment instead of transaction type.</dd></div>
+            <div class="row"><dt>Why it matters</dt><dd>Directly re-tests the single highest-value distinction in this lesson.</dd></div>
+          </dl>
+        </details>
+      </div>
+
+      <div class="q-card">
+        <p class="q-num">5 · Professional judgment</p>
+        <p class="q-prompt">A file shows 22% down. The agent is confident that clears the bar for Insurable and moves forward without checking anything else. What's missing, and would you escalate?</p>
+        <details><summary>Show expected reasoning</summary>
+          <dl class="q-answer">
+            <div class="row"><dt>Expected</dt><dd>Down payment alone doesn't confirm eligibility — price cap, amortization, occupancy, and transaction type still need checking before treating the file as settled.</dd></div>
+            <div class="row"><dt>Acceptable alternatives</dt><dd><span class="flag">Unresolved — Spark hasn't yet defined what threshold of doubt requires escalation vs. self-verification.</span> Both "escalate" and "verify independently" are currently defensible.</dd></div>
+            <div class="row"><dt>Why it matters</dt><dd>Same reasoning error as Cases 3 and 4, tested without the scaffolding — checks whether the lesson generalized or was just pattern-matched.</dd></div>
+          </dl>
+        </details>
+      </div>
+    </section>
+
+    <section id="knowledge-check">
+      <p class="section-eyebrow">Knowledge check</p>
+      <h2>12 multiple-choice items — Know / Understand only</h2>
+      <p class="lede">Supplementary to the Assessment above, not a replacement — multiple choice can't honestly test judgment. A perfect score doesn't establish competence. A couple of items use "verify before classifying" as the correct choice on purpose, so the format doesn't quietly train false confidence.</p>
+
+      <div class="mcq-grid">
+        <details class="mcq-card">
+          <summary><span class="mcq-num">1</span><p class="mcq-stem">Which category involves the borrower paying a mortgage default insurance premium?</p><span class="reveal-btn"></span></summary>
+          <ol class="mcq-options" type="A"><li>Insured</li><li>Insurable</li><li>Uninsurable</li><li>All three</li></ol>
+          <p class="mcq-answer">Answer: A</p>
+        </details>
+
+        <details class="mcq-card">
+          <summary><span class="mcq-num">2</span><p class="mcq-stem">In the Insurable category, who typically decides whether default insurance is obtained?</p><span class="reveal-btn"></span></summary>
+          <ol class="mcq-options" type="A"><li>The client, for their own protection</li><li>The lender, for their own funding purposes</li><li>The insurer, automatically</li><li>Insurance is never obtained on an Insurable file</li></ol>
+          <p class="mcq-answer">Answer: B</p>
+        </details>
+
+        <details class="mcq-card">
+          <summary><span class="mcq-num">3</span><p class="mcq-stem">Which factor most directly excludes a purchase from insurer eligibility, regardless of down payment?</p><span class="reveal-btn"></span></summary>
+          <ol class="mcq-options" type="A"><li>The client's credit score</li><li>Property occupancy/use and transaction type</li><li>The lender's internal volume targets</li><li>The client's age</li></ol>
+          <p class="mcq-answer">Answer: B</p>
+        </details>
+
+        <details class="mcq-card">
+          <summary><span class="mcq-num">4</span><p class="mcq-stem">Two files both have 25% down. One is Insurable, one Uninsurable. Most likely explanation?</p><span class="reveal-btn"></span></summary>
+          <ol class="mcq-options" type="A"><li>Data entry error — down payment always decides the category</li><li>They differ on a structural factor such as occupancy or transaction type</li><li>The Insurable file must have a higher credit score</li><li>The Uninsurable file must have a shorter amortization</li></ol>
+          <p class="mcq-answer">Answer: B</p>
+        </details>
+
+        <details class="mcq-card">
+          <summary><span class="mcq-num">5</span><p class="mcq-stem">Purchase, owner-occupied townhouse, 8% down, 25-yr amortization. Strongest classification?</p><span class="reveal-btn"></span></summary>
+          <ol class="mcq-options" type="A"><li>Uninsurable — 8% is too low</li><li>Insurable — the client is a first-time buyer</li><li>Likely Insured, pending price/amortization confirmation</li><li>Cannot be classified — occupancy is unclear</li></ol>
+          <p class="mcq-answer">Answer: C</p>
+        </details>
+
+        <details class="mcq-card">
+          <summary><span class="mcq-num">6</span><p class="mcq-stem">Second home occupied only part of the year (not a rental, not primary residence), 30% down. First step?</p><span class="reveal-btn"></span></summary>
+          <ol class="mcq-options" type="A"><li>Classify Insurable — 30% clears the low-ratio threshold</li><li>Classify Uninsurable — it isn't the primary residence</li><li>Recognize occupancy is ambiguous; verify before classifying</li><li>Classify Insured — always the safest default</li></ol>
+          <p class="mcq-answer">Answer: C</p>
+        </details>
+
+        <details class="mcq-card">
+          <summary><span class="mcq-num">7</span><p class="mcq-stem">Refinance to consolidate debt, 40% equity. Classify it.</p><span class="reveal-btn"></span></summary>
+          <ol class="mcq-options" type="A"><li>Insured — large equity cushion</li><li>Insurable — 40% is well above any low-ratio threshold</li><li>Uninsurable — refinances are generally excluded by transaction type, regardless of equity</li><li>Cannot be determined without more information</li></ol>
+          <p class="mcq-answer">Answer: C</p>
+        </details>
+
+        <details class="mcq-card">
+          <summary><span class="mcq-num">8</span><p class="mcq-stem">Rental property purchase, 35% down, strong tenant history on other properties. Classify it.</p><span class="reveal-btn"></span></summary>
+          <ol class="mcq-options" type="A"><li>Insurable — 35% is well above the low-ratio threshold</li><li>Uninsurable — occupancy independently excludes it regardless of down payment</li><li>Insured — rental income supports qualification</li><li>Cannot be determined without a credit check</li></ol>
+          <p class="mcq-answer">Answer: B</p>
+        </details>
+
+        <details class="mcq-card">
+          <summary><span class="mcq-num">9</span><p class="mcq-stem">"The down payment is 25%, so this file is Insurable." Strongest critique of that reasoning?</p><span class="reveal-btn"></span></summary>
+          <ol class="mcq-options" type="A"><li>25% isn't actually above the low-ratio threshold</li><li>Down payment alone doesn't confirm eligibility — occupancy, transaction type, price, and amortization can independently affect the category</li><li>The agent should have said "Insured" instead</li><li>There's no flaw — that reasoning is sufficient</li></ol>
+          <p class="mcq-answer">Answer: B</p>
+        </details>
+
+        <details class="mcq-card">
+          <summary><span class="mcq-num">10</span><p class="mcq-stem">A file's price is close to a threshold the agent isn't certain is still current. Most defensible next step?</p><span class="reveal-btn"></span></summary>
+          <ol class="mcq-options" type="A"><li>Proceed with the likeliest classification, correct later if needed</li><li>Verify the current threshold, or escalate, before treating it as settled</li><li>Avoid mentioning the category until every detail is finalized</li><li>Default to Uninsurable — the safest assumption under uncertainty</li></ol>
+          <p class="mcq-answer">Answer: B</p>
+        </details>
+
+        <details class="mcq-card">
+          <summary><span class="mcq-num">11</span><p class="mcq-stem">Which is the best reason to escalate or verify a file's classification?</p><span class="reveal-btn"></span></summary>
+          <ol class="mcq-options" type="A"><li>The file involves a first-time buyer</li><li>A structural factor is unclear, or a threshold is uncertain, and the classification affects what the client is told</li><li>The loan amount is large</li><li>The client asked an unexpected question</li></ol>
+          <p class="mcq-answer">Answer: B</p>
+        </details>
+
+        <details class="mcq-card">
+          <summary><span class="mcq-num">12</span><p class="mcq-stem">Why does the category distinction matter practically, beyond naming it correctly?</p><span class="reveal-btn"></span></summary>
+          <ol class="mcq-options" type="A"><li>It's a required file-management system field</li><li>It affects likely pricing, required documentation, and which lenders/programs are realistically available</li><li>It determines the agent's commission structure</li><li>It has no practical effect beyond terminology</li></ol>
+          <p class="mcq-answer">Answer: B</p>
+        </details>
+      </div>
+    </section>
+
+    <section id="facilitator">
+      <p class="section-eyebrow">Facilitator / reviewer notes</p>
+      <h2>What this prototype can't establish on its own</h2>
+      <ul class="fac-list">
+        <li><strong>Discussion beats automated grading for</strong>Question 5 and Case 5 — both have genuinely defensible alternative answers that depend on judgment Spark hasn't operationalized yet.</li>
+        <li><strong>Requires subject-matter validation</strong>Every bracketed placeholder in Learn; the three-category framing itself; every Apply case number, to confirm it lands where intended against current thresholds.</li>
+        <li><strong>What a supervisor should observe later, in practice</strong>Whether a new agent correctly flags an occupancy or transaction-type override on a live file, rather than anchoring on down payment — and whether they escalate appropriately on genuinely ambiguous files.</li>
+        <li><strong>What this prototype cannot establish</strong>That the learner can classify a real file, that the underlying facts are currently accurate, or that completion constitutes training credit.</li>
+      </ul>
+    </section>
+
+    <section id="sourcemap">
+      <p class="section-eyebrow">Source map</p>
+      <h2>What's backed by what</h2>
+      <div class="tablewrap">
+        <table>
+          <thead><tr><th>Content</th><th>Category</th></tr></thead>
+          <tbody>
+            <tr><td>Philosophy alignment (Principles 1, 2, 3, 5, 6, 7)</td><td class="cat">Accepted Spark Philosophy</td></tr>
+            <tr><td>"Canon currently has no mortgage content"</td><td class="cat">Existing repository source</td></tr>
+            <tr><td>General three-category structure (Learn)</td><td class="cat">Prototype assumption</td></tr>
+            <tr><td>All numeric thresholds, caps, percentages</td><td class="cat">Unresolved — requires verification</td></tr>
+            <tr><td>Case 1–5 facts and figures</td><td class="cat">Fictional scenario content</td></tr>
+            <tr><td>Sheldon's experience / org. judgment</td><td class="cat">Not used in this draft</td></tr>
+            <tr><td>External authoritative source</td><td class="cat">Not used in this draft</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer class="colophon">
+      Workbench learning prototype. Non-authoritative. Not approved for operational, client, compliance, licensing, or training reliance. Companion process notes live in <code>prototype-findings.md</code>.
+    </footer>
+  </main>
+</div>
