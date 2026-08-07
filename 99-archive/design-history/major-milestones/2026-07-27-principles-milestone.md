@@ -63,5 +63,6 @@ This record preserves approval, installation, and verification provenance. It do
 
 ## Related History
 
+- [Principles Exploration 001 conversation summary](../conversation-summaries/2026-07-27-principles-exploration-001-summary.md)
 - [Spark OS Architectural Evolution](../evolution/README.md)
 - [Foundational Philosophy milestone](2026-07-22-foundational-philosophy-milestone.md)
