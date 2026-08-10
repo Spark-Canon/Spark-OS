@@ -2,8 +2,8 @@
 
 **Last updated:** 2026-08-09
 **Current phase:** Philosophy development
-**Current milestone:** Independently verify and merge the Foundational Glossary installation
-**Status:** Manifesto, Values, Principles, and Foundational Glossary accepted and active; Glossary installation pending independent verification and merge
+**Current milestone:** Foundational Glossary installation completed, independently verified, and merged
+**Status:** Manifesto, Values, Principles, and Foundational Glossary accepted and active; Mental Models in development
 
 ## Repository Reality
 
@@ -26,7 +26,7 @@
 - The Manifesto, all five Values, all seven Principles, and the ten-entry Foundational Glossary are installed as accepted and active in [`../01-philosophy/`](../01-philosophy/).
 - The governing Explore → Challenge → Audit → Close → Distill work method is defined in [`../CONTRIBUTING.md`](../CONTRIBUTING.md) and is available through Full Architectural Boot without being copied into Brain.
 - Sheldon Phillips approved the Principles on 2026-07-27; their installation was independently verified and merged through pull request #9.
-- Sheldon Phillips approved the Foundational Glossary on 2026-08-09; its installation awaits independent verification and merge.
+- Sheldon Phillips approved the Foundational Glossary on 2026-08-09. Pull request #13 installed it, the installation was independently verified retroactively, and it merged at `f2ce678ae65de1dd24c1fea237fd208fce2e454a`.
 - Foundational Glossary development is complete. Mental Models remain in development.
 - Applicable mortgage-sector terminology remains a verification item before operational derivation.
 
@@ -52,15 +52,15 @@
 - Completed independent verification of the corrected foundational installation; Philosophy fidelity, heading structure, navigation, formatting, and repository integrity all pass.
 - Installed the Principles artifact approved by Sheldon Phillips on 2026-07-27 and linked the accepted Values to their derived Principles.
 - Independently verified and merged the Principles installation through pull request #9.
-- Installed Foundational Glossary Candidate 001 as the accepted and active ten-entry Foundational Glossary; independent verification and merge remain pending.
+- Installed Foundational Glossary Candidate 001 through pull request #13 as the accepted and active ten-entry Foundational Glossary, independently verified the installation retroactively, and merged it at `f2ce678ae65de1dd24c1fea237fd208fce2e454a`.
 
 ## Current Priority
 
-Independently verify and merge the approved Foundational Glossary installation. Do not begin another Philosophy task as part of this installation.
+Review current authorized Workbench priorities before selecting another material project. Mental Models remain evidence-gated and in development.
 
 ## Next Task
 
-Independently verify the Foundational Glossary installation and merge it only after verification passes. Mental Models remain in development and outside this installation task.
+Review current authorized Workbench priorities and available evidence before selecting the next material project. Do not force Mental Models into Distill without sufficient evidence and readiness.
 
 Do not begin domain-software architecture until Spark OS scope and Philosophy are sufficiently established to constrain it.
 

@@ -117,7 +117,7 @@ The repository currently establishes:
 - the Philosophy framework and document boundaries
 - the accepted Manifesto, Values, Principles, and Foundational Glossary as the active Philosophy foundation
 
-The Foundational Glossary installation awaits independent verification and merge. Mental Models remain in development as defined by [`01-philosophy/README.md`](01-philosophy/README.md).
+Sheldon Phillips approved the Foundational Glossary on 2026-08-09. Pull request #13 installed it, the installation was independently verified retroactively, and it merged at `f2ce678ae65de1dd24c1fea237fd208fce2e454a`. The canonical Glossary is accepted and active. Mental Models remain structurally established but substantively in development as described in [`01-philosophy/README.md`](01-philosophy/README.md).
 
 ## Design North Star
 
