@@ -1,9 +1,9 @@
 # Current State
 
-**Last updated:** 2026-07-27
+**Last updated:** 2026-08-09
 **Current phase:** Philosophy development
-**Current milestone:** Develop Mental Models from the accepted Philosophy foundation
-**Status:** Manifesto, Values, and Principles accepted and active; Principles installation independently verified and merged
+**Current milestone:** Independently verify and merge the Foundational Glossary installation
+**Status:** Manifesto, Values, Principles, and Foundational Glossary accepted and active; Glossary installation pending independent verification and merge
 
 ## Repository Reality
 
@@ -23,10 +23,11 @@
 - Design conversations may be preserved under `99-archive/design-history/` as historical reference only.
 - Design History remains separate from Spark Brain and is not Quick Resume or operational context.
 - Repository documents, Governance, Canon, Philosophy, Academy, and canonical ADRs remain authoritative over archived history.
-- The Manifesto, all five Values, and all seven Principles are installed as accepted and active in [`../01-philosophy/`](../01-philosophy/).
+- The Manifesto, all five Values, all seven Principles, and the ten-entry Foundational Glossary are installed as accepted and active in [`../01-philosophy/`](../01-philosophy/).
 - The governing Explore → Challenge → Audit → Close → Distill work method is defined in [`../CONTRIBUTING.md`](../CONTRIBUTING.md) and is available through Full Architectural Boot without being copied into Brain.
 - Sheldon Phillips approved the Principles on 2026-07-27; their installation was independently verified and merged through pull request #9.
-- Mental Models are the next Philosophy development phase.
+- Sheldon Phillips approved the Foundational Glossary on 2026-08-09; its installation awaits independent verification and merge.
+- Foundational Glossary development is complete. Mental Models remain in development.
 - Applicable mortgage-sector terminology remains a verification item before operational derivation.
 
 ## Last Completed
@@ -51,14 +52,15 @@
 - Completed independent verification of the corrected foundational installation; Philosophy fidelity, heading structure, navigation, formatting, and repository integrity all pass.
 - Installed the Principles artifact approved by Sheldon Phillips on 2026-07-27 and linked the accepted Values to their derived Principles.
 - Independently verified and merged the Principles installation through pull request #9.
+- Installed Foundational Glossary Candidate 001 as the accepted and active ten-entry Foundational Glossary; independent verification and merge remain pending.
 
 ## Current Priority
 
-Begin deliberate Mental Models development when authorized.
+Independently verify and merge the approved Foundational Glossary installation. Do not begin another Philosophy task as part of this installation.
 
 ## Next Task
 
-Prepare Mental Models Exploration 001 using the accepted Manifesto, Values, and Principles as constraints. Treat earlier models and exploratory distinctions as non-authoritative source signals until they survive the governing work method.
+Independently verify the Foundational Glossary installation and merge it only after verification passes. Mental Models remain in development and outside this installation task.
 
 Do not begin domain-software architecture until Spark OS scope and Philosophy are sufficiently established to constrain it.
 
