@@ -1,39 +1,38 @@
 # Session Continuity
 
-**Session date:** 2026-07-27
-**Repository baseline:** `main` at `0f740d8ee79b7c33a3afbb04810978a20ddbd1c4`
-**Session status:** Principles milestone closed; Mental Models ready for authorization
+**Session date:** 2026-08-09
+**Repository baseline:** `main` at `2b467953d84efa631655113549c0353e22b4bc5a`
+**Session status:** Foundational Glossary installed; independent verification and merge pending
 
 ## Session Objective
 
-Close the verified Principles installation by recording its merged state and provenance through the existing Brain and Design History structures without altering accepted Philosophy.
+Install approved Foundational Glossary Candidate 001 into the canonical Glossary and update only the minimum repository continuity files.
 
 ## Decisions Made
 
-- Treat the accepted Principles and the other installed Philosophy documents as out of scope for closeout edits.
-- Record approval, source and installed fingerprints, installation commits, independent audit, pull request, and merge through the established Design History mechanism.
-- Advance Brain continuity to Mental Models only after confirming the audited Principles installation reached `main`.
-- Keep Principles provenance separate from pull request #8 and unrelated technical-integrity work.
-- Do not begin Mental Models or course-prototype content during closeout.
+- Preserve the accepted Manifesto, Values, Principles, and all existing Glossary framework sections.
+- Install exactly the approved ten entries, with only authorized status changes and the required relative-link rebase.
+- Record that Foundational Glossary development is complete while independent verification and merge remain pending.
+- Keep Mental Models in development and do not begin Mental Models or another Philosophy task.
 
 ## Verification Performed
 
-- Confirmed pull request #9 merged into `main` at `0f740d8ee79b7c33a3afbb04810978a20ddbd1c4`.
-- Confirmed the merged head was the independently audited commit `739392b196218126d3dda82d6373efa83fb47fcd`.
-- Confirmed the accepted Principles are present on GitHub `main`.
-- Confirmed the approved source and installed fingerprints remain recorded without making historical artifacts authoritative.
-- Confirmed the closeout changes only Brain continuity and the existing Design History system.
+- Confirmed the approved source SHA-256 is `2C0D2B9D62354C1F1449CD7CE6CCB7D6EC08AED3F63481A58E048B10818C2158`.
+- Installed exactly ten Foundational Glossary entries in the approved order with six fields each.
+- Preserved Governance ownership of repository and source authority.
+- Repository integrity, source-fidelity, link, status, and scope checks are required before handoff.
 
-## Files in Closeout Scope
+## Files in Installation Scope
 
 - `brain/current-state.md`
 - `brain/session.md`
-- `99-archive/design-history/evolution/README.md`
-- `99-archive/design-history/major-milestones/2026-07-27-principles-milestone.md`
+- `01-philosophy/glossary.md`
+- `01-philosophy/README.md`
+- `README.md`
 
 ## Next Resume Point
 
-Begin Mental Models Exploration 001 only when Sheldon authorizes it. A clearly non-authoritative learning-content prototype may proceed in parallel when separately authorized.
+Independently verify the Foundational Glossary installation, then merge only after verification and required checks pass.
 
 Do not begin domain-software architecture until Spark OS scope and Philosophy are sufficiently established to constrain it.
 
