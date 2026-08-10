@@ -2096,9 +2096,9 @@ This glossary captures language emerging from the conversation. It is explorator
 
 **Observed state:**
 
-1. The live checkout at `OneDrive/Documents/Spark-OS` contains no Claude changes; only this task's foundational audit file is modified.
+1. The live checkout at `<primary local workspace>` contains no Claude changes; only this task's foundational audit file is modified.
 2. No additional Git worktree is registered and no repository lock is present.
-3. A separate clone exists at `OneDrive/Documents/GitHub/Spark-OS` with `origin` set to `https://github.com/Spark-Canon/Spark-OS.git`.
+3. A separate clone exists at `<secondary local clone>` with `origin` set to `https://github.com/Spark-Canon/Spark-OS.git`.
 4. The visible clone is clean on `main` at merge commit `02c07f2`, substantially behind current live `main`.
 5. GitHub shows no Claude-created remote branch; only `main` and the already merged provenance-closeout branch are present.
 6. Active Claude processes are issuing read-oriented Git queries, but process information does not expose their working directories or prove write authentication.
@@ -2817,7 +2817,7 @@ Receive Claude Code's prototype location, branch, commit, changed-file list, sou
 
 ### S-082 — 2026-07-28 — Prototype-course inventory audit
 
-**Source location reported:** An archived Spark OS clone at `G:\My Drive\Claude Code\_archived-spark-os-clone-2026-07-27\`, with the two prototype files under `00-workbench/drafts/course-prototype-001/`.
+**Source location reported:** An archived Spark OS clone at `<archived local clone>`, with the two prototype files under `00-workbench/drafts/course-prototype-001/`.
 
 **Repository state reported:**
 
@@ -3495,9 +3495,9 @@ Receive the focused Glossary Challenge. Audit each disposition, the post-Challen
 **Read-only Drive findings:**
 
 1. The `Spark OS` folder still exists with the same Drive folder ID, `1-x2Ix-GGuzgFWQujqy4GXEHMF4dgYR0j`.
-2. Its current Drive hierarchy is `My Drive / 01 Business Operations / Spark OS`.
+2. Its current Drive hierarchy is `<designated Spark OS source folder>`.
 3. The original `Text documents` subfolder remains inside `Spark OS` with folder ID `1Cb24CZpORgVEBppq-x5tIIPb0sdjrYqG`.
-4. `00 The Spark Manifesto.docx` remains present, untrashed, and directly locatable in that subfolder with file ID `1E2AqrJktuZZqJA4Pg8Mx4HOYlq9-X7R7`.
+4. `00 The Spark Manifesto.docx` remains present, untrashed, and directly locatable in that subfolder with `private Drive file ID withheld`.
 5. The older Spark OS sprint package, Brain package, ZIP files, resume document, and archived repository material remain locatable under the moved folder or elsewhere in Drive.
 6. `Thought Papers and Knowledge Distillation.docx` was initially absent from Drive but remained available locally in Downloads. Sheldon then authorized its move into the existing Spark OS source-document folder.
 7. The current foundational audit, Mental Models checkpoint, and Foundational Glossary exploration are local OneDrive Workbench files rather than Google Drive artifacts.
@@ -3505,9 +3505,9 @@ Receive the focused Glossary Challenge. Audit each disposition, the post-Challen
 
 **Authority conclusion:** Current GitHub `main` remains authoritative for installed Spark OS. The local OneDrive Workbench remains the active non-authoritative audit and exploration memory. Google Drive is a source and historical-storage location, not the controlling repository state.
 
-**Path consequence:** Earlier local references to `G:/My Drive/Spark OS/...` should be treated as moved-path references. The current Drive hierarchy is `My Drive / 01 Business Operations / Spark OS / ...`. Stable Drive file IDs remain valid despite the folder move.
+**Path consequence:** Earlier local references to `<historical Drive location>` should be treated as moved-path references. The current Drive hierarchy is `<designated Spark OS source folder>`. Stable Drive file IDs remain valid despite the folder move.
 
-**Follow-up move:** The DOCX was uploaded unchanged as a stored Word document to `My Drive / 01 Business Operations / Spark OS / Text documents` and verified by name, 12,536-byte size, Word MIME type, parent folder, and folder listing. Drive file ID: `1ZGBa7JMM6m1ZRX39F5wowcjdxPNIBJmA`. Original SHA-256 before upload: `F2BAD34BD6B4BFD73BA1137E5EC2E42CDC9854615EEA090B7DE4D709D54AC53D`. After verification, the Downloads source was removed to complete the requested move.
+**Follow-up move:** The DOCX was uploaded unchanged as a stored Word document to `<designated Spark OS source folder>` and verified by name, 12,536-byte size, Word MIME type, parent folder, and folder listing. Drive file ID: `private Drive file ID withheld`. Original SHA-256 before upload: `F2BAD34BD6B4BFD73BA1137E5EC2E42CDC9854615EEA090B7DE4D709D54AC53D`. After verification, the Downloads source was removed to complete the requested move.
 
 **Disposition:** No material is missing that prevents continuation of Foundational Glossary Challenge. If a later backup or consolidation task is authorized, distinguish original source documents from stale repository snapshots before moving or deleting anything.
 
@@ -3983,7 +3983,7 @@ The earlier `35955A875DF82427F30B9BAA20823B6FEA4C60A24CD56CE57C2721DAD92F8C90` v
 
 **Human direction:** Sheldon authorized retirement of the completed PR #15 feature branch and its temporary local checkout.
 
-**Pre-deletion safeguards:** GitHub confirmed branch tip `8040eaf83cedcb1e562b2a9ac46b33b6a3af5849` is fully contained in merged `main` at `ec177993bbd55efe29bbaf14daddc132ddc3e055`, with no file difference between the feature tip and its merge-base state in `main`. The local repository was clean, its active branch and HEAD matched the remote feature branch, its origin was `Spark-Canon/Spark-OS`, and its resolved repository root was exactly `C:\Users\Sheld\AppData\Local\Temp\spark-os-close-foundational-glossary-installation` inside the operating-system temporary directory.
+**Pre-deletion safeguards:** GitHub confirmed branch tip `8040eaf83cedcb1e562b2a9ac46b33b6a3af5849` is fully contained in merged `main` at `ec177993bbd55efe29bbaf14daddc132ddc3e055`, with no file difference between the feature tip and its merge-base state in `main`. The local repository was clean, its active branch and HEAD matched the remote feature branch, its origin was `Spark-Canon/Spark-OS`, and its resolved repository root was exactly `<temporary closeout checkout>` inside the operating-system temporary directory.
 
 **Actions completed:** Deleted remote branch `codex/close-foundational-glossary-installation` and removed only the verified temporary checkout directory named above.
 
