@@ -16,23 +16,11 @@ It contains the foundational beliefs that guide the Canon, Academy, governance, 
 
 ## How the Documents Relate
 
-The Philosophy layer should develop in sequence:
+The Manifesto establishes purpose. Values protect that purpose. Principles translate those commitments into decision rules. Together, they form the directional foundation for Mental Models and Shared Language.
 
-```text
-Manifesto
-   ↓
-Values
-   ↓
-Principles
-   ↓
-Mental Models
-   ↓
-Shared Language
-```
+Mental Models support judgment when applying the foundation. The Glossary protects consistent meaning across every layer. They develop from the accepted foundation according to evidence and readiness, may develop in either order, and may inform one another.
 
-The Manifesto establishes purpose. Values protect that purpose. Principles translate those commitments into decision rules. Mental Models support judgment when applying them. The Glossary protects consistent meaning across every layer.
-
-The relationship is directional, but not isolated. Later documents may reveal ambiguity in earlier ones and trigger deliberate review.
+Neither Mental Models nor Shared Language may silently revise accepted earlier Philosophy. Any change to accepted Philosophy remains deliberate and governed.
 
 ## Authority
 
@@ -59,6 +47,6 @@ A material change should identify downstream documents that may require review.
 
 The Manifesto, Values, Principles, and Foundational Glossary are accepted and active foundations of Spark Philosophy.
 
-Foundational Glossary development is complete. Its installation awaits independent verification and merge. Mental Models remain structurally established but substantively in development.
+Sheldon Phillips approved the Foundational Glossary on 2026-08-09. Pull request #13 installed it, and the installation was independently verified retroactively and merged at `f2ce678ae65de1dd24c1fea237fd208fce2e454a`.
 
-Development remains sequential: Manifesto → Values → Principles → Mental Models → shared language. Each layer should constrain and clarify the next, while later documents may reveal ambiguity that warrants deliberate revision of an earlier document.
+The canonical Glossary is accepted and active. Mental Models remain structurally established but substantively in development.
