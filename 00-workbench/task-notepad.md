@@ -2,70 +2,109 @@
 
 **Status:** Active working list
 **Authority:** Non-authoritative Workbench material
-**Purpose:** Capture tasks and feedback arising from other Spark OS chats until they are reviewed, assigned a destination, and deliberately accepted or parked.
+**Last reviewed:** 2026-08-09
+**Purpose:** Keep the current cross-chat queue concise while detailed reasoning remains in the [foundational audit](drafts/foundational-conversation-audit.md) and qualifying Design History.
 
-## Active To-Do List
+## Current Priority Queue
 
-### Philosophy
+1. [ ] **Preserve the reviewed Workbench state on a clean current-`main` branch.**
+   - Carry forward this notepad, the active foundational audit, the [Mental Models evidence checkpoint](drafts/mental-models-evidence-checkpoint-001.md), and the [parking-lot index](parking-lot/README.md).
+   - Exclude superseded candidate copies and the superseded local practitioner brief unless a specific preservation need is demonstrated.
+   - Audit the exact branch diff before merge.
 
-- [ ] **Classify and refine this candidate value/principle:** Prefer established knowledge over reinvention unless there is a compelling reason to diverge.
-  - Determine whether this is a foundational commitment or a decision rule derived from a deeper value.
-  - Define what qualifies as established knowledge, a compelling reason, and responsible divergence.
-  - Preserve room for innovation while requiring deliberate justification for departing from proven knowledge.
-  - Test how the statement applies to domain knowledge, operating practices, governance, software, and AI behavior.
-  - If it is a value, develop it using the standard in [`../01-philosophy/values.md`](../01-philosophy/values.md).
-  - If it is a principle, identify the value it serves and develop it in [`../01-philosophy/principles.md`](../01-philosophy/principles.md).
+2. [ ] **Complete Governance Fit Audit 001.**
+   - Test whether current [`CONTRIBUTING.md`](../CONTRIBUTING.md) already provides sufficient design-time Philosophy application and post-design/pre-acceptance review.
+   - Compare it with accepted Philosophy, Governance, Spark Brain boot paths, Canon authority, and applicable external constraints.
+   - Identify concrete recurring decisions the current workflow does not guide.
+   - Recommend no change when the existing workflow is sufficient; otherwise propose the smallest coherent edit and likely owner.
+   - Do not create an ADR, new Governance file, checklist system, schema, or automation during the audit.
 
-### Governance and Design
+3. [ ] **Explore a minimum Canon sourcing and entry standard.**
+   - Define only the minimum needed to distinguish accepted claims, provenance, currency, scope, uncertainty, and authority.
+   - Use Course Prototype 001 failures as evidence without treating the prototype as authoritative.
+   - Preserve legal, regulatory, professional, insurer, lender, and organizational ownership boundaries.
+   - Do not design a comprehensive schema or create mortgage Canon or Academy content during this exploration.
 
-- [ ] **Create an installed instruction for applying current values and principles when designing new work.**
-  - Cover new features, content, processes, governance, software, AI behavior, and other material additions.
-  - Require the designer to identify the accepted values and principles that constrain or support the work.
-  - Record material tensions, trade-offs, exceptions, and unresolved conflicts during design rather than after implementation.
-  - Include relevant external constraints such as law, regulation, evidence, professional standards, and accepted Canon; values and principles must not be treated as the only authorities.
-  - Define proportionate review so minor edits do not receive the same ceremony as consequential additions.
-  - Determine the canonical home for the instruction, favoring an existing Governance or contribution document over a duplicate process layer.
-  - Ensure the instruction is reliably discoverable during the appropriate Spark Brain boot or contribution workflow.
+4. [ ] **Run one bounded Canon pilot after the minimum standard is credible.**
+   - Select a narrow topic with accessible current sources and meaningful operational use.
+   - Test sourcing, retrieval, change handling, downstream teaching implications, and evidence for future Mental Models.
+   - Do not generalize repository architecture from one pilot.
 
-- [ ] **Design a post-design and pre-acceptance audit for new features, content, and other additions.**
-  - Test whether the addition aligns with, conflicts with, weakens, or exposes a gap in the current values and principles.
-  - Distinguish an implementation problem from evidence that a value or principle may need clarification, refinement, merger, retirement, or addition.
-  - Capture possible emerging values and principles as non-authoritative Workbench candidates.
-  - For each candidate, create a task to challenge it with counterexamples, refusal points, meaningful costs, overlap tests, and practical decision scenarios.
-  - Require a candidate principle to identify the accepted value or values it protects.
-  - Require a candidate value to pass the existing design and acceptance tests in [`../01-philosophy/values.md`](../01-philosophy/values.md).
-  - Do not allow a feature or content addition to silently create philosophy by precedent.
-  - Define dispositions for emerging candidates: retain for testing, refine, merge, reject, defer, or propose for explicit approval.
-  - Link accepted changes back to the addition that exposed them, preserving the reasoning without turning the Workbench into an authority layer.
+## Parallel and Evidence-Gated Work
+
+- [ ] **Obtain licensed-practitioner review of Course Prototype 001.**
+  - Draft PR [#12](https://github.com/Spark-Canon/Spark-OS/pull/12) remains the frozen, non-authoritative review package.
+  - It is currently conflicted with `main`; do not refresh, repair, or merge it merely to remove the conflict.
+  - After practitioner findings return, reconcile them here before authorizing any successor prototype, Canon, or Academy work.
+
+- [ ] **Continue observing `Representation Is Not Capability`.**
+  - The Mental Models evidence checkpoint found insufficient independent evidence for Distill.
+  - Reopen only when repeated non-lineage-biased use demonstrates a recurring reasoning benefit.
+  - `What Changes When We Simplify?` remains reallocated to possible future Academy or editorial guidance, not foundational Mental Models.
+
+## Parked
+
+See the [parking-lot index](parking-lot/README.md).
+
+- Bookmarks and links repository
+- Established knowledge over reinvention
+
+Reopen either only when the recorded evidence trigger occurs. Parking is not rejection and does not create an active design task.
+
+## Current Repository Reconciliation
+
+- PR #8 repository-integrity hardening and ADR-0003 merged at `aef0b29ccc228bdba5b12ae1a6160b5e2f3edf31`.
+- PR #11 Principles Exploration archive merged at `2b467953d84efa631655113549c0353e22b4bc5a`.
+- PR #13 installed the accepted Foundational Glossary at merge `f2ce678ae65de1dd24c1fea237fd208fce2e454a`.
+- PR #14 archived the Glossary exploration as non-authoritative Design History at `a9178a17c57684c425ffb3cc8854e5f638a48097`.
+- PR #15 completed the verified Glossary closeout at `ec177993bbd55efe29bbaf14daddc132ddc3e055`; its branch and temporary checkout are retired.
+- PR #12 remains draft, open, unmerged, and non-authoritative pending practitioner review.
+- No known architectural or repository-integrity blocker prevents Governance Fit Audit 001.
+
+## Workbench Artifact Dispositions
+
+| Artifact | Disposition | Reason |
+|---|---|---|
+| `drafts/foundational-conversation-audit.md` | Retain — active | Primary local audit and continuity record |
+| `drafts/mental-models-evidence-checkpoint-001.md` | Retain — observation | One candidate remains evidence-gated |
+| PR #12 curated practitioner brief | Retain on PR #12 | Active external-review input |
+| Local `course-prototype-001-practitioner-review-brief.md` | Superseded | PR #12 contains the curated active brief |
+| Local `spark-os-principles-candidate.md.txt` | Superseded | Accepted Principles and Design History preserve the outcome and provenance |
+| Local `foundational-glossary-candidate-001.md.txt` | Superseded | Accepted Glossary, approval fingerprint, audit, and Design History preserve the outcome |
+| Local `foundational-glossary-exploration-001.md` | Superseded for active use | Accepted Glossary, foundational audit, and merged Design History preserve durable findings |
+
+Do not delete a superseded local file until the clean preservation branch has been audited and its exclusion is confirmed.
 
 ## Feedback Intake
 
-Add new feedback here before changing authoritative documents.
+For each new item, record:
 
-For each item, capture:
+- the proposal and source;
+- the problem it is trying to solve;
+- the affected authority or destination;
+- whether it is a correction, conflict, clarification, proposal, or new task;
+- the evidence and decision; and
+- the final disposition or reconsideration trigger.
 
-- [ ] the feedback or proposed change
-- [ ] its source or originating task/chat
-- [ ] the problem it is trying to solve
-- [ ] the affected document or area
-- [ ] whether it is a clarification, correction, proposal, conflict, or new task
-- [ ] the decision made and its reasoning
-- [ ] the final destination, if accepted
+## Feedback Review Method
 
-## Feedback Review Plan
+1. **Capture** without treating the item as accepted.
+2. **Locate** the current authoritative owner.
+3. **Compare** for duplication, contradiction, and scope drift.
+4. **Classify** as accept, refine, merge, reject, defer, park, or needs discussion.
+5. **Draft** only the smallest coherent non-authoritative change when judgment remains.
+6. **Validate** terminology, links, authority, and downstream effects.
+7. **Promote** only after explicit acceptance and coordinated installation.
+8. **Close** with a durable result and next trigger.
 
-1. **Capture** — Record the feedback without treating it as accepted truth.
-2. **Locate** — Identify the current authoritative document and any related definitions or decisions.
-3. **Compare** — Check for duplication, contradiction, authority conflicts, and unintended scope changes.
-4. **Classify** — Mark the item as accept, revise, defer, reject, or needs discussion.
-5. **Draft** — Prepare the smallest coherent change in the Workbench when material judgment is still required.
-6. **Validate** — Confirm terminology, links, document boundaries, and downstream implications remain consistent.
-7. **Promote** — Update the authoritative destination only after explicit review or approval.
-8. **Close** — Record the outcome here, link the resulting document or decision, and check off the task.
+## Completed Foundation
 
-## Completed
+- Spark OS Manifesto and five Values approved, installed, independently verified, and merged through PR #6.
+- Seven Principles approved, installed, independently verified, and merged through PR #9; milestone closeout completed through PR #10.
+- Foundational Glossary approved, installed, audited, closed, and merged through PRs #13–#15.
+- Mental Models Evidence Checkpoint 001 closed without forcing a candidate into Distill.
+- Governing Explore → Challenge → Audit → Close → Distill method installed in [`CONTRIBUTING.md`](../CONTRIBUTING.md).
 
-- [x] **Define Spark OS Values and its non-negotiable commitments** — completed 2026-07-22
-  - Installed outcome: [`../01-philosophy/values.md`](../01-philosophy/values.md)
-  - Historical provenance: [`../99-archive/design-history/major-milestones/2026-07-22-foundational-philosophy-milestone.md`](../99-archive/design-history/major-milestones/2026-07-22-foundational-philosophy-milestone.md)
-  - The five Values were explicitly approved, installed, independently verified, and merged through pull request #6.
+## Next Action
+
+Preserve this reviewed Workbench state from a fresh current-`main` base. After that branch passes independent audit, begin Governance Fit Audit 001 as non-authoritative Workbench analysis.
