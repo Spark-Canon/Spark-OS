@@ -3494,9 +3494,9 @@ Receive the focused Glossary Challenge. Audit each disposition, the post-Challen
 
 **Read-only Drive findings:**
 
-1. The `Spark OS` folder still exists with the same Drive folder ID, `1-x2Ix-GGuzgFWQujqy4GXEHMF4dgYR0j`.
+1. The `Spark OS` folder still exists with the same Drive folder ID, `private Drive folder ID withheld`.
 2. Its current Drive hierarchy is `<designated Spark OS source folder>`.
-3. The original `Text documents` subfolder remains inside `Spark OS` with folder ID `1Cb24CZpORgVEBppq-x5tIIPb0sdjrYqG`.
+3. The original `Text documents` subfolder remains inside `Spark OS` with folder ID `private Drive folder ID withheld`.
 4. `00 The Spark Manifesto.docx` remains present, untrashed, and directly locatable in that subfolder with `private Drive file ID withheld`.
 5. The older Spark OS sprint package, Brain package, ZIP files, resume document, and archived repository material remain locatable under the moved folder or elsewhere in Drive.
 6. `Thought Papers and Knowledge Distillation.docx` was initially absent from Drive but remained available locally in Downloads. Sheldon then authorized its move into the existing Spark OS source-document folder.
