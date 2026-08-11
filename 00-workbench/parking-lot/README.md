@@ -10,3 +10,29 @@ An item should explain:
 - likely destination if approved
 
 Parking an idea is not rejecting it. It is choosing not to create premature complexity.
+
+## Parked Ideas
+
+### Bookmarks and Links Repository
+
+**Why it may matter:** Repeated research and Canon work may eventually need consistent link ownership, categorization, maintenance, verification, and retirement.
+
+**Why it is parked:** No recurring operational failure currently demonstrates that a separate repository or durable subsystem is needed. Building one now would add structure before its actual use is understood.
+
+**Reconsider when:** Canon or research work repeatedly loses useful sources, duplicates link collections, relies on stale links, or cannot identify who maintains a reference.
+
+**Likely destination:** Existing Canon or Governance structures first; a separate supporting resource only if repeated evidence shows the existing architecture cannot contain it cleanly.
+
+**Boundary:** A bookmarked or linked source remains reference material. It does not become authoritative Spark OS knowledge merely because Spark OS links to it.
+
+### Established Knowledge Over Reinvention
+
+**Idea:** Prefer established knowledge over reinvention unless evidence provides a responsible reason to diverge.
+
+**Why it may matter:** The formulation highlights duplication risk, institutional memory, evidence, and the need to justify divergence from proven work.
+
+**Why it is parked:** It is not currently distinct enough to justify another Value or Principle. Existing contribution rules already ask whether knowledge exists elsewhere and whether an accepted source should be improved, while accepted Principles require evidence-responsive judgment.
+
+**Reconsider when:** Governance Fit Audit 001 or repeated Canon work exposes a consequential decision that current contribution rules, Values, and Principles do not guide.
+
+**Likely destination:** A clarification within an existing contribution or Canon sourcing standard, unless later evidence establishes a genuinely independent Philosophy commitment or decision rule.
