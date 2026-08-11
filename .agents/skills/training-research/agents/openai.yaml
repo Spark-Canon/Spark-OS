@@ -1,0 +1,7 @@
+interface:
+  display_name: "Training Research"
+  short_description: "Run the bounded instructional-design pilot"
+  default_prompt: "Use $training-research to run the fixed public-source Pilot 001 study of worked examples for novice professional learning."
+
+policy:
+  allow_implicit_invocation: false
