@@ -4028,6 +4028,301 @@ The earlier `35955A875DF82427F30B9BAA20823B6FEA4C60A24CD56CE57C2721DAD92F8C90` v
 
 **Disposition:** **Workbench review complete; preservation is the immediate maintenance gate.** No authoritative file changed. After safe preservation, Governance Fit Audit 001 is the next substantive Spark OS task.
 
+### S-122 — 2026-08-10 — Audit of manual training-research skill concept
+
+**Intake:** Sheldon provided a separate conceptual conversation proposing a manually invoked, repository-local research skill and a persistent non-canonical evidence library for future training development.
+
+**Strong direction:** The revised concept correctly rejects early automation, automatic promotion, direct Canon or Academy writes, Philosophy recommendations, and a premature separate AI-role document. A manually invoked project-local skill is proportionate if repeated use is expected, and `00-workbench/` is the correct authority state for unaccepted evidence and research briefs.
+
+**Verified Codex fit:** Current official Codex guidance confirms that repository-scoped skills may live at `.agents/skills/<skill-name>/SKILL.md`, with optional `agents/openai.yaml`. Because Sheldon wants deliberate manual use and the skill writes persistent research files, any later candidate should set `policy.allow_implicit_invocation: false`. The existing root `.agents/` directory is currently empty, so no collision exists.
+
+**Correction to the revised browser response:** Removing a new Governance role document is proportionate, but the skill does not become disconnected from existing Governance. `AI_GOVERNANCE.md`, `CONTRIBUTING.md`, repository authority, and review requirements still constrain it. Adding a repository-scoped skill is itself a durable behavioral change and must be reviewed even though it does not require a new Governance file by default.
+
+**Primary authority risk:** A durable evidence library can gradually become a shadow Canon if course-building chats treat accumulated research as accepted truth. `Course use only` is not a sufficient boundary. Mortgage, business, legal, regulatory, lender, insurer, or operational claims must enter teaching only through the applicable Canon acceptance path. Instructional-design research may inform an explicit Academy design review without becoming business Canon, but it still remains evidence rather than accepted instructional policy until reviewed.
+
+**Required distinction:** The design must separate at least two research purposes without necessarily creating separate tools:
+
+1. **Domain research** — mortgage, business, regulatory, product, operational, or institutional claims. Output remains Workbench evidence and may be considered only through a later explicit Canon review before being taught as fact.
+2. **Instructional-design research** — learning science, sequencing, examples, assessment methods, and learner-support evidence. Output remains Workbench evidence and may inform a later explicit Academy design review without silently becoming an Academy standard.
+
+The skill may collect either type when explicitly requested, but every brief must declare which purpose applies and must not initiate either downstream review itself.
+
+**Complexity correction:** The proposed default of an index plus a folder containing `research-brief.md`, `evidence.md`, and `sources.md` for every topic is premature. Begin with one dated Markdown brief per research invocation and one concise template. Add an index only after retrieval becomes difficult, and split a topic into multiple files only when actual size or reuse demands it.
+
+**Minimum future candidate:** If later authorized, the smallest credible implementation is:
+
+- `.agents/skills/training-research/SKILL.md`;
+- optional `.agents/skills/training-research/agents/openai.yaml` with implicit invocation disabled;
+- one supporting research-brief template only if `SKILL.md` would otherwise become unwieldy; and
+- `00-workbench/training-research/README.md` plus dated topic briefs.
+
+No automation, MCP server, new AI-role document, new Governance file, multi-file topic schema, or automatic index is currently justified.
+
+**Research-record safeguards:** Each brief should state the question, intended use, research type, scope, jurisdiction, research and access dates, source owner and type, relevant effective date, material claims and citations, interpretation separately from source statements, disagreement, limitations, restricted-access status, and whether an older brief is superseded. The skill should append a new dated brief rather than silently overwrite earlier research. Store citations and original summaries, not full copied source material unless permitted.
+
+**Manual invocation control:** Explicit invocation should be required. The skill may write only inside its designated Workbench research directory, update only the minimum navigation needed by its accepted design, and stop after producing the research output. Procedural limits are not security controls, so each invocation still requires diff review.
+
+**Priority relationship:** This concept should not leapfrog the current Workbench preservation gate or Governance Fit Audit 001. It is a strong source signal for the minimum Canon sourcing and entry standard and could later become a bounded implementation candidate after the two research purposes and downstream gates are settled.
+
+**Disposition:** **Continue exploration; do not implement yet.** The revised direction is architecturally promising and materially better than the first response. Resolve the domain-versus-instructional research distinction, downstream acceptance boundary, minimum one-file output, explicit-only invocation, and non-overwrite lifecycle before drafting the skill or evidence-library structure.
+
+### S-123 — 2026-08-10 — Reconciliation of Claude research audit and PR #16 response mismatch
+
+**Intake:** Sheldon supplied Claude's audit of the revised training-research memo and a browser response described as the reply to that audit. The supplied browser response instead audits Workbench-preservation PR #16 and does not address Claude's research findings.
+
+**Context separation:** Two valid but independent tracks are present:
+
+1. **Research-model exploration** — Claude findings A through F concern the proposed manual skill and evidence-library memo.
+2. **Workbench preservation** — the browser response concerns formatting, fingerprint, and disclosure corrections on draft PR #16.
+
+Neither response invalidates the other, but the PR #16 correction must not be treated as closure of the research-model audit.
+
+**Claude A/B — Workbench retirement contradiction:** Substantively correct. A memo cannot both prescribe permanent retention of superseded briefs in the active Workbench and list their lifecycle as an unresolved implementation gate. However, automatic relocation to `99-archive/design-history/` is not justified: Design History is reserved for architectural evolution, not ordinary research records. During the first one-brief pilot, no supersession architecture is needed. Remove the permanent-retention rule, keep retirement unresolved, and decide later among deletion with Git history, continued relevance as dated evidence, or a separately governed research archive only if repeated use demonstrates need.
+
+**Claude C — OpenAI schema verification:** The caution was reasonable, but the factual uncertainty is now resolved. Current official Codex guidance, verified on 2026-08-10, confirms repository skills under `.agents/skills/<skill-name>/SKILL.md`, optional `agents/openai.yaml`, and `policy.allow_implicit_invocation: false`. The memo may retain these as currently verified implementation details while recording that tooling configuration should be rechecked when implementation begins.
+
+**Claude D — terminology:** Correct. `Non-authoritative research` is the repository-wide status. `Non-canonical` should be used only when contrasting domain evidence with Canon and must not imply that Canon is the only possible downstream authority. Instructional-design evidence may inform an Academy design review without becoming Canon.
+
+**Claude E — role document:** Correctly nuanced. Deferring a separate durable AI-role document is proportionate because repeated need has not yet been demonstrated. The memo should state that this is deferred, not rejected, and should reconsider it after pilot evidence shows that the responsibility is repeatedly needed, materially distinct, and clearer with a durable role definition. Existing AI Governance applies throughout.
+
+**Claude F — deterministic naming:** Correct if persistent files are implemented. The smallest rule is `YYYY-MM-DD-<topic-slug>.md`, with lowercase kebab-case, a bounded readable slug, collision detection against existing filenames, and the next available two-digit suffix. The exact slug length need not become architecture before the pilot; it can be a skill-level implementation detail.
+
+**Empty numbered point:** Treat as a paste defect and remove it from any preserved memo. It carries no substantive decision.
+
+**PR #16 independent assessment:** The browser's PR correction is materially sound and separate. Live GitHub inspection confirms PR #16 is draft, open, mergeable, unmerged, based on `ec177993bbd55efe29bbaf14daddc132ddc3e055`, changes exactly four Workbench files, and has successful Repository Integrity run 37. Its reported formatting deviation, inaccurate exact-byte claim caused by line-ending normalization, and unnecessary newly published local/Drive locators justify one bounded correction. The proposed two-file correction plus PR-body update is proportionate. S-122 and this S-123 must remain outside that pre-research checkpoint rather than widening PR #16 during correction.
+
+**Disclosure finding:** Local machine paths and private Drive identifiers are not credentials, but they provide no public-repository value proportionate to their disclosure. Generalizing them while retaining repository commits, PR numbers, Git blobs, approved fingerprints, and historical meaning improves safety without weakening constitutional provenance.
+
+**Disposition:** **Accept Claude's core research corrections with one ownership correction; accept the browser's PR #16 correction as a separate task.** Revise the research memo without routing research into Design History by default. Apply the bounded PR #16 correction independently, re-audit it, and preserve S-122/S-123 in a later Workbench update after the pre-research preservation checkpoint is merged or otherwise closed.
+
+### S-124 — 2026-08-10 — Audit of corrected research-chat reconciliation
+
+**Intake correction:** Sheldon confirmed that the earlier browser text was the wrong attachment and supplied the actual research-chat response to Claude's audit.
+
+**Overall result:** The corrected response properly addresses Claude's substantive findings. It retracts permanent Workbench retention, keeps retirement outside the skill, rejects automatic Design History routing, resolves the earlier internal contradiction, standardizes on non-authoritative status, preserves the domain/instructional split, adds a naming rule, and explicitly defers rather than rejects a future AI-role document.
+
+**Verified configuration:** The response's current Codex configuration claim is substantively correct. Official guidance independently verified in S-122 confirms repository-scoped `.agents/skills/`, optional `agents/openai.yaml`, and `policy.allow_implicit_invocation: false`. The locally quoted reference path in the transferred text is malformed as written and should not be preserved as evidence; cite official current guidance or reverify installed tooling when implementation begins.
+
+**Four remaining refinements:**
+
+1. **Installation versus invocation:** Installing the pilot necessarily changes repository behavior by adding a skill and Workbench research area. The prohibition on infrastructure changes applies to later skill invocations, not to the separately reviewed installation task. State both scopes explicitly.
+2. **One lane per pilot brief:** Do not use `research_lane: mixed` in the first pilot. Mixed briefs recreate the ownership ambiguity the lane distinction is meant to prevent. If a request genuinely requires both domain and instructional-design research, create separately scoped briefs through separately authorized invocations.
+3. **Deterministic slugging:** `First eight meaningful words` is not deterministic because `meaningful` requires interpretation. Prefer an explicit caller-supplied topic slug, or mechanically normalize the full research title and truncate the normalized string to a fixed character limit without semantic word selection. Collision suffixes may remain sequential.
+4. **Separate sourcing standards:** A Workbench research-brief citation standard records evidence and provenance; a future Canon sourcing and entry standard governs acceptance and authority. The pilot must not quietly define Canon's acceptance standard merely because some domain research may later inform Canon review.
+
+**Retirement boundary:** The revised first-pilot treatment is proportionate. The skill may create a new dated brief and flag potential conflict, but may not overwrite, supersede, move, delete, or retire an older brief. No research archive is created. Repeated use must demonstrate the need before Spark OS decides whether dated research remains relevant, relies on Git history after removal, or requires a governed archive outside Design History.
+
+**Role-document trigger:** Reassessment after the pilot is appropriate, but one invocation cannot itself demonstrate repeated need. The post-pilot audit may record an observation; a durable role document remains deferred until multiple materially useful invocations or recurring boundary problems establish the AI Governance threshold.
+
+**Disposition:** **Ready for one focused pilot-specification gate, not implementation.** Produce a concise non-authoritative pilot specification in the research conversation resolving the four refinements and the stated sourcing, copyright, privacy, restricted-source, teachable-fact, explicit-consultation, and failure boundaries. Do not create the skill or repository structure until Workbench preservation is closed and the specification passes independent audit.
+
+### S-125 — 2026-08-10 — Audit of Training Research Skill Pilot Specification 001
+
+**Intake:** Sheldon supplied the complete non-authoritative Pilot Specification 001 for a manually invoked repository-scoped training-research skill and requested direction on how to proceed.
+
+**Prior corrections resolved:** The specification clearly separates installation from invocation; requires exactly one research lane per brief; uses a caller-approved validated slug; distinguishes research-evidence capture from future Canon acceptance; preserves public-source, copyright, privacy, restricted-information, uncertainty, contrary-evidence, non-overwrite, and no-downstream-promotion boundaries; and leaves the skill uninstalled. These changes substantively resolve S-124.
+
+**Primary over-complexity finding:** The response is no longer a concise pilot specification. Twenty-six sections plus a second final-definition layer duplicate requirements and pre-design much of a durable research-governance system before one invocation has demonstrated which controls are operationally necessary. Installing this text substantially unchanged would make `SKILL.md` large, repetitive, and difficult to execute reliably. The material is valuable source evidence, but it requires compression into one implementation candidate with a single controlling statement for each rule.
+
+**Implementation structure tension:** The proposed three-file installation forbids a reference or template file while requiring extensive sourcing, metadata, legal, privacy, consultation, status, conflict, and post-pilot rules. Either the operational requirements must be materially compressed so they fit cleanly in `SKILL.md`, or exactly one supporting reference/template must be authorized. File-count minimalism must not produce an overlong, unreliable skill. No additional index, script, asset, archive, or topic hierarchy is justified.
+
+**Downstream-authority correction:** Section 18 may describe safe provisional consultation practice, but this pilot skill cannot establish a binding course-development permission protocol or Academy workflow. Any exact named-brief consultation rule remains a pilot safeguard and source signal for later Academy or Governance review, not accepted repository authority.
+
+**Role-document correction:** The three-invocation, two-date, two-question test is a useful observation trigger, not an accepted AI Governance threshold. Repeated use and material distinctness remain the governing concepts. Numeric conditions may prompt reassessment but may neither require nor independently justify a durable role document.
+
+**Metadata proportionality:** The source record currently treats many fields as universally mandatory even when some are conditional or unavailable. The compressed candidate should separate minimum required metadata from conditional metadata. Required fields should support identity, traceability, access/verification, currency, applicability, and limitations; publisher differences, exact page location, effective date, jurisdiction, and licence details should be required when relevant rather than mechanically populated for every source.
+
+**First-pilot boundary:** The first invocation should remain instructional-design only and public-source only. This avoids domain-authority and access-control risk while testing the workflow's real purpose. Access-controlled material, domain research, research-retirement policy, indexes, and stronger technical enforcement remain outside Pilot 001. The invocation environment must confirm current web/research access before beginning; inability to access adequate evidence may produce a correctly bounded `limited` or `failed` brief.
+
+**Recommended first question:** `What does current research indicate about when worked examples improve initial learning for novices in professional education, and what limitations apply when considering mortgage-broker training?` Recommended caller-approved slug: `worked-examples-novice-professional-learning`. The possible relevance to mortgage-broker training must be labelled as inference, not a source finding or Academy decision.
+
+**Priority relationship:** This research track still must not silently replace the Spark OS roadmap. PR #16 preservation and its bounded correction remain the immediate maintenance gate. Governance Fit Audit 001 remains the next substantive architectural task because installing a repository-local skill is a durable behavioral change that must fit existing contribution and AI Governance boundaries. Pilot-specification compression may continue in parallel, but installation should wait for those gates and explicit human approval.
+
+**Disposition:** **Refine, then re-audit; do not install yet.** Preserve the full response as exploration source material. Produce a compressed implementation candidate that removes duplication, separates invariant safeguards from conditional procedures, resolves the skill-versus-reference-file tension, labels downstream consultation and numeric role triggers as provisional, and fixes the first pilot to one public-source instructional-design question. No repository files, research brief, Academy workflow, Canon standard, or durable AI-role document are authorized by this disposition.
+
+### S-126 — 2026-08-10 — Bounded re-audit of Training Research Skill Compressed Implementation Candidate 001
+
+**Intake:** Sheldon supplied the compressed implementation candidate produced from S-125 and requested review and direction.
+
+**Compression result:** Pass. The candidate removes the earlier twenty-six-section duplication, gives each requirement a clearer primary home, authorizes one supporting reference file, separates required from conditional metadata, labels named-brief consultation as a Pilot 001 safeguard rather than accepted Academy or Governance procedure, removes numeric AI-role thresholds, fixes a public-source instructional-design pilot, and preserves the no-authority, no-overwrite, no-downstream-action, copyright, privacy, uncertainty, and contrary-evidence boundaries.
+
+**Skill-design fit:** Current local Codex skill-creator guidance supports the proposed progressive-disclosure structure: a concise `SKILL.md`, UI metadata in `agents/openai.yaml`, and detailed procedures in one directly referenced file. The Workbench `README.md` is outside the skill folder and has a justified repository-boundary purpose, so it does not violate the guidance against auxiliary README files inside a skill. A later installation should initialize and validate the skill using the then-current skill-creator tooling, keep `SKILL.md` under the recommended size, generate `agents/openai.yaml` deterministically, and set `policy.allow_implicit_invocation: false`.
+
+**Remaining scope contradiction:** The candidate describes Pilot 001 as one instructional-design invocation and defers domain-research pilots, yet the general invocation contract still accepts `domain | instructional-design`. Installing that contract would authorize a broader durable capability before domain use has passed its own pilot gate. Pilot 001 must accept only `instructional-design`; `domain` should remain a deferred future extension requiring separate review.
+
+**Research-question neutrality:** The wording `when worked examples improve initial learning` presupposes that improvement occurs and may bias the search toward confirming benefit. The fixed question should neutrally ask about effects, limitations, and conditions, including null or adverse findings and transfer limits for mortgage-broker training.
+
+**Validation contradiction:** The pass criteria require that current public research access `was available`, while the following paragraph permits a correctly handled unavailable-evidence result to pass. Replace availability with a requirement that permitted public research access was checked and that any access limitation was recorded accurately.
+
+**Artifact-approval boundary:** This document specifies four files but does not contain their exact contents. It is therefore not yet an installable constitutional artifact and should not be approved for coordinated installation as though implementation were mechanical. After the three bounded corrections, the next task should draft the exact four-file artifact candidate without writing to the repository. Independent audit and Sheldon's explicit approval should precede installation, preventing the implementation task from silently making substantive policy and wording decisions.
+
+**Disposition:** **Pass architecture; refine three bounded defects before artifact drafting.** Do not reopen sourcing, lifecycle, authority, file-count, or broader research architecture. Correct the Pilot 001 lane, neutralize the fixed question, reconcile the access-validation wording, then produce exact proposed contents for the four files in conversation only. Do not install, invoke, or create a research brief yet.
+
+### S-127 — 2026-08-11 — Artifact audit of Training Research Skill Exact Four-File Candidate 001
+
+**Intake:** Sheldon supplied the exact proposed contents of the four Pilot 001 skill files for final pre-approval audit.
+
+**Architecture and scope:** Pass. Exactly four file bodies are present. The skill is explicit-only, instructional-design-only, public-source-only, limited to the neutral worked-examples question, and restricted to one new non-authoritative Workbench brief. Domain research, course creation, authority changes, automatic promotion, lifecycle decisions, additional repository files, and downloaded-source storage remain excluded. The research-access contradiction identified in S-126 is resolved.
+
+**Codex schema fit:** Pass. `SKILL.md` uses only `name` and `description` frontmatter; the folder and skill names agree; instructions are imperative; `agents/openai.yaml` uses supported interface fields, quotes strings, mentions `$training-research` in the default prompt, and sets `policy.allow_implicit_invocation: false`. The proposed `references/` file is one level below `SKILL.md`, and the Workbench README is outside the skill package with a legitimate authority-boundary purpose.
+
+**Repository-safety defect:** The exact skill no longer requires the invocation to establish that it is operating in the intended Spark OS checkout under existing repository and AI Governance rules. This is material because earlier work in this project was accidentally performed in stale or historical clones. Add a non-mutating preflight requiring a prepared clean dedicated Spark OS worktree, inspection of repository identity, branch, HEAD, and status, and complete reading of `CONTRIBUTING.md` and `02-governance/ai-governance/AI_GOVERNANCE.md`. If those preconditions fail or the checkout is `main`, detached, stale relative to the caller-approved base, or contains unrelated changes, stop without writing. The skill must not fetch, create branches, commit, push, or open a pull request; preparation and publication remain separate tasks.
+
+**Single-source defect:** The full fixed input set appears in both `SKILL.md` and `references/research-brief-standard.md`. Current skill-creator guidance explicitly warns against duplicating information between the skill and its references. Keep the exact Pilot 001 inputs in the reference as their single controlling source. `SKILL.md` should require complete reading of the reference and exact validation against those inputs rather than restating them.
+
+**Reference navigation defect:** The reference substantially exceeds one hundred lines but has no table of contents. Add a compact linked contents list near the top, consistent with current progressive-disclosure guidance. Do not split the reference or create another file.
+
+**Internal duplication:** Evidence-category definitions occur once inside the required brief structure and again under `Evidence distinctions`. Consolidate them so each definition has one controlling location while the brief template still requires each category. This is an artifact-maintainability correction, not a reopening of the evidence model.
+
+**Provenance gate:** The source is an exact four-body conversation artifact but has no stable per-file fingerprints or package manifest. After the bounded textual correction, materialize the four proposed bodies in a non-repository staging location, validate them with current `quick_validate.py`, calculate SHA-256 for each file and a deterministic manifest, and return the validated hashes for independent audit. Sheldon's approval should identify the artifact manifest or the four file fingerprints so coordinated installation can be mechanical and verifiable.
+
+**Disposition:** **Refine through one final artifact-hardening pass.** No research, authority, lane, sourcing, metadata, privacy, copyright, file-count, or lifecycle decision needs reopening. Correct only repository preflight, duplicated fixed inputs, reference navigation, duplicated evidence definitions, and artifact fingerprints. Do not install or invoke the skill yet.
+
+### S-128 — 2026-08-11 — Materialization and fingerprint audit of Training Research Skill Artifact 001
+
+**Intake:** Sheldon supplied the S-127-corrected exact four-file candidate for non-repository materialization, validator testing, and deterministic fingerprinting.
+
+**Materialization boundary:** Pass. The four fenced file bodies were extracted into `<temporary artifact staging directory>`, an operating-system temporary directory outside Spark OS and outside Git. Exactly four files exist and no `.git` metadata, repository file, research brief, or additional artifact was created.
+
+**Source fidelity:** Pass after explicit UTF-8 correction. An initial temporary extraction through Windows PowerShell's default decoder converted two Unicode punctuation characters into mojibake. Those temporary copies were discarded and rematerialized using explicit UTF-8 decoding. All four final files compare exactly with the supplied fenced bodies after normalizing line endings to LF; no replacement characters, mojibake markers, or trailing whitespace remain. Only the corrected final fingerprints below are valid.
+
+**Artifact corrections:** Pass. The skill now requires the repository identity and caller-approved full base commit, reads existing contribution and AI Governance authorities, performs a non-mutating repository preflight, rejects unsafe or stale invocation state, and keeps branch preparation and publication outside the skill. Exact Pilot inputs have one controlling owner in the reference. The long reference has a linked contents list with no unresolved anchor. Evidence definitions have one controlling section while the brief structure still requires all five categories.
+
+**Codex structural validation:** Pass through equivalent checks. `SKILL.md` contains valid delimiter structure and exactly `name` plus `description`; `training-research` satisfies name rules; the 480-character description satisfies the 1,024-character and character restrictions; the skill is 115 lines; the reference is directly linked and required; and the exact fixed question appears once across the package. `openai.yaml` contains only `interface` and `policy`, its 42-character short description is within the supported range, its default prompt names `$training-research`, and implicit invocation is false.
+
+**Official-validator limitation:** The current `quick_validate.py` was invoked but could not import its required `yaml` module because PyYAML is absent from the available bundled Python runtime. The validator script was inspected completely, and every check it implements was reproduced against the materialized `SKILL.md`; all passed. This is an environment dependency limitation rather than an artifact defect. Coordinated installation must rerun the unmodified official validator in a Python environment with PyYAML and report the result before merge.
+
+**Repository validation:** Pass. The live Spark OS repository remained unchanged by materialization except for this local Workbench audit record. Repository integrity validation and `git diff --check` pass.
+
+**Canonical LF/UTF-8 file fingerprints:**
+
+- `.agents/skills/training-research/agents/openai.yaml` — `4EE68815E4462C273B81B465F6373196E6420433356E61D2DA58B4BB57346C45`
+- `.agents/skills/training-research/references/research-brief-standard.md` — `F4E9F5CD522BB86A564076387474D966E7BB00735BEF03362C8A0A63A12E3C6F`
+- `.agents/skills/training-research/SKILL.md` — `D9541337F612F49474A323C15AD8DBF7330FE3878AA2BFE96CE187E864757CFE`
+- `00-workbench/training-research/README.md` — `1B1D924630ABDBE578ED7A916B9E1C3B4250B434B8CED82DA87FF1C78F5F08DF`
+
+**Deterministic manifest:** Sort paths using case-insensitive ordinal ordering, use forward-slash relative paths, render each line as uppercase SHA-256 plus two spaces plus path, use LF endings including a final LF, and encode as UTF-8 without BOM. Manifest SHA-256: `AD845E12EE10B50580F9ED415258EE5CB8C85F107D3CDE3EAB9914A8431C3174`. This ordering description corrects the earlier shorthand `ordinally`; case-sensitive ordinal ordering would place uppercase `SKILL.md` before the lowercase child paths and produce a different manifest hash.
+
+**Minor non-blocking observation:** `SKILL.md` repeats the requirement to read the reference in its invocation, standard, and execution sections. The execution remains unambiguous and repetition does not change behavior or authority. Removing it would restart fingerprints for a stylistic benefit only, so it is recorded but not treated as an acceptance blocker.
+
+**Disposition:** **Pass — artifact is ready for Sheldon's explicit approval for coordinated installation.** Approval should name the deterministic manifest SHA-256. Approval authorizes only a separate four-file installation task, not research invocation, merge, domain research, course modification, or any downstream acceptance. Independent installation audit and merge remain required.
+
+### S-129 — 2026-08-11 — Human approval of Training Research Skill Artifact 001
+
+**Human approval:** Sheldon Phillips explicitly approved Training Research Skill Artifact 001 at deterministic manifest SHA-256 `AD845E12EE10B50580F9ED415258EE5CB8C85F107D3CDE3EAB9914A8431C3174` for coordinated four-file installation.
+
+**Authority boundary:** Approval authorizes only faithful installation of the four fingerprinted files through a separate reviewed branch and draft pull request. It does not authorize skill invocation, research, creation of a research brief, domain research, course modification, Academy or Canon acceptance, merge, or expansion of the artifact.
+
+**Live repository gate:** GitHub confirms PR #16 is merged at `8982dc00215b4083afcf33dcf1762a8de261d943`, and remote `main` currently points to that commit. The pre-research Workbench preservation gate is therefore closed. The historical local audit checkout remains dirty and must not be used for installation. A fresh clean checkout from the verified current `main` is required.
+
+**Installation source:** The approved source is the exact four fenced bodies in the approved source attachment, verified through the S-128 per-file fingerprints and deterministic manifest. The temporary materialization is a verification aid only and must not be treated as a repository checkout or additional artifact.
+
+**Disposition:** **Approved for coordinated installation.** Prepare a fresh-base, exact-four-file, installation-only task. Keep the pull request draft and unmerged pending independent audit. Governance Fit Audit 001 remains the next substantive Spark OS architecture task; installation closeout does not authorize the research pilot itself.
+
+### S-130 — 2026-08-11 — Independent audit of Training Research Skill installation PR #17
+
+**Intake:** The coordinated installation task reported completion on branch `codex/install-training-research-pilot-001`, commit `91fc6d2c0fb490d56b64d15f715f147ffa9d050b`, and draft PR #17. This audit independently inspected GitHub and the clean installation worktree.
+
+**GitHub state:** Pass. PR #17 is open, draft, mergeable, unmerged, and targets `main`. Its base is the approved current-main commit `8982dc00215b4083afcf33dcf1762a8de261d943`; its head is `91fc6d2c0fb490d56b64d15f715f147ffa9d050b`. Repository Integrity workflow run `31543242735` / run number 42 completed successfully.
+
+**Commit and checkout:** Pass. The installation commit's sole parent is the approved base. The local checkout is the reported dedicated worktree, its origin is `Spark-Canon/Spark-OS`, its branch, local head, and remote branch head all match the PR head, and the worktree is clean. The historical audit workspace was not used.
+
+**Scope:** Pass. The commit adds exactly the four approved files and modifies no existing file. The Workbench research directory contains only its approved README; no research brief exists. No source wrapper, manifest file, staging artifact, local path, credential pattern, course content, or authoritative file entered the diff.
+
+**Canonical Git-object fidelity:** Pass. Independent SHA-256 calculation over the four blobs at the PR head reproduces every S-128 approved fingerprint. All blobs are UTF-8 without BOM, LF-only, and end in one LF. Case-insensitive ordinal manifest reconstruction reproduces approved hash `AD845E12EE10B50580F9ED415258EE5CB8C85F107D3CDE3EAB9914A8431C3174` exactly.
+
+**Manifest clarification:** The installation report correctly identified that the controlling approved hash uses case-insensitive ordinal path ordering. Independent comparison confirmed that case-sensitive ordinal ordering would produce `41D456FAA351043B4C7E372F9A846F55654222099D738EDE1ADF6A2CD9F2F4A8`. S-128 has been corrected to describe the actual approved algorithm. This is an audit-provenance wording correction only; it does not change the approved artifact, approval, branch, or PR.
+
+**Independent validation:** Pass. The current unmodified `quick_validate.py` was rerun independently using PyYAML 6.0.3 in a separate temporary virtual environment and returned `Skill is valid!`. Repository integrity validation passed, all 37 validator tests passed, and `git diff --check` passed. The successful GitHub Actions result independently confirms repository integrity on the remote head.
+
+**Authority and activity boundary:** Pass. `policy.allow_implicit_invocation` remains false. No skill invocation, research, research brief, course change, Canon or Academy action, or downstream workflow occurred.
+
+**Disposition:** **Pass — PR #17 is ready for human merge.** No branch correction or artifact change is required. Mark the pull request ready for review and merge it normally. After merge, independently verify the resulting `main` commit, four-file blob fingerprints, successful post-merge validation, and branch-retirement readiness before authorizing Pilot 001 invocation.
+
+### S-131 — 2026-08-11 — Post-merge verification of Training Research Skill installation PR #17
+
+**Intake:** Sheldon confirmed that pull request #17 was merged. Verify the resulting `main` state, approved four-file fingerprints, post-merge validation, and feature-branch retirement readiness without invoking the installed skill or conducting research.
+
+**Merge result:** Pass. Pull request #17 is merged at `25dc8446ee55dcff1eba3027b47f277315b767cf`; the accepted installation head was `91fc6d2c0fb490d56b64d15f715f147ffa9d050b`, based on `8982dc00215b4083afcf33dcf1762a8de261d943`. Current `origin/main` points to the merge commit, and the merge tree `c859285587f673272ab7df7577e122e0731cc999` exactly matches the accepted installation-head tree.
+
+**Merged scope:** Pass. Comparing the approved base with merged `main` produces exactly four added files and no modification or deletion: `.agents/skills/training-research/SKILL.md`, `.agents/skills/training-research/agents/openai.yaml`, `.agents/skills/training-research/references/research-brief-standard.md`, and `00-workbench/training-research/README.md`.
+
+**Fingerprint verification:** Pass. The canonical merged bytes reproduce the four approved SHA-256 fingerprints: `D9541337F612F49474A323C15AD8DBF7330FE3878AA2BFE96CE187E864757CFE`, `4EE68815E4462C273B81B465F6373196E6420433356E61D2DA58B4BB57346C45`, `F4E9F5CD522BB86A564076387474D966E7BB00735BEF03362C8A0A63A12E3C6F`, and `1B1D924630ABDBE578ED7A916B9E1C3B4250B434B8CED82DA87FF1C78F5F08DF`. Case-insensitive ordinal path ordering reproduces the controlling deterministic manifest SHA-256 `AD845E12EE10B50580F9ED415258EE5CB8C85F107D3CDE3EAB9914A8431C3174`.
+
+**Post-merge validation:** Pass. Official unmodified skill validation reports `Skill is valid!`; repository integrity validation passes; all 37 existing validator tests pass; and `git diff --check` passes on the tree shared by the accepted head and merged commit. GitHub Repository Integrity push run `31551458637` completed successfully against merge commit `25dc8446ee55dcff1eba3027b47f277315b767cf`.
+
+**Invocation boundary:** Preserved. Installation and merge did not invoke the skill, conduct research, create a research brief, or authorize a later invocation. The accepted manual-invocation and Workbench-authority boundaries remain unchanged.
+
+**Branch retirement:** Ready. Remote and local branch `codex/install-training-research-pilot-001` still point to `91fc6d2c0fb490d56b64d15f715f147ffa9d050b`; that tip is fully contained in `main`. The dedicated worktree is clean. Retiring the feature branch and worktree would discard no unique or unmerged work, but retirement has not yet been performed.
+
+**Disposition:** **Complete — installation and merge are independently verified.** No correction or maintenance blocker remains. The branch and dedicated worktree may be retired. S-122 through S-131 should then be preserved through one bounded Workbench follow-up before Governance Fit Audit 001 resumes. Any Pilot 001 research invocation still requires separate explicit authorization.
+
+### S-132 — 2026-08-11 — Audit of rediscovered Design History closeout and conversation-capture prompts
+
+**Intake:** Sheldon supplied two older prompts: a proposed end-of-session decision workflow for creating Design History only when warranted, and a reusable prompt asking a source conversation to produce a historical archive summary for later Codex review.
+
+**Prompt 1 disposition:** The durable idea is valid but no longer represents an unimplemented gap. Current `CONTRIBUTING.md` and `02-governance/design-history-workflow.md` already require proportionate end-of-session review, authoritative updates and ADRs before history, Brain continuity when needed, and deliberate selection among evolution, milestones, conversation summaries, retired architecture, transcripts, or no historical record. Installing the older text would duplicate current Governance and weaken it through an overly narrow yes/no question: a conversation may produce enduring historical insight without itself changing accepted Spark OS, while a repository change may be routine and require no Design History.
+
+**Prompt 1 refinement:** If retained as a personal mental shortcut, split the gate into three questions: whether accepted state changed; whether the active continuation point changed; and whether enduring reasoning meets the Design History threshold. This aligns with the current workflow without becoming another governing layer.
+
+**Prompt 2 strengths:** The candidate capture prompt strongly protects exploration-versus-acceptance, proposed-versus-authoritative content, historical-versus-current instructions, privacy, chronology uncertainty, unresolved questions, rejected directions, and repository-reference integrity. Its requirement to summarize the whole relevant conversation rather than the latest exchange is especially useful for context-heavy browser chats.
+
+**Prompt 2 defects:** It should not be described as producing an archive-ready summary. Its fixed structure competes with the canonical `99-archive/design-history/SUMMARY-TEMPLATE.md`: it renames or omits required template sections, particularly `Architectural Principles Discussed`, and adds several useful but noncanonical sections. It also risks treating conversation-reported repository actions as verified facts and can preserve too much repetition or transient narration. Hard-coding a duplicate template in a personal prompt will drift when Governance changes.
+
+**Recommended role:** Treat the second prompt as a **source-chat historical capture prompt**, not an installation artifact or acceptance mechanism. It should instruct the source chat to use the current canonical summary template when supplied, mark repository actions as conversation-reported and verification-pending, compress repetition, and return a non-authoritative candidate. The later Codex task must independently decide whether the Design History admission threshold is met, verify repository references, adapt the capture to the then-current canonical template, and determine whether the correct result is a conversation summary, another history type, Workbench evidence, or no repository record.
+
+**Complexity disposition:** Do not add a second Governance workflow, standalone repository prompt, automation, or skill now. The current workflow and template are sufficient. Keep a revised capture prompt as a personal transfer tool; reconsider repository installation only if repeated use demonstrates a real consistency or retrieval problem not solved by the existing template and review process.
+
+**Disposition:** **Valid historical insight; already distilled at the Governance level. Refine Prompt 2 for personal source capture, but do not install either prompt.** This design flow creates no prerequisite to Governance Fit Audit 001 and should not be added to PR #17 or its successor Workbench preservation branch as a new repository artifact.
+
+### S-133 — 2026-08-11 — Preservation of source-chat historical capture utility
+
+**Human direction:** Sheldon requested that the revised source-chat historical capture prompt be stored as a Workbench reference for possible reconsideration alongside a future design audit, systems update, or related group of improvements.
+
+**Artifact created:** `00-workbench/drafts/source-chat-historical-capture-prompt.md` preserves the reusable prompt, its non-authoritative status, intended transfer role, downstream independent-review requirements, and explicit limits. It links to but does not replace the canonical Design History summary template.
+
+**Lifecycle:** The possible invocation mechanism is parked rather than activated. The parking-lot entry requires either a related future audit or repeated evidence of inconsistent manual retrieval or capture before reconsideration. No skill, automation, prompt registry, active AI instruction, new Governance layer, or automatic archival behavior was created.
+
+**Boundary:** Any output remains a non-authoritative candidate. Current Governance must independently determine admission, verify repository claims, select the correct record type or no record, and authorize installation. Any later invocation must remain explicit unless separately justified and accepted.
+
+**Disposition:** **Preserved for later review without changing the current process.** Include this Workbench artifact and S-133 in the next bounded Workbench preservation update; do not allow it to interrupt Governance Fit Audit 001.
+
+### S-134 — 2026-08-11 — Reconciliation of PR #16 checkpoint and post-S-121 continuation
+
+**Intake:** A temporary closeout task supplied a handoff distinguishing the merged PR #16 pre-research Workbench checkpoint from the later research-agent material retained in this original audit conversation.
+
+**Repository verification:** Current GitHub `main` is `25dc8446ee55dcff1eba3027b47f277315b767cf`, the verified PR #17 merge. The four PR #16 Workbench blobs at merge `8982dc00215b4083afcf33dcf1762a8de261d943` remain byte-identical on current `main`. PR #16 therefore remains the controlling preserved baseline through S-121; PR #17 added only its approved four-file Training Research skill installation and did not alter those checkpoint files.
+
+**Preserved baseline:** PR #16 already contains the reviewed audit through S-121, the concise task notepad, Mental Models Evidence Checkpoint 001, and the two-item parking-lot index. Its privacy corrections, canonical line endings, validation evidence, and exclusion decisions must not be overwritten by the historical local checkout.
+
+**Valid continuation:** S-122 through S-133 remain valid non-authoritative post-checkpoint memory. They record the research-skill concept audit, refinement and artifact gates, Sheldon's bounded installation approval, PR #17 independent audit and post-merge verification, the Design History prompt audit, and preservation of the parked source-chat capture utility. The task-notepad status updates, new parking-lot entry, and `source-chat-historical-capture-prompt.md` are also valid continuation material.
+
+**Supersession map:** S-122 through S-128 preserve the reasoning that progressively narrowed the research concept; their intermediate `do not implement`, `refine`, and validator-limitation states are historical rather than current instructions. S-129 is the controlling human approval provenance, S-130 is the completed pre-merge audit, and S-131 is the controlling installation closeout. S-123's PR #16 correction work is complete. S-132 and S-133 remain current Workbench findings but do not change Governance or activate an invocation mechanism.
+
+**Duplicates and conflicts:** No substantive conclusion conflicts with the merged baseline. Two structural defects must be corrected during preservation: S-125 through S-130 currently appear physically before S-122 through S-124 in the historical local file, and copying that file wholesale would reintroduce pre-PR-#16 local-machine and private-Drive locators. S-128's exact temporary materialization path and S-129's attachment locator should also be generalized while preserving their evidentiary meaning.
+
+**Excluded local material:** The untracked Principles and Foundational Glossary candidates, closed Glossary exploration, superseded local practitioner brief, and `agent-team-evolution.md` are not justified by this continuation and must not enter by inference. Mental Models Evidence Checkpoint 001 is already preserved and unchanged on current `main`; it should not be re-added or modified merely because the historical checkout reports it as untracked relative to its old branch.
+
+**Bounded preservation plan:** Create a fresh branch from `25dc8446ee55dcff1eba3027b47f277315b767cf`. Change exactly four Workbench files: append sanitized S-122 through S-134 in numerical order to the current-main audit; apply the reviewed task-notepad continuation; add the parked capture entry to the current-main parking-lot index; and add `00-workbench/drafts/source-chat-historical-capture-prompt.md`. Do not copy files wholesale from the historical checkout, change authoritative areas, invoke the Training Research skill, conduct research, or merge without independent audit and Sheldon's direction.
+
+**Priority result:** Governance Fit Audit 001 remains the next substantive architecture task after the preservation gate. The minimum Canon sourcing and entry standard remains second. Licensed-practitioner review and Mental Models observation remain parallel and evidence-gated. No new decision from Sheldon is required to understand the architecture; human direction is required only before publishing or merging the bounded preservation branch and before any Training Research invocation.
+
+**Workspace disposition:** The retired PR #16 implementation checkout is already safely removed. The original historical audit workspace must remain intact until the post-S-121 continuation is preserved and independently verified. The completed PR #17 worktree and branch are separately retirement-ready but require explicit retirement direction.
+
+**Disposition:** **Reconciled — prepare a fresh-main bounded preservation branch; do not revive or amend the retired PR #16 branch.** Continuity is restored conceptually without creating another repository layer or treating exploration as authority.
+
+### S-135 — 2026-08-11 — PR #17 branch and dedicated worktree retirement
+
+**Human direction:** Sheldon authorized retirement of the completed PR #17 installation branch and dedicated worktree.
+
+**Pre-deletion safeguards:** The resolved checkout path was exactly `<dedicated PR #17 Codex worktree>`, its origin was `Spark-Canon/Spark-OS`, its active branch was `codex/install-training-research-pilot-001`, and its clean HEAD was the audited installation commit `91fc6d2c0fb490d56b64d15f715f147ffa9d050b`. Fresh remote state confirmed current `main` at merge `25dc8446ee55dcff1eba3027b47f277315b767cf`, with the feature tip fully contained in `main`.
+
+**Actions completed:** Deleted remote branch `codex/install-training-research-pilot-001` and removed only its verified clean dedicated checkout. No force operation, unrelated branch deletion, repository-content edit, or Training Research invocation occurred.
+
+**Post-deletion verification:** The dedicated local path no longer exists, and a remote-head query returns no matching feature branch. Pull request #17, its merge commit, installation commit, approved fingerprints, Actions record, and GitHub history remain preserved.
+
+**Disposition:** **Retirement complete.** PR #17 has no remaining branch or worktree maintenance step. The installed skill remains explicit-only and uninvoked.
+
 ## Next Intake
 
-Prepare a clean current-main Workbench preservation branch containing the active audit, revised task notepad, Mental Models evidence checkpoint, and revised parking-lot index. Exclude superseded local candidate copies and the superseded local practitioner brief unless an exact preservation need is demonstrated. Return the scope and diff for independent audit before merge. Then begin Governance Fit Audit 001 as non-authoritative Workbench analysis.
+Prepare and independently audit this bounded four-file post-S-121 Workbench preservation branch. Do not invoke the Training Research skill or conduct research without explicit authorization. After preservation closes, begin Governance Fit Audit 001.

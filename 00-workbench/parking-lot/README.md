@@ -36,3 +36,17 @@ Parking an idea is not rejecting it. It is choosing not to create premature comp
 **Reconsider when:** Governance Fit Audit 001 or repeated Canon work exposes a consequential decision that current contribution rules, Values, and Principles do not guide.
 
 **Likely destination:** A clarification within an existing contribution or Canon sourcing standard, unless later evidence establishes a genuinely independent Philosophy commitment or decision rule.
+
+### Source-Chat Historical Capture Invocation
+
+**Idea:** Preserve the [source-chat historical capture prompt](../drafts/source-chat-historical-capture-prompt.md) as a reusable transfer aid and later consider making it explicitly invocable alongside related design or workflow improvements.
+
+**Why it may matter:** Long, context-heavy conversations can be difficult to transfer faithfully. A consistent prompt can preserve material reasoning, uncertainty, boundaries, and repository-verification needs without treating the source chat as an authority.
+
+**Why it is parked:** Current Design History Governance and its canonical summary template already control admission and installation. No repeated use has yet demonstrated that another skill, automation, prompt registry, or active instruction is necessary.
+
+**Reconsider when:** A future design, workflow, or AI-systems audit is already reviewing related improvements, or repeated manual use shows inconsistent retrieval, lost prompts, or unreliable historical captures.
+
+**Likely destination:** An explicitly invoked repository utility or existing skill only if evidence shows a durable need. It must not replace the canonical Design History template or automatically create historical records.
+
+**Boundary:** The prompt's output remains a non-authoritative candidate requiring independent admission, repository verification, adaptation to current Governance, and deliberate installation.

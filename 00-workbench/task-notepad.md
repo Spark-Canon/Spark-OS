@@ -2,15 +2,16 @@
 
 **Status:** Active working list
 **Authority:** Non-authoritative Workbench material
-**Last reviewed:** 2026-08-09
+**Last reviewed:** 2026-08-11
 **Purpose:** Keep the current cross-chat queue concise while detailed reasoning remains in the [foundational audit](drafts/foundational-conversation-audit.md) and qualifying Design History.
 
 ## Current Priority Queue
 
-1. [ ] **Preserve the reviewed Workbench state on a clean current-`main` branch.**
-   - Carry forward this notepad, the active foundational audit, the [Mental Models evidence checkpoint](drafts/mental-models-evidence-checkpoint-001.md), and the [parking-lot index](parking-lot/README.md).
-   - Exclude superseded candidate copies and the superseded local practitioner brief unless a specific preservation need is demonstrated.
-   - Audit the exact branch diff before merge.
+1. [ ] **Close the bounded post-checkpoint Workbench preservation.**
+   - Branch `agent/preserve-post-s121-workbench` starts from current `main` and appends a sanitized and correctly ordered S-122 through S-135 continuation, updates this notepad and the parking-lot index, and adds the source-chat historical capture utility.
+   - Do not copy the historical local audit file wholesale: its pre-S-122 content predates PR #16 privacy corrections, and S-125 through S-130 require chronological relocation after S-124.
+   - Do not widen the update into authoritative content, skill invocation, research, or superseded candidate preservation.
+   - Independently audit the exact four-file branch diff before merge.
 
 2. [ ] **Complete Governance Fit Audit 001.**
    - Test whether current [`CONTRIBUTING.md`](../CONTRIBUTING.md) already provides sufficient design-time Philosophy application and post-design/pre-acceptance review.
@@ -22,6 +23,7 @@
 3. [ ] **Explore a minimum Canon sourcing and entry standard.**
    - Define only the minimum needed to distinguish accepted claims, provenance, currency, scope, uncertainty, and authority.
    - Use Course Prototype 001 failures as evidence without treating the prototype as authoritative.
+   - Treat the installed but uninvoked Training Research Pilot 001 as bounded instructional-design evidence infrastructure, not a Canon standard or authority. Any later domain research still requires separate review and authorization.
    - Preserve legal, regulatory, professional, insurer, lender, and organizational ownership boundaries.
    - Do not design a comprehensive schema or create mortgage Canon or Academy content during this exploration.
 
@@ -48,6 +50,7 @@ See the [parking-lot index](parking-lot/README.md).
 
 - Bookmarks and links repository
 - Established knowledge over reinvention
+- Source-chat historical capture invocation
 
 Reopen either only when the recorded evidence trigger occurs. Parking is not rejection and does not create an active design task.
 
@@ -58,6 +61,8 @@ Reopen either only when the recorded evidence trigger occurs. Parking is not rej
 - PR #13 installed the accepted Foundational Glossary at merge `f2ce678ae65de1dd24c1fea237fd208fce2e454a`.
 - PR #14 archived the Glossary exploration as non-authoritative Design History at `a9178a17c57684c425ffb3cc8854e5f638a48097`.
 - PR #15 completed the verified Glossary closeout at `ec177993bbd55efe29bbaf14daddc132ddc3e055`; its branch and temporary checkout are retired.
+- PR #16 preserved the reviewed pre-research Workbench checkpoint at `8982dc00215b4083afcf33dcf1762a8de261d943`.
+- PR #17 installed the approved Training Research Pilot 001 skill and merged at `25dc8446ee55dcff1eba3027b47f277315b767cf`; post-merge fingerprints and validation pass. The skill remains uninvoked, and its completed feature branch and dedicated worktree are retired.
 - PR #12 remains draft, open, unmerged, and non-authoritative pending practitioner review.
 - No known architectural or repository-integrity blocker prevents Governance Fit Audit 001.
 
@@ -67,6 +72,7 @@ Reopen either only when the recorded evidence trigger occurs. Parking is not rej
 |---|---|---|
 | `drafts/foundational-conversation-audit.md` | Retain — active | Primary local audit and continuity record |
 | `drafts/mental-models-evidence-checkpoint-001.md` | Retain — observation | One candidate remains evidence-gated |
+| `drafts/source-chat-historical-capture-prompt.md` | Retain — parked utility | Reusable non-authoritative transfer prompt awaiting evidence for an explicit invocation mechanism |
 | PR #12 curated practitioner brief | Retain on PR #12 | Active external-review input |
 | Local `course-prototype-001-practitioner-review-brief.md` | Superseded | PR #12 contains the curated active brief |
 | Local `spark-os-principles-candidate.md.txt` | Superseded | Accepted Principles and Design History preserve the outcome and provenance |
@@ -107,4 +113,4 @@ For each new item, record:
 
 ## Next Action
 
-Preserve this reviewed Workbench state from a fresh current-`main` base. After that branch passes independent audit, begin Governance Fit Audit 001 as non-authoritative Workbench analysis.
+Independently audit and merge the bounded post-S-121 Workbench preservation branch. After closeout, begin Governance Fit Audit 001 as non-authoritative Workbench analysis.
