@@ -44,6 +44,7 @@ Read in order:
 Before writing, state:
 
 - which authority is affected
+- which accepted Values or Principles materially constrain the proposed design, including any material tension among them
 - whether an ADR is required
 - what downstream documents may need review
 - whether the change creates a new source of truth

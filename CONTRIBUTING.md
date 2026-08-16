@@ -131,7 +131,7 @@ For a material, architectural, or governance change:
 
 1. Perform Full Architectural Boot.
 2. Create a branch.
-3. Identify affected authorities and whether an ADR is required.
+3. Identify affected authorities, the accepted Values and Principles that materially constrain the proposed change—including material tensions—and whether an ADR is required. If no specific Value or Principle materially changes the proposal beyond the generally applicable Philosophy, state that briefly and explain why.
 4. Make the proposed changes.
 5. Update navigation, current state, and session continuity.
 6. Run `python tools/validate_repository.py`.
@@ -195,10 +195,12 @@ Before accepting a meaningful change, ask:
 
 - Does this preserve Spark Philosophy?
 - Does it contradict accepted Governance or Canon?
+- Where the change derives from or represents another source, does it faithfully preserve that source’s material meaning, scope, assumptions, uncertainty, and limitations; and has applicable credible contrary evidence been addressed?
 - Does it create a second source of truth?
 - Is the file in the authority location named by the repository map?
 - Does it improve competence, judgment, trust, retrieval, or continuity?
 - Does it make Spark OS simpler or merely larger?
+- Are the review depth, safeguards, accountable ownership, and preservation burden proportionate to what could materially be affected?
 - What downstream outputs need revision?
 - Do the integrity checks pass?
 
