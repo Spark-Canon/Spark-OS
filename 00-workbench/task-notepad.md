@@ -2,47 +2,45 @@
 
 **Status:** Active working list
 **Authority:** Non-authoritative Workbench material
-**Last reviewed:** 2026-08-11
+**Last reviewed:** 2026-08-18
 **Purpose:** Keep the current cross-chat queue concise while detailed reasoning remains in the [foundational audit](drafts/foundational-conversation-audit.md) and qualifying Design History.
 
 ## Current Priority Queue
 
-1. [ ] **Close the bounded post-checkpoint Workbench preservation.**
-   - Branch `agent/preserve-post-s121-workbench` starts from current `main` and appends a sanitized and correctly ordered S-122 through S-135 continuation, updates this notepad and the parking-lot index, and adds the source-chat historical capture utility.
-   - Do not copy the historical local audit file wholesale: its pre-S-122 content predates PR #16 privacy corrections, and S-125 through S-130 require chronological relocation after S-124.
-   - Do not widen the update into authoritative content, skill invocation, research, or superseded candidate preservation.
-   - Independently audit the exact four-file branch diff before merge.
+1. [ ] **Independently audit and merge the bounded current-main Workbench reconciliation.**
+   - Review the exact eight-file diff: four continuity updates and four deliberate Workbench additions.
+   - Confirm ordered S-136 through S-148 continuity, exclusions, source boundaries, links, validation, and no sensitive local or private locator disclosure.
+   - Do not turn the maintenance package into Canon, Governance, Academy, research, pilot, or installation work.
 
-2. [ ] **Complete Governance Fit Audit 001.**
-   - Test whether current [`CONTRIBUTING.md`](../CONTRIBUTING.md) already provides sufficient design-time Philosophy application and post-design/pre-acceptance review.
-   - Compare it with accepted Philosophy, Governance, Spark Brain boot paths, Canon authority, and applicable external constraints.
-   - Identify concrete recurring decisions the current workflow does not guide.
-   - Recommend no change when the existing workflow is sufficient; otherwise propose the smallest coherent edit and likely owner.
-   - Do not create an ADR, new Governance file, checklist system, schema, or automation during the audit.
+2. [ ] **Distill the closed Minimum Canon Sourcing and Entry Standard Exploration 001.**
+   - Begin only after the reconciliation package closes.
+   - Produce one concise non-authoritative candidate and first test whether it fits coherently in `03-canon/README.md`.
+   - Preserve the audited nine admission questions, seven recoverable information groups, proportionality, authority allocation, and no-new-infrastructure boundaries.
+   - Do not begin a Canon pilot, create a Canon entry, conduct research, invoke Training Research, create Academy content, amend Governance, create an ADR, or design a schema.
 
-3. [ ] **Explore a minimum Canon sourcing and entry standard.**
-   - Define only the minimum needed to distinguish accepted claims, provenance, currency, scope, uncertainty, and authority.
-   - Use Course Prototype 001 failures as evidence without treating the prototype as authoritative.
-   - Treat the installed but uninvoked Training Research Pilot 001 as bounded instructional-design evidence infrastructure, not a Canon standard or authority. Any later domain research still requires separate review and authorization.
-   - Preserve legal, regulatory, professional, insurer, lender, and organizational ownership boundaries.
-   - Do not design a comprehensive schema or create mortgage Canon or Academy content during this exploration.
-
-4. [ ] **Run one bounded Canon pilot after the minimum standard is credible.**
-   - Select a narrow topic with accessible current sources and meaningful operational use.
-   - Test sourcing, retrieval, change handling, downstream teaching implications, and evidence for future Mental Models.
+3. [ ] **Run one bounded Canon pilot only after a credible standard is audited, approved, and installed.**
+   - Choose a narrow topic with accessible current sources and meaningful operational use.
+   - Test sourcing, retrieval, maintenance, downstream teaching implications, and evidence for future Mental Models.
    - Do not generalize repository architecture from one pilot.
 
 ## Parallel and Evidence-Gated Work
 
 - [ ] **Obtain licensed-practitioner review of Course Prototype 001.**
-  - Draft PR [#12](https://github.com/Spark-Canon/Spark-OS/pull/12) remains the frozen, non-authoritative review package.
-  - It is currently conflicted with `main`; do not refresh, repair, or merge it merely to remove the conflict.
-  - After practitioner findings return, reconcile them here before authorizing any successor prototype, Canon, or Academy work.
+  - PR #12 merged as a preserved, non-authoritative Workbench review package.
+  - Practitioner findings must be reconciled here before any successor prototype, Canon, or Academy work is authorized.
+
+- [ ] **Keep coordinated installation-package workflow refinement paused.**
+  - The candidate is retained as Workbench source material pending the related Claude audit and later reconciliation.
+  - Do not promote it to Governance or invoke it as a mandatory new layer by inference.
 
 - [ ] **Continue observing `Representation Is Not Capability`.**
   - The Mental Models evidence checkpoint found insufficient independent evidence for Distill.
-  - Reopen only when repeated non-lineage-biased use demonstrates a recurring reasoning benefit.
-  - `What Changes When We Simplify?` remains reallocated to possible future Academy or editorial guidance, not foundational Mental Models.
+  - Reopen only when repeated, non-lineage-biased use demonstrates a recurring reasoning benefit.
+  - `What Changes When We Simplify?` remains reallocated to possible future Academy or editorial guidance.
+
+- [ ] **Keep agent-team evolution notes paused.**
+  - They are retained only as state-context source material pending later Claude documents and reconciliation.
+  - They do not authorize a role, agent, skill, workflow, or AI Governance change.
 
 ## Parked
 
@@ -62,24 +60,24 @@ Reopen either only when the recorded evidence trigger occurs. Parking is not rej
 - PR #14 archived the Glossary exploration as non-authoritative Design History at `a9178a17c57684c425ffb3cc8854e5f638a48097`.
 - PR #15 completed the verified Glossary closeout at `ec177993bbd55efe29bbaf14daddc132ddc3e055`; its branch and temporary checkout are retired.
 - PR #16 preserved the reviewed pre-research Workbench checkpoint at `8982dc00215b4083afcf33dcf1762a8de261d943`.
-- PR #17 installed the approved Training Research Pilot 001 skill and merged at `25dc8446ee55dcff1eba3027b47f277315b767cf`; post-merge fingerprints and validation pass. The skill remains uninvoked, and its completed feature branch and dedicated worktree are retired.
-- PR #12 remains draft, open, unmerged, and non-authoritative pending practitioner review.
-- No known architectural or repository-integrity blocker prevents Governance Fit Audit 001.
+- PR #17 installed the approved Training Research Pilot 001 skill and merged at `25dc8446ee55dcff1eba3027b47f277315b767cf`; the skill remains uninvoked.
+- PR #12 preserved Course Prototype 001 for practitioner review at `e3ba58b1ee687d1b4ac11f4da44f8caaa61cc5ae`.
+- PRs #19, #20, #22, and #23 added non-authoritative Design History summaries at `523c4a6cd5c7995faa52c3cded209df763c1e180`, `deb87aeb3f8180614f05507f44f004130b1150ec`, `58954480c51ee9126d746be3c72d4910b67ffc6f`, and `7ad895ac3f56e93a5f823b7de5b072d0f3e6c748`.
+- PR #21 merged the bounded Governance and boot clarification at `a73d90dc66c5713c0dda6fe11eb1609f34b37674`.
+- No known architectural or repository-integrity blocker prevents the bounded Canon Distill after this reconciliation closes.
 
 ## Workbench Artifact Dispositions
 
 | Artifact | Disposition | Reason |
 |---|---|---|
-| `drafts/foundational-conversation-audit.md` | Retain — active | Primary local audit and continuity record |
-| `drafts/mental-models-evidence-checkpoint-001.md` | Retain — observation | One candidate remains evidence-gated |
-| `drafts/source-chat-historical-capture-prompt.md` | Retain — parked utility | Reusable non-authoritative transfer prompt awaiting evidence for an explicit invocation mechanism |
-| PR #12 curated practitioner brief | Retain on PR #12 | Active external-review input |
-| Local `course-prototype-001-practitioner-review-brief.md` | Superseded | PR #12 contains the curated active brief |
-| Local `spark-os-principles-candidate.md.txt` | Superseded | Accepted Principles and Design History preserve the outcome and provenance |
-| Local `foundational-glossary-candidate-001.md.txt` | Superseded | Accepted Glossary, approval fingerprint, audit, and Design History preserve the outcome |
-| Local `foundational-glossary-exploration-001.md` | Superseded for active use | Accepted Glossary, foundational audit, and merged Design History preserve durable findings |
-
-Do not delete a superseded local file until the clean preservation branch has been audited and its exclusion is confirmed.
+| `drafts/foundational-conversation-audit.md` | Retain — active | Primary continuity and audit record |
+| `drafts/minimum-canon-sourcing-entry-exploration-001.md` | Retain — closed source | Audited non-authoritative source for a separate bounded Distill |
+| `drafts/independent-architecture-auditor-pickup-prompt.md` | Retain — transfer utility | Non-authoritative future-chat handoff; current repository sources control |
+| `drafts/coordinated-installation-package-workflow.md` | Retain — paused candidate | Bounded process source pending later reconciliation |
+| `drafts/agent-team-evolution-notes-consolidated.md` | Retain — paused intake | State-context source only; no role or agent authority |
+| `drafts/mental-models-evidence-checkpoint-001.md` | Retain — observation | Candidate remains evidence-gated |
+| PR #12 curated practitioner brief | Retain on `main` | Active external-review input, non-authoritative |
+| Local candidate and exploration drafts superseded by accepted Philosophy | Superseded | Canonical artifacts, audits, and Design History preserve durable outcomes |
 
 ## Feedback Intake
 
@@ -113,4 +111,4 @@ For each new item, record:
 
 ## Next Action
 
-Independently audit and merge the bounded post-S-121 Workbench preservation branch. After closeout, begin Governance Fit Audit 001 as non-authoritative Workbench analysis.
+Independently audit and merge the bounded current-main Workbench reconciliation package. After closeout, begin the separate bounded Minimum Canon Distill.
