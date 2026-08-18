@@ -4323,6 +4323,226 @@ Neither response invalidates the other, but the PR #16 correction must not be tr
 
 **Disposition:** **Retirement complete.** PR #17 has no remaining branch or worktree maintenance step. The installed skill remains explicit-only and uninvoked.
 
+### S-136 — 2026-08-12 — PR #18 merge verification and Governance Fit Audit recovery finding
+
+**Intake:** Sheldon confirmed completion of PR #18 and requested the next step.
+
+**Merge verification:** Pass. Pull request #18 merged at `b492afb448d5f76b4be0dae73d0a84d2c91a959b`; current remote `main` points to that commit. The accepted head `d64a065951563cb6dbc85c708c98693d88ed4d83` is fully contained in `main`, and the merge tree `1f1aed4c16fe0da4d0950afc901672f54dde8860` exactly matches the accepted-head tree.
+
+**Scope and fingerprints:** Pass. Comparing the prior `main` at `25dc8446ee55dcff1eba3027b47f277315b767cf` with the merge changes exactly the four audited Workbench files. Their canonical SHA-256 fingerprints match the pre-merge report: audit `A5BBC3ED9AAF4CB0038BEED9566EE0179576E965F474416068174117F0C57749`, task notepad `2B2FAA16F315F481256D7DAFFBC4FF805426CACDF42E4F4A08A1DC5BF33667F0`, parking-lot index `CC6D390ABBA7AED665AE13A29366E41FF9D17ECD7A3AA04C3FCF8A5A64B681B1`, and capture utility `A20863458EEDCF18463EB0214732EC59FDF737D12C04115E6B5441D458795F2E`.
+
+**Post-merge state:** Pass. Repository Integrity push run `31571238459` completed successfully against the merge. The remote feature branch and dedicated PR #18 worktree are absent, and no local feature branch remains. GitHub history preserves the PR, head, merge, and validation evidence.
+
+**Next-task discovery:** A separate worktree exists on `codex/governance-fit-audit-001` at historical base `8982dc00215b4083afcf33dcf1762a8de261d943`. It contains an untracked completed `governance-fit-audit-001.md` plus uncommitted task-notepad and Brain changes. Repository validation, all 37 tests, and `git diff --check` pass in that worktree. The audit concludes that current `CONTRIBUTING.md` is sufficient and recommends no Governance change, while reallocating the remaining claim-level sourcing question to the already planned minimum Canon sourcing exploration.
+
+**Stale-base boundary:** The existing audit reasoning may be valid because PRs #17 and #18 did not change Governance, accepted Philosophy, or `CONTRIBUTING.md`. Its repository updates cannot be published as-is: the checkout predates the installed Training Research skill and merged Workbench continuation, and its task and Brain files therefore overwrite newer repository continuity by omission. Do not rebase, reset, delete, or copy the stale checkout wholesale before preserving its unique draft.
+
+**Disposition:** **PR #18 closeout complete; Governance Fit Audit 001 recovery is next.** Independently compare the audit conclusion against current `main`, then preserve only the validated audit and reconciled current-state changes on a fresh current-main branch. Default to no Governance or ADR change unless current evidence overturns the draft's conclusion.
+
+### S-137 — 2026-08-12 — Coordinated Installation Package Workflow captured as repeated routine
+
+**Human direction:** Sheldon identified that the coordinated artifact-installation process has been repeated across multiple Spark OS installations and requested a Workbench item documenting its format, process, GitHub location, and audit-trail title convention.
+
+**Governance basis:** AI Governance states that automation routines belong to Spark OS rather than a vendor or model, that a routine should be stored as an explicit repository instruction so another capable tool can execute it, and that no routine becomes active until scope, frequency, inputs, outputs, and escalation rules are defined. Its evolution triggers also include repeated assignment, new durable workflows, and hidden dependency risk. The observed installation pattern now meets the threshold for deliberate documentation.
+
+**Artifact created:** `00-workbench/drafts/coordinated-installation-package-workflow.md` records a vendor-portable candidate covering package metadata, source and installed fingerprints, deterministic multi-file manifests, human approval language, fresh-main installation, mechanical transformations, draft PR publication, independent audit, merge, post-merge verification, safe retirement, and closeout.
+
+**GitHub and audit conventions:** The candidate proposes `Spark-Canon/Spark-OS`, vendor-neutral `agent/install-<artifact-slug>` branches, draft PRs titled `Install approved <Artifact Name>`, and GitHub PR bodies as the default installation-report surface. It defines audit headings as `### S-#### — YYYY-MM-DD — <Concise event title>`, where `S-####` means the next unused sequential identifier and does not require retroactive renumbering or zero-padding.
+
+**Complexity boundary:** No generic installation-package directory, new Governance layer, automation, skill, or active instruction was created. The package should not be committed as a duplicate record by default; GitHub history and the audit trail normally preserve provenance. Artifact-specific validation and authority destinations remain variable.
+
+**Effect on Governance Fit Audit 001:** This is material new evidence. The stale audit draft's conclusion that no Governance change is needed may still survive if the routine can be integrated into an existing instruction without material change, but it can no longer be accepted without testing the repository-owned-routine gap. The recovery task must audit this candidate against current AI Governance and `CONTRIBUTING.md` before final disposition.
+
+**Disposition:** **Preserved as a non-authoritative process candidate for Explore and Challenge.** It does not authorize an installation or alter current Governance. No decision from Sheldon is required until the candidate has been challenged and its smallest appropriate owner is identified.
+
+### S-138 — 2026-08-12 — Agent-Team Evolution paused state-context intake
+
+**Human direction:** Sheldon supplied `agentteamevolutionnotesconsolidated.md` from an ongoing Claude audit of the agent-production concept and requested preservation only. The material is a state-context pause that will be elaborated through later documents.
+
+**Artifact preserved:** The source was copied byte-for-byte to `00-workbench/drafts/agent-team-evolution-notes-consolidated.md`. Source and Workbench copy are both 20,939 bytes with SHA-256 `B319F3D0362E888AA4E48A078868CC5AE3D57F92D4B5BDE4D25E993AB7E0A5A6`.
+
+**Boundary:** No substantive audit, reconciliation, compression, acceptance, prioritization, installation, Governance change, or agent-production decision was performed. The document's closed, open, and not-yet-reached points remain the source conversation's working states rather than Spark OS findings. The separate local `00-workbench/agent-team-evolution.md` artifact was not compared, modified, or included by inference.
+
+**Disposition:** **Retain as paused non-authoritative Workbench intake.** Continue only when Sheldon supplies later audit documents or explicitly requests reconciliation. This intake does not interrupt Governance Fit Audit recovery.
+
+### S-139 — 2026-08-12 — Recovered Governance Fit Audit 001
+
+**Intake:** Sheldon directed this audit chat to proceed with Governance Fit Audit 001 after the repeated Coordinated Installation Package Workflow was captured as new evidence.
+
+**Recovery:** The earlier completed draft was assessed from current GitHub `main` at `b492afb448d5f76b4be0dae73d0a84d2c91a959b`. Its general analysis remains applicable because the reviewed authoritative files are blob-identical between its historical base and current `main`. Its stale Brain and task-notepad changes remain excluded from wholesale reuse.
+
+**General fit:** Pass. Current `CONTRIBUTING.md` remains sufficient for ordinary and material contribution design, Philosophy application, authority identification, human acceptance, validation, ADR triggers, and downstream review. No broad Governance redesign, new layer, comprehensive checklist system, or automated approval regime is justified.
+
+**New exception:** AI Governance requires repeated durable routines to become explicit, portable repository instructions with defined scope, frequency, inputs, outputs, and escalation. The coordinated installation of exact approved artifacts has now repeated often enough to meet that threshold. Its distinctive risks are stale-base installation, source or transformation drift, unrelated scope, self-certification, premature merge, authority-versus-use confusion, incomplete post-merge verification, and unsafe retirement.
+
+**Candidate audit:** The Workbench candidate passes the routine-contract test but earns `Refine`. Required changes are to limit the trigger to exact approved artifacts; separate universal from artifact-specific validation; compress repeated explanation; keep `S-####` as a current Workbench audit convention rather than package identity; define independence as role separation rather than vendor separation; avoid making GitHub the sole process memory; make branch-prefix wording advisory; retain deletion safeguards and authority; distinguish approval, installation, authority, and downstream use; and require an accessible fingerprint-verifiable source.
+
+**Likely owner:** If later accepted, the smallest coherent destination is a focused workflow in the existing Governance layer, provisionally `02-governance/coordinated-installation-workflow.md`, with short discovery links from current governing documents rather than duplicated rules. No new Governance directory, automation, skill, or default boot dependency is indicated.
+
+**ADR boundary:** No ADR is authorized or required for the audit or Workbench refinement. A later accepted workflow would likely meet current ADR criteria because it creates a durable cross-area Governance constraint; decide and prepare that ADR only when the candidate is acceptance-ready.
+
+**Artifact:** The complete recovered audit is recorded in `00-workbench/drafts/governance-fit-audit-001.md`.
+
+**Disposition:** **Governance Fit Audit 001 complete — general fit passes with one targeted routine exception.** Revise and independently audit the installation-workflow candidate before any canonical Governance drafting or approval. Canon sourcing remains the next architecture task after this bounded Governance item closes. No Sheldon decision is required before revision.
+
+### S-140 — 2026-08-12 — Coordinated Installation Workflow refinement paused
+
+**Human direction:** Sheldon paused the bounded refinement of the Coordinated Installation Package Workflow because a concurrent Claude audit has identified a similar potential workflow and has already developed implementation distinctions for later consideration.
+
+**Effect on S-139:** Governance Fit Audit 001 remains valid as non-authoritative evidence: the general contribution workflow passes, and a targeted repository-owned-routine gap is substantiated. Its recommendation to refine the current candidate is paused rather than rejected, superseded, accepted, or installed.
+
+**Reconciliation boundary:** Do not develop a competing workflow from the current candidate while the Claude audit is incomplete or unavailable here. When Sheldon supplies that material, compare scope, ownership, activation criteria, approval boundaries, audit independence, GitHub portability, identifiers, deletion authority, status transitions, and source-fidelity requirements before deciding whether to merge, refine, reject, or reopen either proposal.
+
+**Authority boundary:** No Governance document, ADR, automation, skill, installation package, or active routine is authorized by this pause. The Workbench candidate and recovered audit remain non-authoritative source material.
+
+**Priority effect:** The paused workflow no longer blocks the minimum Canon sourcing and entry standard. Canon exploration becomes the next active architecture task while installation-workflow reconciliation remains parallel and evidence-gated.
+
+**Disposition:** **Paused pending Claude-audit intake and reconciliation.** Resume only on Sheldon's supplied findings or explicit direction.
+
+### S-141 — 2026-08-14 — Minimum Canon Sourcing and Entry Standard Exploration 001 opened
+
+**Human direction:** After reviewing the purpose and necessity of the minimum Canon sourcing step, Sheldon directed this audit task to proceed.
+
+**Current-source verification:** GitHub `main` remains at `b492afb448d5f76b4be0dae73d0a84d2c91a959b`. Accepted Canon, contribution, Philosophy, Glossary, AI Governance, and Training Research boundaries were read from that revision. Course Prototype 001 source material was read without modification from its preserved PR #12 review commit `7e2460fa018496692cf068f7cf1a530a6ed45f4f`.
+
+**Artifact created:** `00-workbench/drafts/minimum-canon-sourcing-entry-exploration-001.md`.
+
+**Representative claims:** The Explore phase tested one external federal-criteria statement, one insurer-product statement, one proposed Spark operating practice, one professional/domain synthesis, and the failed exhaustive three-category teaching simplification. The claims remain candidate inputs; no new mortgage research was performed and none became Canon.
+
+**Initial architecture:** A provisional nine-question admission test and nine information fields emerged. The minimum boundary concerns claim wording, intended reliance, knowledge class and legitimate authority, retrievable evidence, scope and applicability, direct support versus synthesis or choice, uncertainty and contrary evidence, currency and review triggers, and deliberate acceptance with dependencies.
+
+**Key findings:** The claim rather than the whole document is the admission unit; external authority, repository authority, and operational applicability must remain separate; source count does not establish sufficiency; primary-source preference is not a universal ritual; Spark choices require internal decision provenance rather than invented external authority; and Academy answer keys and rationales are consequential derivative claims.
+
+**Complexity controls:** No universal source count, expiry period, confidence score, ontology, database schema, machine-readable metadata format, source archive, automated synchronization, Canon folder, or learner content was designed. The Training Research skill was not invoked, and its evidence standard remains a source signal rather than a Canon standard.
+
+**Disposition:** **Explore is complete enough for focused Challenge; the exploration remains active and non-authoritative.** Challenge the admission questions and entry fields for necessity, proportionality, access-controlled evidence, practitioner evidence, Spark internal decisions, maintenance burden, and gaming risk. Do not Distill, draft a canonical standard, begin the Canon pilot, or reopen the paused installation-workflow refinement.
+
+### S-142 — 2026-08-16 — Minimum Canon Challenge source-mismatch audit
+
+**Intake:** Sheldon returned the browser's Focused Challenge for Minimum Canon Sourcing and Entry Standard Exploration 001.
+
+**Baseline:** Pass. GitHub `main` was independently reverified at `b492afb448d5f76b4be0dae73d0a84d2c91a959b`.
+
+**Controlling source:** Before this intake audit was appended, the local exploration was independently rehashed at SHA-256 `7E237EC30D49BA397D6F25360A763C184DC902E103C9114B4B20F9F973B0619C`. That controlling Explore revision contains exactly nine provisional admission questions and nine provisional entry fields.
+
+**Material mismatch:** The browser response states that the challenged artifact contains twelve admission questions and ten entry fields, then assigns item-level dispositions to an expanded structure not present in the controlling file. This prevents direct traceability from the Challenge dispositions to every actual source item and invalidates its claim that the attached prompt's nine/nine count was stale.
+
+**Substantive value retained:** The response supplies credible findings about compound claims, foreseeable reliance, evidence retrievability versus complete support, external versus Spark authority, reusable source records, admission reasoning, restricted evidence, practitioner observation, event-based reconsideration, metadata gaming, and allocation among Canon entries, source records, admission review, Governance, and downstream implementation. Its proposed nine-question test and seven-group information minimum are plausible compression candidates.
+
+**Correction scope:** Do not repeat the whole Challenge. Require a bounded reconciliation that quotes and disposes each exact controlling nine-question and nine-field item, maps every item to the proposed nine/seven result or its removal, states whether the corrected source changes any conclusion, and confirms or withdraws formal-Audit readiness. Do not permit a reconstructed twelve/ten model to replace the source artifact.
+
+**Disposition:** **Bounded source-reconciliation correction required; formal Audit is not yet authorized.** The Challenge remains useful non-authoritative evidence rather than a valid completed gate. No mortgage research, Training Research invocation, repository modification, Canon drafting, schema, Governance change, or pilot work is authorized.
+
+### S-143 — 2026-08-16 — Minimum Canon Challenge bounded correction passes
+
+**Intake:** Sheldon returned the browser's bounded source-reconciliation correction for Minimum Canon Sourcing and Entry Standard Exploration 001.
+
+**Question mapping:** Pass. All nine controlling admission questions receive one explicit disposition and trace to the corrected nine-question test. `Evidence support` is refined into separate retrievability and complete-support tests; `Basis of judgment` merges into authority/provenance and support; currency separates present validity from reconsideration; and acceptance remains visible through legitimate authority, disposition, unresolved constraints, and evidence-access treatment. No safeguard was silently removed.
+
+**Field mapping:** Pass. All nine controlling entry fields receive one explicit disposition and trace to the seven-group information minimum. Entry name and accepted wording merge into claim identity; knowledge class and authority become nature/authority plus admission provenance; basis/provenance separates across source linkage and support assessment; and currency, acceptance, and dependencies divide between admission and reconsideration records. Durable roles remain Governance-owned, and downstream dependency mechanics remain downstream.
+
+**Corrected architecture:** The post-Challenge result remains nine admission questions—Claim, Use, Evidence, Support, Authority and provenance, Applicability, Currency, Uncertainty and acceptance, and Reconsideration—and seven recoverable information groups—Claim identity, Purpose and scope, Nature and authority, Evidence linkage, Support and limits, Admission record, and Reconsideration.
+
+**Audit finding:** The mapping restores traceability to the controlling Explore revision at SHA-256 `7E237EC30D49BA397D6F25360A763C184DC902E103C9114B4B20F9F973B0619C`. The prior twelve/ten reconstruction is no longer treated as the source architecture. The useful Challenge findings remain supporting evidence rather than substituted source content.
+
+**Disposition:** **Bounded correction passes; formal Audit is authorized.** No Sheldon decision is required before Audit. Do not conduct mortgage research, invoke Training Research, draft a canonical standard, create Canon entries, begin the pilot, modify Governance, create an ADR, design a schema, or install anything.
+
+### S-144 — 2026-08-17 — Formal Audit of Minimum Canon Sourcing and Entry Standard Exploration 001
+
+**Human direction:** Sheldon directed this audit chat to perform the formal Audit of the corrected nine-question admission test and seven-group information minimum.
+
+**Baseline:** GitHub `main` was independently verified unchanged at `b492afb448d5f76b4be0dae73d0a84d2c91a959b`.
+
+**Executive result:** Pass with bounded refinements incorporated. The nine/seven architecture is coherent, proportionate, aligned with accepted Philosophy and Governance, and ready to Close as non-authoritative source material. No further Challenge is justified.
+
+**Material refinements:** Evidence and support now include decision provenance appropriate to internal Spark choices rather than presuming every normative or procedural entry is externally proven. Only an authorized admitted claim may enter active Canon; narrowing requires retest, while hold, unresolved, and reject remain outside active Canon. Source and admission records are logical information functions rather than mandatory new files or registries. Claim-level review does not require one file or metadata block per sentence. Canon fit is explicit so Governance, Academy, Workbench, and external authority remain correctly owned.
+
+**Final architecture:** Nine audited questions cover Claim, Use, Basis retrieval, Support or establishment, Authority/provenance/owner, Applicability, Currency, Uncertainty/disposition, and Reconsideration. Seven recoverable information groups cover Claim identity, Purpose/scope, Nature/authority/owner, Basis linkage, Support/limits, Admission record, and Reconsideration.
+
+**Allocation:** Canon owns exact accepted wording and the context material to safe reliance. Reusable source information owns source identity, location, access, and currency. Admission review owns support analysis, synthesis, reasoning, disposition, and actual decision provenance. Governance owns durable approval roles and delegation. Academy owns derivative teaching. Schemas, registries, automation, cadence, and dependency tooling remain downstream and uncreated.
+
+**Proportionality:** The information obligation remains stable while review depth varies with volatility, consequence, obligations, and foreseeable reliance. Shared document-level information is allowed; material distinctions remain claim-reviewable. No universal source count, primary-source ritual, expiry period, confidence score, or dependency map was introduced.
+
+**Likely owner:** A future Distill should first test whether the standard fits as a concise addition to `03-canon/README.md`. A separate standards file is justified only if clarity and use require it. No new folder or Governance layer is presumed.
+
+**Human decisions:** None are required to Close. Sheldon retains later approval, delegation, qualified-review-class, fixed-review-date, and restricted-source-process decisions before acceptance or demonstrated operational need.
+
+**Disposition:** **Formal Audit complete — pass with bounded refinements incorporated; ready for Close.** Close must not begin Distill, draft Canon, conduct research, invoke Training Research, begin the pilot, change Governance, create an ADR, design a schema, or install anything.
+
+### S-145 — 2026-08-17 — Future independent-auditor pickup prompt reconciled
+
+**Intake:** Sheldon supplied a working-role prompt from a branched audit chat and requested an audit, improvement, and consolidation using this original audit chat's experience. The prompt is intended to start a future independent-auditor chat with less accumulated conversation context. Sheldon specifically directed adoption of its role-exploration instruction.
+
+**Strong content retained:** The prompt correctly protects authority states, Explore through Drift Review boundaries, independent implementation verification, proportionality, source fidelity, cross-chat intake, complexity discipline, glossary restraint, and human acceptance. Its implementation-audit checklist includes the important distinction between command success and intended test discovery.
+
+**Primary structural defect:** The source mixed a durable auditor contract, a large pre-seeded candidate-role catalogue, and time-sensitive PR #21 continuity in one permanent prompt. That makes future pickup inefficient and risks treating stale state or named role hypotheses as standing instructions.
+
+**Revision:** Created `00-workbench/drafts/independent-architecture-auditor-pickup-prompt.md`. The durable portion is condensed around startup verification, mission, lifecycle boundaries, audit method, implementation audit, intake, continuity, complexity, and behavioral constraints. Time-sensitive repository and Workbench claims are isolated in a dated replaceable Pickup State Capsule.
+
+**Role-exploration adoption:** Adopted as a lightweight responsibility-signal lens for this audit process. Signals should be recorded only after meaningful recurrence, failure, or authority separation—not after every turn. The lens now requires a neutral task label, recurrence evidence, inputs/outputs, authority, accountability, separation and existing-owner tests, provisional classification, evidence level, and reconsideration trigger. It explicitly separates a responsibility from a possible person, AI task, skill, workflow, validation control, or agent.
+
+**Complexity correction:** Removed the permanent catalogue of named candidate roles from the durable prompt. Named responsibilities from the branched chat remain only as provisional baseline signals in the replaceable capsule. No separate role-signal file, agent, skill, AI Governance change, or durable role was created. Use the current Workbench owner unless repeated retrieval need later justifies another artifact.
+
+**GitHub verification:** Current `main` remains `b492afb448d5f76b4be0dae73d0a84d2c91a959b`. PR #21 is open, draft, mergeable, and unmerged at head `ffa401a169c14ed27d9f63868c86c1836eb4d057`, with two changed files. Its current GitHub body still says independent audit is required and contains no review comments, while the branched prompt reports a passed independent audit and corrected description. The revised capsule preserves this discrepancy and requires reconciliation rather than treating the handoff as verified fact.
+
+**Current-task correction:** The branched prompt's expected next substantive task—minimum Canon sourcing exploration—is historical. In this audit chat, that exploration has completed Formal Audit and is ready to Close. The revised capsule records the actual current continuation without making local Workbench state authoritative.
+
+**Disposition:** **Retain the revised prompt as a non-authoritative future-chat transfer utility.** It does not establish a durable AI role, authorize repository writes, or replace current boot and Governance. The role-exploration lens is adopted in this audit process proportionately; no immediate responsibility signal from this revision justifies a new agent.
+
+### S-146 — 2026-08-17 — Minimum Canon Sourcing and Entry Standard Exploration 001 closed
+
+**Human direction:** Sheldon authorized Close after Formal Audit S-144 passed the corrected nine-question admission test and seven-group information minimum and found no need for further Challenge.
+
+**Closed artifact:** `00-workbench/drafts/minimum-canon-sourcing-entry-exploration-001.md` is closed as completed non-authoritative Workbench source material. Close preserves the final audited questions and information groups, admission-result and logical information-surface boundaries, repository-function allocation, proportionality and gaming protections, smallest-owner test, reopening threshold, and decisions reserved for Sheldon.
+
+**Authority boundary:** Closure does not approve, install, activate, or operationalize a Canon sourcing and entry standard. It does not make any tested mortgage claim current or canonical; repair Course Prototype 001; create Academy content; invoke Training Research; begin a Canon pilot; amend Canon or Governance; create an ADR, schema, source registry, or automation; or authorize installation.
+
+**Defect check:** No unresolved conceptual, authority, evidence, scope, currency, proportionality, allocation, maintenance, or gaming defect requires reopening. Explore or Challenge should reopen only if Distill exposes a material contradiction or omission that cannot be corrected without changing the audited architecture, or credible new evidence defeats a preserved boundary.
+
+**Continuation:** The next eligible step is a separate bounded Distill task. It should produce one concise non-authoritative candidate, first test coherent fit inside `03-canon/README.md`, and return the candidate for independent audit before any pilot, human approval, or coordinated installation. The paused installation-workflow refinement does not block non-installation work.
+
+**Disposition:** **Close complete — exploration preserved as non-authoritative source material; ready for a separate Distill, not yet ready for pilot, approval, or installation.**
+
+### S-147 — 2026-08-17 — Open pull-request and repository reconciliation audit
+
+**Human direction:** Sheldon requested a current-state review of the many open Spark OS pull requests, most of which preserve concurrent-task conversation summaries, followed by a safe reconciliation sequence and recommendations for returning the repository to further work.
+
+**Verified repository state:** GitHub `main` remains `b492afb448d5f76b4be0dae73d0a84d2c91a959b`. Six pull requests are open, draft, mergeable, and unmerged: #12, #19, #20, #21, #22, and #23. Each head has a successful Repository Integrity workflow. None has a GitHub review or conversation comment.
+
+**Scope audit:** PR #12 adds eleven files only under the non-authoritative Course Prototype 001 Workbench package. PRs #19, #20, #22, and #23 each add one uniquely named non-authoritative Design History conversation summary and do not modify current authority. PR #21 alone changes active behavior: four approved line changes across `CONTRIBUTING.md` and `brain/boot-sequence.md`. All changed paths are disjoint across the six PRs, and GitHub currently reports every PR mergeable.
+
+**Substantive result:** No content-level blocker, authority inversion, credential exposure, private machine path, or cross-PR file conflict was found. The four summaries conform to the Design History template and qualify as curated history rather than raw transcript dumps. PR #12 contains intentionally flawed domain material, but its repeated Workbench and non-reliance boundaries, corrected review package, and preservation purpose prevent merge from representing course acceptance.
+
+**Required administrative correction:** PR #21's body still says independent audit remains required, while its implementation, correct 37-test discovery, workflow, and this audit pass. Before merge, replace that stale sentence with an accurate statement that independent audit passed and the PR is ready for human merge while remaining non-authoritative until merged. PR #12's final status sentence should preferably say it is proposed only for non-authoritative Workbench preservation, not Canon or Academy installation; this clarifies purpose without changing files.
+
+**Merge dependencies:** Merge PR #12 before PR #23 so the prototype commits cited by the Canon exploration history become reachable from `main`. Merge PR #21 before PR #22 so current Governance precedes its historical explanation. PRs #19 and #20 are independent. A safe serial order is #12, #19, #20, #21, #22, then #23, with mergeability and Repository Integrity rechecked after each merge rather than assuming six currently green runs remain sufficient against a changing base.
+
+**Continuity finding:** Current `brain/current-state.md` and `brain/session.md` still describe the 2026-08-09 Foundational Glossary closeout. The exact closed Minimum Canon exploration and this later audit continuity also remain only in the dirty historical local checkout; PR #23 preserves a historical summary, not the Distill source artifact. After the six PRs are merged, create one bounded reconciliation PR from fresh `main` that preserves only reviewed current Workbench sources and records the Governance clarification, preserved Workbench and Design History state, closed Minimum Canon exploration, and next eligible bounded Distill in Brain. Do not mix new architecture or Canon drafting into that maintenance PR.
+
+**Local-workspace boundary:** Do not copy the current checkout wholesale. It remains on historical branch `agent/foundational-provenance-closeout` at `5842c77c6c04d46f328ed13834844d54696a9557` with numerous modified and untracked files, including superseded, paused, duplicate-named, and active artifacts. Before the reconciliation PR, compare each candidate against current `main` and retain only deliberate current sources. At minimum, the final closed Canon exploration, current task notepad, foundational audit, and future-auditor pickup prompt require disposition review.
+
+**Branch finding:** Three remote branches are fully contained in `main` and eligible for retirement now or with the final cleanup: `agent/archive-foundational-glossary-exploration-001`, `agent/foundational-provenance-closeout`, and `codex/install-foundational-glossary-001`. Delete each newly merged PR branch only after verifying its tip is reachable from `main`. Do not delete `agent/spark-financial-hub-rebuild`; it diverges with three unique commits and three Workbench files and requires a separate retain, preserve, or discard decision.
+
+**Role-exploration signal:** Repeated cross-task PR intake, dependency ordering, continuity reconciliation, and branch-reachability checks strengthen a provisional repository-reconciliation responsibility signal. Inputs are reviewed implementation and archive branches; outputs are a verified merge order, current continuity, and safe retirement disposition. Governance and human merge authority remain unchanged. This work still fits the independent-audit workflow and does not yet justify a separate agent, skill, or durable role; reconsider only if the responsibility recurs often enough that manual pickup loses state or consistency.
+
+**Disposition:** **Pass with two PR-description corrections and one post-merge continuity closeout.** No open PR requires substantive file revision before merge. Reconciliation and maintenance temporarily precede the Canon Distill; the Distill remains the next substantive build task afterward.
+
+### S-148 — 2026-08-18 — Current-main Workbench and continuity reconciliation prepared
+
+**Human direction:** Sheldon directed reconciliation after the reviewed open-pull-request sequence was completed.
+
+**Verified merged state:** Pull requests #12, #19, #20, #21, #22, and #23 merged serially into `main` at commits `e3ba58b1ee687d1b4ac11f4da44f8caaa61cc5ae`, `523c4a6cd5c7995faa52c3cded209df763c1e180`, `deb87aeb3f8180614f05507f44f004130b1150ec`, `a73d90dc66c5713c0dda6fe11eb1609f34b37674`, `58954480c51ee9126d746be3c72d4910b67ffc6f`, and `7ad895ac3f56e93a5f823b7de5b072d0f3e6c748`. The audited PR #21 description was corrected before merge. The current `main` revision is `7ad895ac3f56e93a5f823b7de5b072d0f3e6c748`.
+
+**Bounded package:** A fresh-main reconciliation branch preserves the ordered, sanitized S-136 through S-147 continuation; refreshes stale Workbench and Brain continuity; and adds only four deliberate non-authoritative Workbench sources: the closed Minimum Canon exploration, future-auditor pickup prompt, paused installation-package workflow candidate, and paused agent-team evolution notes.
+
+**Exclusions:** The package excludes raw Governance Fit material, superseded candidate and exploration drafts, the historical prompt source already preserved on `main`, the raw agent-team proposal, practitioner-review duplication, and any Canon, Academy, Philosophy, Governance, ADR, schema, research, pilot, or installation change.
+
+**Current continuation:** Independently audit and merge this bounded reconciliation package. Only after that closeout may a separate task Distill one concise non-authoritative candidate from the closed Minimum Canon exploration, first testing fit in `03-canon/README.md`. The paused installation-workflow refinement, practitioner review, Mental Models observation, and agent-team material remain separate and do not authorize operational work.
+
+**Disposition:** **Draft reconciliation prepared; independent audit and merge remain pending.**
+
 ## Next Intake
 
-Prepare and independently audit this bounded four-file post-S-121 Workbench preservation branch. Do not invoke the Training Research skill or conduct research without explicit authorization. After preservation closes, begin Governance Fit Audit 001.
+Independently audit and merge the bounded current-main Workbench and continuity reconciliation package. After closeout, begin a separate bounded non-authoritative Distill from `minimum-canon-sourcing-entry-exploration-001.md`, first testing coherent fit in `03-canon/README.md`.
+
+Do not begin a Canon pilot, create Canon entries, conduct research, invoke Training Research, create Academy content, amend Governance, create an ADR, design a schema, or install anything through this continuation.

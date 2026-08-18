@@ -1,9 +1,9 @@
 # Current State
 
-**Last updated:** 2026-08-09
-**Current phase:** Philosophy development
-**Current milestone:** Foundational Glossary installation completed, independently verified, and merged
-**Status:** Manifesto, Values, Principles, and Foundational Glossary accepted and active; Mental Models in development
+**Last updated:** 2026-08-18
+**Current phase:** Canon foundation development
+**Current milestone:** Governance Fit clarification and repository reconciliation completed; Minimum Canon sourcing exploration closed
+**Status:** Manifesto, Values, Principles, and Foundational Glossary accepted and active; Mental Models evidence-gated; no Canon claim or entry accepted
 
 ## Repository Reality
 
@@ -53,20 +53,24 @@
 - Installed the Principles artifact approved by Sheldon Phillips on 2026-07-27 and linked the accepted Values to their derived Principles.
 - Independently verified and merged the Principles installation through pull request #9.
 - Installed Foundational Glossary Candidate 001 through pull request #13 as the accepted and active ten-entry Foundational Glossary, independently verified the installation retroactively, and merged it at `f2ce678ae65de1dd24c1fea237fd208fce2e454a`.
+- PR #12 preserved Course Prototype 001 for practitioner review as non-authoritative Workbench material; it did not accept course, Canon, or Academy content.
+- PR #17 installed Training Research Pilot 001 as an uninvoked skill. It is not a Canon standard and does not authorize research by itself.
+- PR #21 merged a bounded clarification of contribution and boot workflow. The coordinated installation-package workflow candidate remains Workbench-only and paused.
+- Minimum Canon Sourcing and Entry Standard Exploration 001 is closed non-authoritative Workbench source material. It is eligible for a separate Distill only; no Canon standard, Canon claim, pilot, research, or Academy content is authorized.
+- Reconciled the reviewed concurrent Design History and Workbench preservation pull requests into current `main`.
 
 ## Current Priority
 
-Review current authorized Workbench priorities before selecting another material project. Mental Models remain evidence-gated and in development.
+Independently audit and merge the bounded Workbench and continuity reconciliation package. After closeout, Distill one concise non-authoritative candidate from the closed Minimum Canon exploration.
 
 ## Next Task
 
-Review current authorized Workbench priorities and available evidence before selecting the next material project. Do not force Mental Models into Distill without sufficient evidence and readiness.
-
-Do not begin domain-software architecture until Spark OS scope and Philosophy are sufficiently established to constrain it.
+After reconciliation closes, test whether the Minimum Canon candidate fits coherently inside `03-canon/README.md`. Keep the task bounded to a candidate: do not begin a Canon pilot, create Canon entries, conduct research, invoke Training Research, create Academy content, amend Governance, create an ADR, or design a schema.
 
 ## Known Blockers
 
-- No known architectural or repository-integrity blockers.
+- No known architectural or repository-integrity blocker.
+- Practitioner review, Mental Models evidence, paused installation-workflow refinement, and paused agent-team material remain separate inputs; none authorizes a shortcut around the Canon lifecycle.
 
 ## Continuity Responsibility
 
